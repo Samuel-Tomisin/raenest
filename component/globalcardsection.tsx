@@ -1,4 +1,4 @@
-import FeatureShowcase, { type ShowcaseOption } from "../featureshowcase";
+import FeatureShowcase, { type ShowcaseOption } from "./featureshowcase";
 
 const cardOptions: ShowcaseOption[] = [
   {

@@ -1,6 +1,6 @@
 "use client"
 
-import FeatureShowcase, { type ShowcaseOption } from "../featureshowcase";
+import FeatureShowcase, { type ShowcaseOption } from "./featureshowcase";
 
 const accountOptions: ShowcaseOption[] = [
   {

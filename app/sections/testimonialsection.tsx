@@ -165,7 +165,7 @@ function VideoTestimonialCard({
   );
 }
 
-export default function TestimonialsSection() {
+export default function Testimonialsection() {
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       {/* Capped container so nothing stretches edge-to-edge on large/ultra-wide screens */}

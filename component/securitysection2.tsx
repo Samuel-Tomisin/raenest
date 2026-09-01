@@ -20,7 +20,7 @@ const SECURITY_POINTS = [
   },
 ];
 
-export default function SecuritySection() {
+export default function Securitysection2() {
   return (
     <section className="bg-[#40339E] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
       <div className="mx-auto max-w-7xl text-center">

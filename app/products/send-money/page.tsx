@@ -3,9 +3,9 @@
 
 import SendMoneyHero from "@/component/sendmoneyhero";
 import SendMoneyCarousel from "@/component/sendmoneycarousel";
-import FirstTransferSteps from "@/component/first-transfer-steps";
-import SecuritySection from "@/component/security-section";
-import Second from "@/app/sections/second";
+import FirstTransferSteps from "@/component/firsttransfersteps";
+import SecuritySection from "@/component/securitysection2";
+import Second from "@/app/sections/testimonialsection";
 import Footer from "@/component/footer";
 // import TestimonialsSection from "@/component/testimonialssection";
 // import FAQSection from "@/component/faqsection";

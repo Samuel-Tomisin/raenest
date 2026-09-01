@@ -1,4 +1,4 @@
-import FeatureShowcase, { type ShowcaseOption } from "../featureshowcase";
+import FeatureShowcase, { type ShowcaseOption } from "./featureshowcase";
 import { Check, Download } from "lucide-react";
 
 const transactionOptions: ShowcaseOption[] = [

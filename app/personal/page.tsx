@@ -2,7 +2,7 @@
 
 import Navbar from "@/component/navbar";
 import Hero from "../sections/hero";
-import TestimonialsSection from "../sections/second";
+import TestimonialsSection from "../sections/testimonialsection";
 import ThirdSection from "../sections/third";
 import FourthSection from "../sections/fourth";
 import FifthSection from "../sections/fifth";
