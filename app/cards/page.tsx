@@ -3,6 +3,9 @@
 import { JSX, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { Apple, PlayCircle, Users, Plus, Play } from "lucide-react";
+import Footer from "@/component/footer";
+import Navbar from "@/component/navbar";
+import image from "next/image";
 
 /* ------------------------------------------------------------------ */
 /*  Shared: flag badges (SVG, no external flag-icon package needed)   */
@@ -64,7 +67,7 @@ function CardsHero() {
     <section className="relative overflow-hidden bg-white px-6 pt-14 pb-20 sm:px-10 lg:px-16 lg:pt-20">
       <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-2 lg:items-center lg:gap-10">
         <div className="flex flex-col gap-6">
-          <p className="text-sm font-medium text-neutral-400">Cards</p>
+          <p className="text-sm sm:text-2xl font-bold text-neutral-400">Cards</p>
           <h1 className="text-5xl font-semibold leading-[1.05] text-neutral-950 sm:text-6xl lg:text-[64px]">
             Dollar cards for everyday use
           </h1>
@@ -91,8 +94,12 @@ function CardsHero() {
         </div>
 
         <div className="relative mx-auto w-full max-w-sm lg:max-w-md">
+          <div className="mx-auto max-w-7xl">
           {/* Drop your card photo/render in here */}
-          <div className="aspect-[4/5] w-full rounded-[32px] bg-gradient-to-br from-[#5433C9] via-[#6a4ce0] to-[#d6ff3f]" />
+          <img src="/visahand.png" alt="" />
+          </div>
+          {/* <div className="aspect-[4/5] w-full rounded-[32px] bg-gradient-to-br from-[#5433C9] via-[#6a4ce0] to-[#d6ff3f]">
+          </div> */}
         </div>
       </div>
     </section>
@@ -108,6 +115,7 @@ function CardTravelBanner() {
     <section className="px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         {/* Drop your travel photo (e.g. Arc de Triomphe with card in hand) in here */}
+        <img src="/visahand.png" alt="" />
         <div className="h-[260px] w-full rounded-[32px] bg-gradient-to-br from-[#2b6ff0] to-[#8fb8ff] sm:h-[320px]" />
       </div>
     </section>
@@ -134,7 +142,7 @@ const FEATURE_SLIDES: FeatureSlide[] = [
     heading: "The smarter way to pay",
     description:
       "Simply bring your device near the payment terminal to pay in seconds. Works with Google pay and Apple pay.",
-    image: "/cards-slide-contactless.webp",
+    image: "/womanphone.webp",
   },
   {
     key: "easy-funding",
@@ -175,9 +183,10 @@ function CardFeaturesCarousel() {
     <section className="px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div
-          className="relative h-[480px] overflow-hidden rounded-[32px] bg-neutral-900 bg-cover bg-center bg-no-repeat transition-[background-image] duration-500 sm:h-[520px]"
+          className="relative h-[480px] overflow-hidden bg-neutral-900 bg-cover bg-center bg-no-repeat transition-[background-image] duration-500 sm:h-[520px]"
           style={{ backgroundImage: `url('${active.image}')` }}
         >
+          <img src="/money.webp" alt="" className="w-70 h-35 text-center"/>
           <div className="absolute inset-0 bg-black/50" />
           <div className="absolute inset-x-0 bottom-0 flex flex-col items-center gap-6 px-6 pb-10 text-center sm:px-10">
             <div>
@@ -215,9 +224,10 @@ function CardFeaturesCarousel() {
 
 function FundCardSection() {
   return (
-    <section className="bg-gradient-to-br from-[#3D2299] to-[#5433C9] px-6 py-16 sm:px-10 sm:py-20 lg:px-16">
+    <section className="bg-gradient-to-br px-6 py-16 sm:px-10 sm:py-20 lg:px-16">
+      <div className="bg-[url('/phonecard2.png')] bg-cover bg-no-repeat bg-center bg-2/3 ">
       <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-2 lg:items-center">
-        <div className="flex flex-col gap-6">
+        {/* <div className="flex flex-col gap-6">
           <span className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-full ring-2 ring-white/20">
             <span className="h-full w-1/2 bg-emerald-500" />
             <span className="h-full w-1/2 bg-black" />
@@ -226,11 +236,12 @@ function FundCardSection() {
             Fund your card with Naira, Stablecoins (USDT &amp; USDC), USD, GBP
             &amp; EUR.
           </h2>
-        </div>
+        </div> */}
 
         <div className="relative mx-auto w-full max-w-sm">
           {/* Drop your card render/phone mockup photo in here */}
-          <div className="aspect-[4/5] w-full rounded-[32px] bg-white/10" />
+          {/* <img src="/phonecard.webp" alt="" /> */}
+          <div className="aspect-[4/5] w-full rounded-[32px]" />
         </div>
       </div>
 
@@ -238,6 +249,7 @@ function FundCardSection() {
         <h3 className="max-w-xl text-2xl font-bold leading-tight text-white sm:text-3xl">
           Accepted at over 150 million merchants where Visa is accepted.
         </h3>
+      </div>
       </div>
     </section>
   );
@@ -250,16 +262,19 @@ function FundCardSection() {
 const REQUEST_STEPS = [
   {
     number: 1,
+    image: "/create.webp",
     title: "Go to cards in your Raenest app",
     description: "Log in to your account.",
   },
   {
     number: 2,
+    image: "/virtualcard.png",
     title: "Choose a card type",
     description: "You get a virtual USD card.",
   },
   {
     number: 3,
+    image: "/raenestcard.png",
     title: "Customize your card",
     description:
       "You can give your card a name, different colours, etc. Voila! Your card is ready",
@@ -287,15 +302,16 @@ function RequestCardSteps() {
           {REQUEST_STEPS.map((step) => (
             <div
               key={step.number}
-              className="relative flex flex-col overflow-hidden rounded-3xl bg-gradient-to-b from-[#5433C9] to-[#3D2299] p-4"
+              className="relative flex flex-col overflow-hidden rounded-3xl bg-gradient-to-b from-[#5433C9] to-[#3D2299] px-8 py-15"
             >
               <span className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full bg-white/15 text-sm font-semibold text-white">
                 {step.number}
               </span>
               {/* Drop your app screenshot / mockup image in here */}
-              <div className="mb-6 h-48 w-full rounded-2xl bg-white" />
+              {/* <div className="mb-6 h-48 w-full rounded-2xl bg-white" /> */}
+              <img src={step.image} alt="" className="mb-6 h-full w-full rounded-2xl text-[12px]" />
               <h3 className="text-lg font-semibold text-white">{step.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-white/75">
+              <p className="mt-1 text-sm leading-relaxed text-white/75">
                 {step.description}
               </p>
             </div>
@@ -312,6 +328,7 @@ function RequestCardSteps() {
 
 const SECURITY_POINTS = [
   {
+    image: "/shieldcheck.png",
     title: "Compliant Transactions",
     description: "Backed by local and international financial regulations.",
   },
@@ -654,14 +671,16 @@ function FAQSection() {
 export default function CardsPage() {
   return (
     <main>
+      <Navbar />
       <CardsHero />
-      <CardTravelBanner />
+      {/* <CardTravelBanner /> */}
       <CardFeaturesCarousel />
       <FundCardSection />
       <RequestCardSteps />
       <SecuritySection />
       <TestimonialsSection />
       <FAQSection />
+      <Footer />
     </main>
   );
 }

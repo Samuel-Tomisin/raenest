@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Footer from "@/component/footer";
 import { useState, type ReactNode } from "react";
 import {
   Menu,
@@ -14,6 +15,9 @@ import {
   Lock,
   ShieldAlert,
 } from "lucide-react";
+import Seventh from "../sections/seventh";
+import Eighth from "../sections/eighth";
+import Navbar from "@/component/navbar";
 
 /* ────────────────────────────────────────────────────────────────────── */
 /*  Shared data                                                          */
@@ -26,7 +30,7 @@ const trustLogos = [
   { name: "Techstars", src: "/techstars.png" },
   { name: "Seedstars", src: "/seedstars.png" },
   { name: "Ajim Capital", src: "/ajim.png" },
-  { name: "1789 Capital", src: "/images/business/logos/1p.png" },
+  { name: "1789 Capital", src: "/one.png" },
 ];
 
 interface ShowcaseOption {
@@ -71,11 +75,11 @@ const testimonials = [
 ];
 
 const industries = [
-  { key: "fintech", label: "Fintech", description: "Manage international transfers and treasury management efficiently.", image: "/images/business/industries/fintech.jpg" },
-  { key: "logistics", label: "Logistics", description: "Pay global vendors and suppliers at competitive fees and on time.", image: "/images/business/industries/logistics.jpg" },
-  { key: "fmcg", label: "FMCG", description: "Convert local currencies to USD, GBP, EUR to preserve against currency volatility.", image: "/images/business/industries/fmcg.jpg" },
-  { key: "healthcare", label: "Healthcare", description: "Simplify cross-border payments for medical supplies and services", image: "/images/business/industries/healthcare.jpg" },
-  { key: "marketing", label: "Marketing", description: "Pay for marketing tools and ads with our cards, they work everywhere", image: "/images/business/industries/marketing.jpg" },
+  { key: "fintech", label: "Fintech", description: "Manage international transfers and treasury management efficiently.", image: "/fintech.webp" },
+  { key: "logistics", label: "Logistics", description: "Pay global vendors and suppliers at competitive fees and on time.", image: "/logistics.webp" },
+  { key: "fmcg", label: "FMCG", description: "Convert local currencies to USD, GBP, EUR to preserve against currency volatility.", image: "/fmcg.webp" },
+  { key: "healthcare", label: "Healthcare", description: "Simplify cross-border payments for medical supplies and services", image: "/healthcare.webp" },
+  { key: "marketing", label: "Marketing", description: "Pay for marketing tools and ads with our cards, they work everywhere", image: "/marketing.webp" },
 ];
 
 const securityFeatures = [
@@ -278,9 +282,10 @@ export default function BusinessHomePage() {
           <div className="absolute left-1/2 top-[-320px] h-[640px] w-[900px] -translate-x-1/2 rounded-full bg-gradient-to-b from-[#4B3FA0]/60 via-[#2C1F70]/40 to-transparent blur-3xl" />
           <div className="absolute left-1/2 top-24 h-[520px] w-[520px] -translate-x-1/2 rounded-full border border-white/10" />
         </div>
+        <Navbar />
 
         {/* Transparent overlay navbar */}
-        <div className="relative z-20 px-5 pt-6">
+        {/* <div className="relative z-20 px-5 pt-6">
           <div className="mx-auto flex max-w-6xl items-center justify-between">
             <div className="flex items-center gap-4 lg:gap-10">
               <Link href="/" className="flex items-center gap-2 text-white">
@@ -332,7 +337,7 @@ export default function BusinessHomePage() {
               {mobileOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
-        </div>
+        </div> */}
 
         {/* Hero content */}
         <div className="relative z-10 px-5 pb-24 pt-16 sm:pt-24">
@@ -477,7 +482,9 @@ export default function BusinessHomePage() {
 
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="rounded-2xl border border-white/10 bg-white/5 p-8 text-left">
-              <p className="mb-2 text-sm">🇺🇸 🇪🇺 🇬🇧 🇳🇬</p>
+              <p className="mb-2 text-sm">
+                <img src="/countries.png" alt="" className="w-15 h-7"/>
+              </p>
               <p className="text-3xl font-bold text-white">Over $1 billion</p>
               <p className="mt-1 text-sm text-white/60">in transaction volume processed</p>
             </div>
@@ -515,9 +522,11 @@ export default function BusinessHomePage() {
           </div>
 
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
-            {partnerLogos.map((name, i) => (
-              <div key={`${name}-${i}`} className="flex h-20 items-center justify-center rounded-2xl bg-white px-4 shadow-sm">
-                <span className="text-sm font-bold text-[#101828]">{name}</span>
+            <img src="/leadersat" alt="" />
+            <img src="/leadersat2" alt="" />
+            {partnerLogos.map((image, i) => (
+              <div key={`${image}-${i}`} className="flex h-20 items-center justify-center rounded-2xl bg-white px-4 shadow-sm">
+                <span className="text-sm font-bold text-[#101828]">{image}</span>
               </div>
             ))}
           </div>
@@ -662,7 +671,7 @@ export default function BusinessHomePage() {
               .filter((i) => i.key === activeIndustry)
               .map((industry) => (
                 <div key={industry.key} className="relative h-72 overflow-hidden rounded-2xl sm:col-span-2">
-                  <img src={industry.image} alt={industry.label} className="h-full w-full object-cover" />
+                  <img src={industry.image} alt={industry.label} className=" w-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
                   <div className="absolute bottom-0 left-0 p-6">
                     <h3 className="text-lg font-bold text-white">{industry.label}</h3>
@@ -709,7 +718,9 @@ export default function BusinessHomePage() {
           </div>
         </div>
       </section>
-
+      <Seventh/>
+      <Eighth/>
+      <Footer/>
     </main>
   );
 }

@@ -14,10 +14,10 @@ interface DropdownLink {
 
 const productItems: Record<AccountType, DropdownLink[]> = {
   personal: [
-    { label: "Send Money", href: "/send-money", description: "Global money transfers." },
+    { label: "Send Money", href: "/sendmoney", description: "Global money transfers." },
     { label: "Cards", href: "/cards", description: "Virtual and physical cards for you" },
-    { label: "Receive Money", href: "/receive-money", description: "Receive money from over 190 countries" },
-    { label: "Global Accounts", href: "/global-accounts", description: "Multi-currency accounts easily accessible" },
+    { label: "Receive Money", href: "/receivemoney", description: "Receive money from over 190 countries" },
+    { label: "Global Accounts", href: "/globalaccounts", description: "Multi-currency accounts easily accessible" },
     { label: "Invoices", href: "/invoices", description: "Smart invoicing for professionals" },
     { label: "US Stocks", href: "/us-stocks", description: "Buy U.S. stocks on Raenest with ease" },
     { label: "Upwork", href: "/upwork", description: "Upwork earnings to Raenest in under one hour" },

@@ -1,9 +1,16 @@
-"use client"
+import CreatorClubHero from "@/component/creatorclubhero";
+import CreatorApplicationForm from "@/component/creatorapplicationform";
+import HowItWorks from "@/component/howitworks";
+import Navbar from "@/component/navbar";
 
-export default function Creatorpage() {
+export default function Creatorclub() {
   return (
     <main>
-      <p>This page is coming soon</p>
+      <Navbar />
+      <CreatorClubHero />
+      <CreatorApplicationForm />
+      <HowItWorks />
+      {/* <FAQSection faqs={CREATOR_CLUB_FAQS} /> */}
     </main>
   );
 }
