@@ -2,16 +2,15 @@
 
 import Link from "next/link";
 
-
 export default function Footer() {
     return (
         <div className="relative overflow-hidden bg-[url('/footerbg.svg')] bg-no-repeat">
             <div className="relative z-10 bg-black">
                 <div className="flex flex-col gap-12 px-6 py-12 text-[14px] sm:px-8 sm:py-16 lg:flex-row lg:justify-between lg:gap-0 lg:px-12 lg:py-20">
                     <div className="flex flex-col text-white">
-                        {/* <Link href="/" className="cursor-pointer"> */}
-                            <img src="/raenest.svg" alt="" className="h-[40px] w-[120px] brightness-0 invert sm:h-[50px] sm:w-[150px] cursor-pointer" />
-                        {/* </Link> */}
+                        <Link href="/" className="cursor-pointer">
+                            <img src="/raenest.svg" alt="Raenest Logo" className="h-[40px] w-[120px] brightness-0 invert sm:h-[50px] sm:w-[150px]" />
+                        </Link>
                         <h2 className="pt-5">7460 Warren Parkway, Suite 100,</h2>
                         <h2 className="pb-5">Frisco, TX 75034, US</h2>
                         <div className="flex items-center gap-4 pt-5">
@@ -37,9 +36,9 @@ export default function Footer() {
                             <ul className="space-y-4">
                                 <li><Link href="/sendmoney" className="cursor-pointer">Send Money</Link></li>
                                 <li><Link href="/cards" className="cursor-pointer">Cards</Link></li>
-                                <li><Link href="/receive-money" className="cursor-pointer">Receive Money</Link></li>
-                                <li><Link href="/global-accounts" className="cursor-pointer">Global Accounts</Link></li>
-                                <li><Link href="/invoices" className="cursor-pointer">Invoices</Link></li>
+                                <li><Link href="/products/receivemoney" className="cursor-pointer">Receive Money</Link></li>
+                                <li><Link href="/products/global-accounts" className="cursor-pointer">Global Accounts</Link></li>
+                                <li><Link href="/products/invoices" className="cursor-pointer">Invoices</Link></li>
                             </ul>
                         </div>
 
@@ -49,8 +48,8 @@ export default function Footer() {
                                 <li><Link href="/make-payments" className="cursor-pointer">Make Payments</Link></li>
                                 <li><Link href="/cards" className="cursor-pointer">Cards</Link></li>
                                 <li><Link href="/receive-payments" className="cursor-pointer">Receive Payments</Link></li>
-                                <li><Link href="/global-accounts" className="cursor-pointer">Global Accounts</Link></li>
-                                <li><Link href="/invoices" className="cursor-pointer">Invoices</Link></li>
+                                <li><Link href="/products/global-accounts" className="cursor-pointer">Global Accounts</Link></li>
+                                <li><Link href="/products/invoices" className="cursor-pointer">Invoices</Link></li>
                             </ul>
                         </div>
 
@@ -61,14 +60,14 @@ export default function Footer() {
                                 <li className="flex flex-wrap items-center gap-2">
                                     <Link href="/career" className="cursor-pointer">Career</Link>
                                     <Link
-                                        href="/careers"
+                                        href="/career"
                                         className="cursor-pointer rounded-2xl bg-[#E6FF00] px-2 py-1 text-[11px] text-black"
                                     >
                                         We are Hiring!
                                     </Link>
                                 </li>
                                 <li><Link href="/womens-mentorship" className="cursor-pointer">Women's Mentorship</Link></li>
-                                <li><Link href="/blog" className="cursor-pointer">News & Blog</Link></li>
+                                <li><Link href="/news-&-blog" className="cursor-pointer">News & Blog</Link></li>
                                 <li><Link href="/india" className="cursor-pointer">India</Link></li>
                                 <li><Link href="/philippines" className="cursor-pointer">Philippines</Link></li>
                                 <li><Link href="/united-states" className="cursor-pointer">United States</Link></li>

@@ -16,12 +16,12 @@ const productItems: Record<AccountType, DropdownLink[]> = {
   personal: [
     { label: "Send Money", href: "/sendmoney", description: "Global money transfers." },
     { label: "Cards", href: "/cards", description: "Virtual and physical cards for you" },
-    { label: "Receive Money", href: "/receivemoney", description: "Receive money from over 190 countries" },
-    { label: "Global Accounts", href: "/globalaccounts", description: "Multi-currency accounts easily accessible" },
-    { label: "Invoices", href: "/invoices", description: "Smart invoicing for professionals" },
-    { label: "US Stocks", href: "/us-stocks", description: "Buy U.S. stocks on Raenest with ease" },
-    { label: "Upwork", href: "/upwork", description: "Upwork earnings to Raenest in under one hour" },
-    { label: "Stablecoins", href: "/stablecoins", description: "Receive USDC and USDT on Raenest." },
+    { label: "Receive Money", href: "/products/receivemoney", description: "Receive money from over 190 countries" },
+    { label: "Global Accounts", href: "/products/global-accounts", description: "Multi-currency accounts easily accessible" },
+    { label: "Invoices", href: "/products/invoices", description: "Smart invoicing for professionals" },
+    { label: "US Stocks", href: "/products/us-stocks", description: "Buy U.S. stocks on Raenest with ease" },
+    { label: "Upwork", href: "/products/upwork", description: "Upwork earnings to Raenest in under one hour" },
+    { label: "Stablecoins", href: "/products/stablecoins", description: "Receive USDC and USDT on Raenest." },
   ],
   business: [
     { label: "Make Payments", href: "/business/make-payments", description: "Pay vendors and teams around the world." },
@@ -34,9 +34,9 @@ const productItems: Record<AccountType, DropdownLink[]> = {
 
 const earnItems: Record<AccountType, DropdownLink[]> = {
   personal: [
-    { label: "Referral", href: "/referral", description: "Share Raenest and Earn." },
-    { label: "Creator Club", href: "/creator-club", description: "Get paid to promote Raenest" },
-    { label: "Rewards", href: "/rewards", description: "Earn while you spend" },
+    { label: "Referral", href: "/earn/referral", description: "Share Raenest and Earn." },
+    { label: "Creator Club", href: "/earn/creator-club", description: "Get paid to promote Raenest" },
+    { label: "Rewards", href: "/earn/rewards", description: "Earn while you spend" },
   ],
   business: [
     { label: "Referral", href: "/business/referral", description: "Invite other businesses and earn rewards." },
@@ -204,14 +204,14 @@ function Dropdown({ label, items, isMobile = false, onNavigate }: DropdownProps)
   if (isMobile) {
     return (
       <div className="border-b border-gray-100 last:border-0">
-        <Link
-        href=""
+        <button
+          type="button"
           onClick={() => setOpen(!open)}
           className="flex items-center justify-between w-full py-3 font-semibold text-[14px] text-black hover:text-[#44474e] transition-colors"
         >
           {label}
           <ChevronIcon open={open} />
-        </Link>
+        </button>
 
         <div
           className="overflow-hidden transition-all duration-300 ease-in-out"
@@ -347,7 +347,7 @@ export default function Navbar() {
 
             <div className="hidden md:flex items-center gap-1 bg-gray-50 p-1 rounded-full text-[13px] font-semibold">
               <Link
-              href="/personal"
+                href="/personal"
                 onClick={() => setActiveTab("personal")}
                 className={`px-4 py-1.5 rounded-full transition-colors cursor-pointer ${
                   activeTab === "personal"
@@ -358,7 +358,7 @@ export default function Navbar() {
                 Personal
               </Link>
               <Link
-              href="/business"
+                href="/business"
                 onClick={() => setActiveTab("business")}
                 className={`px-4 py-1.5 rounded-full transition-colors cursor-pointer ${
                   activeTab === "business"
@@ -371,43 +371,41 @@ export default function Navbar() {
             </div>
           </div>
 
-          
-            {/* Desktop links — hidden below lg */}
-            <div className="hidden lg:flex items-center gap-6 xl:gap-7 font-semibold text-[14px]">
-              <Dropdown label="Products" items={productItems[activeTab]} />
-              <Dropdown label="Earn" items={earnItems[activeTab]} />
-              <Link href="/news-&-blog" className="cursor-pointer hover:text-[#44474e] text-black transition-colors">
-                News & Blog
-              </Link>
-            </div>
+          {/* Desktop links — hidden below lg */}
+          <div className="hidden lg:flex items-center gap-6 xl:gap-7 font-semibold text-[14px]">
+            <Dropdown label="Products" items={productItems[activeTab]} />
+            <Dropdown label="Earn" items={earnItems[activeTab]} />
+            <Link href="/news-&-blog" className="cursor-pointer hover:text-[#44474e] text-black transition-colors">
+              News & Blog
+            </Link>
+          </div>
 
-            {/* Desktop auth actions */}
-            <div className="hidden lg:flex items-center gap-2 ml-4 xl:ml-7">
-              <Link
-                href="/login"
-                className="py-2 px-4 border border-blue-900 text-blue-900 rounded-2xl text-[13px] font-semibold hover:bg-blue-50 transition-colors"
-              >
-                Login
-              </Link>
-              <Link
-                href="/register"
-                className="py-2 px-4 bg-blue-900 text-white rounded-2xl text-[13px] font-semibold transition-colors active:scale-95"
-              >
-                Create an account
-              </Link>
-            </div>
-          
+          {/* Desktop auth actions */}
+          <div className="hidden lg:flex items-center gap-2 ml-4 xl:ml-7">
+            <Link
+              href="/login"
+              className="py-2 px-4 border border-blue-900 text-blue-900 rounded-2xl text-[13px] font-semibold hover:bg-blue-50 transition-colors"
+            >
+              Login
+            </Link>
+            <Link
+              href="/register"
+              className="py-2 px-4 bg-blue-900 text-white rounded-2xl text-[13px] font-semibold transition-colors active:scale-95"
+            >
+              Create an account
+            </Link>
+          </div>
 
           {/* Hamburger button — visible below lg */}
-          <Link
-          href="/menu"
+          <button
+            type="button"
             onClick={() => setMobileOpen((prev) => !prev)}
             className="lg:hidden p-2 rounded-lg text-black hover:bg-blue-50 active:bg-blue-100 transition-colors"
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileOpen}
           >
             <HamburgerIcon open={mobileOpen} />
-          </Link>
+          </button>
         </div>
       </div>
 
@@ -420,7 +418,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex flex-col">
           <div className="flex items-center gap-1 bg-gray-50 p-1 rounded-full text-[13px] font-semibold w-fit my-2">
             <Link
-            href="/personal"
+              href="/personal"
               onClick={() => setActiveTab("personal")}
               className={`px-4 py-1.5 rounded-full cursor-pointer ${
                 activeTab === "personal" ? "bg-black text-white shadow-sm" : "text-gray-500"
@@ -429,7 +427,7 @@ export default function Navbar() {
               Personal
             </Link>
             <Link
-            href="/business"
+              href="/business"
               onClick={() => setActiveTab("business")}
               className={`px-4 py-1.5 rounded-full cursor-pointer ${
                 activeTab === "business" ? "bg-black text-white shadow-sm" : "text-black"

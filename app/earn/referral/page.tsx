@@ -157,10 +157,11 @@ function FAQItem({
   return (
     <div className="border-b border-neutral-200">
       <button
-        onClick={onToggle}
-        aria-expanded={isOpen}
-        className="flex w-full items-center justify-between gap-6 py-6 text-left"
-      >
+       type="button"
+      onClick={onToggle}
+      aria-expanded={isOpen}
+      className="flex w-full items-center justify-between gap-6 py-6 text-left"
+>
         <span
           className={`text-base sm:text-lg font-semibold transition-colors ${
             isOpen ? "text-neutral-950" : "text-neutral-800"

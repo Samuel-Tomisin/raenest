@@ -4,8 +4,6 @@ import Link from "next/link";
 import Footer from "@/component/footer";
 import { useState, type ReactNode } from "react";
 import {
-  Menu,
-  X,
   ChevronDown,
   ArrowRight,
   ArrowLeft,
@@ -284,61 +282,6 @@ export default function BusinessHomePage() {
         </div>
         <Navbar />
 
-        {/* Transparent overlay navbar */}
-        {/* <div className="relative z-20 px-5 pt-6">
-          <div className="mx-auto flex max-w-6xl items-center justify-between">
-            <div className="flex items-center gap-4 lg:gap-10">
-              <Link href="/" className="flex items-center gap-2 text-white">
-                <span className="text-lg font-bold">raenest</span>
-              </Link>
-
-              <div className="hidden items-center gap-1 rounded-full bg-white p-1 text-sm font-semibold md:flex">
-                <Link href="/" className="rounded-full px-4 py-1.5 text-black">
-                  Personal
-                </Link>
-                <Link href="/business/home" className="rounded-full bg-[#F2F0FF] px-4 py-1.5 text-black">
-                  Business
-                </Link>
-              </div>
-            </div>
-
-            <nav className="hidden items-center gap-8 text-sm font-semibold text-white lg:flex">
-              <button className="flex items-center gap-1 hover:text-white/80">
-                Products <ChevronDown size={14} />
-              </button>
-              <button className="flex items-center gap-1 hover:text-white/80">
-                Earn <ChevronDown size={14} />
-              </button>
-              <Link href="/blog" className="hover:text-white/80">
-                News &amp; Blog
-              </Link>
-            </nav>
-
-            <div className="hidden items-center gap-3 lg:flex">
-              <Link
-                href="/login"
-                className="rounded-2xl border border-white px-4 py-2 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
-              >
-                Login
-              </Link>
-              <Link
-                href="/register"
-                className="rounded-2xl bg-white px-4 py-2 text-sm font-semibold text-[#160F3D] transition-transform active:scale-95"
-              >
-                Create an account
-              </Link>
-            </div>
-
-            <button
-              onClick={() => setMobileOpen((p) => !p)}
-              className="text-white lg:hidden"
-              aria-label="Toggle menu"
-            >
-              {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
-        </div> */}
-
         {/* Hero content */}
         <div className="relative z-10 px-5 pb-24 pt-16 sm:pt-24">
           <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
@@ -522,8 +465,8 @@ export default function BusinessHomePage() {
           </div>
 
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
-            <img src="/leadersat" alt="" />
-            <img src="/leadersat2" alt="" />
+            <img src="/leadersat.png" alt="" />
+            <img src="/leadersat2.png" alt="" />
             {partnerLogos.map((image, i) => (
               <div key={`${image}-${i}`} className="flex h-20 items-center justify-center rounded-2xl bg-white px-4 shadow-sm">
                 <span className="text-sm font-bold text-[#101828]">{image}</span>

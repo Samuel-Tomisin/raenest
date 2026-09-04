@@ -1,6 +1,7 @@
 "use client";
 
-import { JSX, useState } from "react";
+import { useId, useState } from "react";
+import type { JSX } from "react";
 import { Play } from "lucide-react";
 
 /**
@@ -10,13 +11,15 @@ import { Play } from "lucide-react";
 type CountryCode = "gh" | "ng" | "ke";
 
 function FlagBadge({ country }: { country: CountryCode }) {
+  const uid = useId();
+
   const flags: Record<CountryCode, JSX.Element> = {
     gh: (
       <svg viewBox="0 0 24 24" className="h-6 w-6 rounded-full" aria-label="Ghana">
-        <clipPath id="gh-clip">
+        <clipPath id={`gh-clip-${uid}`}>
           <circle cx="12" cy="12" r="12" />
         </clipPath>
-        <g clipPath="url(#gh-clip)">
+        <g clipPath={`url(#gh-clip-${uid})`}>
           <rect width="24" height="8" y="0" fill="#CE1126" />
           <rect width="24" height="8" y="8" fill="#FCD116" />
           <rect width="24" height="8" y="16" fill="#006B3F" />
@@ -26,10 +29,10 @@ function FlagBadge({ country }: { country: CountryCode }) {
     ),
     ng: (
       <svg viewBox="0 0 24 24" className="h-6 w-6 rounded-full" aria-label="Nigeria">
-        <clipPath id="ng-clip">
+        <clipPath id={`ng-clip-${uid}`}>
           <circle cx="12" cy="12" r="12" />
         </clipPath>
-        <g clipPath="url(#ng-clip)">
+        <g clipPath={`url(#ng-clip-${uid})`}>
           <rect width="8" height="24" x="0" fill="#008751" />
           <rect width="8" height="24" x="8" fill="#FFFFFF" />
           <rect width="8" height="24" x="16" fill="#008751" />
@@ -38,10 +41,10 @@ function FlagBadge({ country }: { country: CountryCode }) {
     ),
     ke: (
       <svg viewBox="0 0 24 24" className="h-6 w-6 rounded-full" aria-label="Kenya">
-        <clipPath id="ke-clip">
+        <clipPath id={`ke-clip-${uid}`}>
           <circle cx="12" cy="12" r="12" />
         </clipPath>
-        <g clipPath="url(#ke-clip)">
+        <g clipPath={`url(#ke-clip-${uid})`}>
           <rect width="24" height="8" y="0" fill="#000000" />
           <rect width="24" height="8" y="8" fill="#FFFFFF" />
           <rect width="24" height="8" y="16" fill="#BB0000" />
