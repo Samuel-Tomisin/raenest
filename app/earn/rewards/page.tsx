@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Apple, PlayCircle, Plus, ArrowLeftRight, Landmark, ShieldCheck } from "lucide-react";
+import Footer from "@/component/footer";
+import Navbar from "@/component/navbar";
 
 /* ------------------------------------------------------------------ */
 /*  Section 1: Hero                                                    */
@@ -306,10 +308,12 @@ function RewardsFAQSection() {
 export default function RewardsPage() {
   return (
     <main>
+      <Navbar/>
       <RewardsHero />
       <EligibilityCriteria />
       <HowToEnjoyRewards />
       <RewardsFAQSection />
+      <Footer/>
     </main>
   );
 }

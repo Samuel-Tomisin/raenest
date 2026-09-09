@@ -54,7 +54,7 @@ function CurrencyPicker({
   );
 }
 
-export default function SendMoneyHero() {
+export default function Sendmoneyhero() {
   const [sendCurrency, setSendCurrency] = useState<CurrencyCode>("EUR");
   const [receiveCurrency, setReceiveCurrency] = useState<CurrencyCode>("GBP");
   const [amount, setAmount] = useState("1000");
@@ -75,7 +75,7 @@ export default function SendMoneyHero() {
       <div className="relative z-10 mx-auto grid max-w-7xl gap-14 lg:grid-cols-2 lg:items-center lg:gap-10">
         {/* Left: copy */}
         <div className="flex flex-col gap-6">
-          <p className="text-sm font-medium text-neutral-400">Send money</p>
+          <p className="text-sm sm:text-2xl font-medium text-neutral-400">Send money</p>
 
           <h1 className="text-5xl font-semibold leading-[1.05] text-neutral-950 sm:text-6xl lg:text-[64px]">
             Make fast international transfers
@@ -87,19 +87,20 @@ export default function SendMoneyHero() {
           </p>
 
           <div className="flex items-center gap-2 pt-2">
-            <button
+            <a
+              href="/download-app"
               type="button"
-              className="flex items-center gap-2 rounded-full bg-[#EDE9FE] px-5 py-3 text-sm font-semibold text-neutral-900 transition-colors hover:bg-[#E0D9FC]"
+              className="flex items-center gap-2 rounded-2xl bg-[#CAC5F3] px-5 py-2 text-sm font-semibold text-neutral-900 transition-colors "
             >
-              <Apple className="h-4 w-4" />
-              <PlayCircle className="h-4 w-4" />
+              <img src="/apple-you.svg" alt=""  className="w-8 h-8 grayscale hover:text-black"/>
               Download app
-            </button>
+            </a>
           </div>
         </div>
 
         {/* Right: send money calculator card */}
-        <div className="relative mx-auto w-full max-w-md">
+        <div className="bg-[url(/sendhero.webp)]  bg-center rounded-3xl p-6" >
+        <div className="relative mx-auto w-full max-w-md ">
           <div className="flex flex-col gap-4 rounded-3xl">
             <div className="rounded-2xl border border-neutral-100 bg-white p-5 shadow-[0_20px_60px_-15px_rgba(84,51,201,0.25)]">
               <p className="text-sm text-neutral-500">How much do you want to send?</p>
@@ -160,11 +161,12 @@ export default function SendMoneyHero() {
 
             <button
               type="button"
-              className="w-full rounded-2xl bg-[#5433C9] py-4 text-base font-semibold text-white transition-colors hover:bg-[#4527ad]"
+              className="w-full rounded-2xl bg-primary py-4 text-base font-semibold cursor-pointer text-white transition-colors"
             >
               Send money now
             </button>
           </div>
+        </div>
         </div>
       </div>
     </section>

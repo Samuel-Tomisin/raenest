@@ -22,7 +22,7 @@ const SECURITY_POINTS = [
 
 export default function Securitysection2() {
   return (
-    <section className="bg-[#40339E] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+    <section className="bg-primary px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
       <div className="mx-auto max-w-7xl text-center">
         <h2 className="text-3xl font-bold text-white sm:text-4xl">
           Security you can rely on

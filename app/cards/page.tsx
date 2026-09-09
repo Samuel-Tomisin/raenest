@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Apple, PlayCircle, Users, Plus, Play } from "lucide-react";
 import Footer from "@/component/footer";
 import Navbar from "@/component/navbar";
+import Download from "@/component/download";
 
 /* ------------------------------------------------------------------ */
 /*  Shared: flag badges (SVG, no external flag-icon package needed)   */
@@ -80,18 +81,11 @@ function CardsHero() {
           <div className="flex flex-wrap items-center gap-3 pt-2">
             <Link
               href="/register"
-              className="rounded-2xl bg-[#5433C9] px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-[#4527ad]"
+              className="rounded-2xl bg-primary px-6 py-3.5 text-sm font-semibold text-white transition-colors]"
             >
               Request a card
             </Link>
-            <button
-              type="button"
-              className="flex items-center gap-2 rounded-full bg-[#EDE9FE] px-5 py-3.5 text-sm font-semibold text-neutral-900 transition-colors hover:bg-[#E0D9FC]"
-            >
-              <Apple className="h-4 w-4" />
-              <PlayCircle className="h-4 w-4" />
-              Download app
-            </button>
+            <Download/>
           </div>
         </div>
 

@@ -37,7 +37,7 @@ function FlagBadge({
 
 function MockupCard({ children }: { children: React.ReactNode }) {
   return (
-    <div className="rounded-3xl border-4 border-[#5433C9] bg-white p-5 shadow-sm">
+    <div className="rounded-3xl border-25 border-primary bg-white p-5 shadow-sm">
       {children}
     </div>
   );
@@ -111,7 +111,7 @@ function BalanceMockup() {
       <div className="mt-5 grid grid-cols-4 gap-2">
         {actions.map(({ icon: Icon, label }) => (
           <div key={label} className="flex flex-col items-center gap-1.5">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#EDE9FE] text-[#5433C9]">
+            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#EDE9FE] text-primary">
               <Icon className="h-4 w-4" />
             </span>
             <span className="text-center text-[11px] text-neutral-500">{label}</span>
@@ -150,7 +150,7 @@ function ConfirmationMockup() {
   );
 }
 
-export default function FirstTransferSteps() {
+export default function Firsttransfersteps() {
   return (
     <section className="bg-[#F6F5FB] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
       <div className="mx-auto max-w-7xl">
@@ -174,11 +174,11 @@ export default function FirstTransferSteps() {
           <ConfirmationMockup />
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-8">
+        <div className="mt-7 grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-8 text-center">
           {STEPS.map((step) => (
             <div key={step.number} className="text-center sm:text-left">
-              <h3 className="text-lg font-semibold text-[#5433C9]">{step.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-neutral-600">
+              <h3 className="text-lg text-center sm:text-2xl font-semibold text-primary">{step.title}</h3>
+              <p className="mt-2 text-sm sm:text-[18px] text-center leading-relaxed text-neutral-600">
                 {step.description}
               </p>
             </div>

@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Apple, PlayCircle, Plus } from "lucide-react";
+import Navbar from "@/component/navbar";
+import Footer from "@/component/footer";
 
 /* ------------------------------------------------------------------ */
 /*  Section 1: Hero                                                    */
@@ -13,7 +15,7 @@ function ReferralHero() {
     <section className="relative overflow-hidden bg-white px-6 pt-14 pb-16 sm:px-10 lg:px-16 lg:pt-20">
       <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-2 lg:items-center lg:gap-10">
         <div className="flex flex-col gap-6">
-          <p className="text-sm font-medium text-neutral-400">Referrals</p>
+          <p className="text-sm font-medium text-neutral-400 sm:text-2xl">Referrals</p>
 
           <h1 className="text-5xl font-semibold leading-[1.05] text-neutral-950 sm:text-6xl lg:text-[64px]">
             Share Raenest, Earn $5
@@ -53,7 +55,7 @@ function ReferralHero() {
 
         <div className="relative mx-auto w-full max-w-lg">
           {/* Drop your referral hero photo in here */}
-          <div className="aspect-[4/3] w-full rounded-[32px] bg-neutral-100" />
+          <img src="/homehero.webp" alt="" />
         </div>
       </div>
     </section>
@@ -70,18 +72,21 @@ const STEPS = [
     title: "Get your link",
     description:
       "Log in to the Raenest app, tap the reward button in the top right of the dashboard to copy your referral link.",
+    imageSrc: "/howitworks1.webp",
   },
   {
     step: "Step 2",
     title: "Share your link",
     description:
       "Share your code. Get up to $4 when your friends use your code in line with the the referral requirements listed below.",
+    imageSrc: "/howitworks2.webp",
   },
   {
     step: "Step 3",
     title: "Get paid",
     description:
       "Go to your account, tap Rewards, then Claim Reward to send it to your USD wallet. Your friend also gets $2.",
+    imageSrc: "/howitworks3.webp",
   },
 ];
 
@@ -93,8 +98,9 @@ function ReferralHowItWorks() {
           How it works
         </h2>
 
-        <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-3">
-          {STEPS.map(({ step, title, description }) => (
+        <div className="mt-12 grid grid-col-1 gap-8 sm:grid-cols-3  ">
+          <div className="bg-white rounded-3xl p-6 sm:p-8">
+          {STEPS.map(({ step, title, description, imageSrc }) => (
             <div key={step} className="flex flex-col">
               <p className="text-xs font-medium text-neutral-500">{step}</p>
               <h3 className="mt-1 text-lg font-bold text-[#5433C9]">{title}</h3>
@@ -102,10 +108,14 @@ function ReferralHowItWorks() {
                 {description}
               </p>
               {/* Drop your step photo in here */}
-              <div className="mt-6 aspect-[4/3] w-full rounded-[80px] rounded-tr-none bg-neutral-200" />
+              {/* <div className="mt-6 aspect-[4/3] w-full rounded-[80px] rounded-tr-none bg-neutral-200" /> */}
+              <img src={imageSrc} alt="" className="mt-6 w-full rounded-[80px] rounded-tr-none" />
             </div>
           ))}
         </div>
+        </div>
+
+        
       </div>
     </section>
   );
@@ -242,9 +252,11 @@ function ReferralFAQSection() {
 export default function Referral() {
   return (
     <main>
+      <Navbar />
       <ReferralHero />
       <ReferralHowItWorks />
       <ReferralFAQSection />
+      <Footer />
     </main>
   );
 }

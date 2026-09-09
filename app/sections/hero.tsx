@@ -156,7 +156,7 @@ function RecentTransactionsCard() {
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[#5433C9] px-6 py-14 sm:px-10 sm:py-16 lg:px-16 lg:py-20">
+    <section className="relative overflow-hidden bg-[#5433C9] px-6 py-5 sm:px-10 sm:py-7 lg:px-16 lg:py-20">
       {/* Soft decorative swoosh behind the photo */}
       <svg
         className="pointer-events-none absolute inset-0 hidden h-full w-full lg:block"

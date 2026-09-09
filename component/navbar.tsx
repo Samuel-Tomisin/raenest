@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import Button2 from "./button-blue";
 // import Button from "../ui/button";
 
 type AccountType = "personal" | "business";
@@ -384,16 +385,11 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-2 ml-4 xl:ml-7">
             <Link
               href="/login"
-              className="py-2 px-4 border border-blue-900 text-blue-900 rounded-2xl text-[13px] font-semibold hover:bg-blue-50 transition-colors"
+              className="py-2 px-4 border border-primary text-primary rounded-2xl text-[13px] font-semibold transition-colors"
             >
               Login
             </Link>
-            <Link
-              href="/register"
-              className="py-2 px-4 bg-blue-900 text-white rounded-2xl text-[13px] font-semibold transition-colors active:scale-95"
-            >
-              Create an account
-            </Link>
+            <Button2 />
           </div>
 
           {/* Hamburger button — visible below lg */}
@@ -470,7 +466,7 @@ export default function Navbar() {
             <Link
               href="/register"
               onClick={() => setMobileOpen(false)}
-              className="py-2.5 px-4 bg-blue-900 text-white rounded-2xl text-[13px] font-semibold text-center"
+              className="py-3 px-4 bg-primary text-white rounded-2xl text-[12px] font-semibold text-center"
             >
               Create an account
             </Link>

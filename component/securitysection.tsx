@@ -18,9 +18,9 @@ const securityFeatures = [
   },
 ];
 
-export default function SecuritySection() {
+export default function Securitysection() {
   return (
-    <section className="bg-[#160F3D] px-5 py-20">
+    <section className="bg-primary px-5 py-20">
       <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
         <div>
           <h2 className="text-3xl font-bold text-white sm:text-4xl">
@@ -38,7 +38,7 @@ export default function SecuritySection() {
               return (
                 <div key={feature.title}>
                   <span className="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white">
-                    <Icon size={20} />
+                    <Icon size={25} />
                   </span>
                   <h3 className="text-sm font-bold text-white">{feature.title}</h3>
                   <p className="mt-1 text-sm text-white/60">{feature.description}</p>

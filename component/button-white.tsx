@@ -1,13 +1,15 @@
 "use client";
 
-import { Link } from "lucide-react";
 
-export default function Button() {
+export default function Button2() {
 return (
   <div>
-    <button className="py-2 px-4 bg-background text-primary rounded-2xl text-center text-[14px] cursor-pointer font-semibold">
-     Create an account
-    </button>
+    <a
+      href="/register"
+      className="rounded-2xl bg-[#FFFFFF] px-6 py-3.5 text-sm font-semibold text-primary transition-colors"
+      >
+      Create an account
+      </a> 
     </div>
 );
 }

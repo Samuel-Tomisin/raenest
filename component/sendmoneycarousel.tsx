@@ -19,7 +19,7 @@ const SLIDES: Slide[] = [
     heading: "Secure and fast transfers",
     description:
       "Send money anytime you need to any destination instantly on Raenest. Enjoy secure global transfers without hidden fees.",
-    image: "/send-money-slide-1.webp",
+    image: "/sendmoneyslider.webp",
   },
   {
     key: "save-fees",
@@ -27,7 +27,7 @@ const SLIDES: Slide[] = [
     heading: "Save on transfer fees",
     description:
       "Whether you're sending money via bank transfers or cards, enjoy the best rates with fees that keep more money in your pocket.",
-    image: "/send-money-slide-2.webp",
+    image: "/sendmoneyslider2.webp",
   },
   {
     key: "home-abroad",
@@ -35,7 +35,7 @@ const SLIDES: Slide[] = [
     heading: "Send money home and abroad",
     description:
       "Whether you're sending to friends and family in Africa, the US, Europe, or the UK, we've got you covered.",
-    image: "/send-money-slide-3.webp",
+    image: "/sendmoneyslider3.webp",
     notification: {
       badge: "$550 sent to Mummy Dearest",
       description: "This is for the movers and the house keeper. I love you mummy.",
