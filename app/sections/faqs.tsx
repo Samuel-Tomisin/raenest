@@ -76,8 +76,8 @@ function FAQItem({ item, isOpen, onToggle }: FAQItemProps) {
         </span>
 
         <span
-          className={`flex h-7 w-7 sm:h-8 sm:w-8 shrink-0 items-center justify-center rounded-full transition-colors duration-300 ${
-            isOpen ? "bg-neutral-300" : "bg-[#4B2E83]"
+          className={`flex h-6 w-6 sm:h-8 sm:w-8 shrink-0 items-center justify-center rounded-full transition-colors duration-300 ${
+            isOpen ? "bg-neutral-300" : "bg-primary"
           }`}
         >
           <Plus
@@ -126,7 +126,7 @@ export default function FAQSection() {
         </div>
 
         {/* Right: accordion list - scroll container only kicks in on desktop */}
-        <div className="lg:max-h-[640px] lg:overflow-y-auto pr-0 lg:pr-6 [scrollbar-width:thin]">
+        <div className="lg:max-h-160 lg:overflow-y-auto pr-0 lg:pr-6 scrollbar-thin">
           {FAQS.map((item, index) => (
             <FAQItem
               key={item.question}
