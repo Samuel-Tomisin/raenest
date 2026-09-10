@@ -156,7 +156,7 @@ function RecentTransactionsCard() {
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[#5433C9] px-6 py-5 sm:px-10 sm:py-7 lg:px-16 lg:py-20">
+    <section className="relative overflow-hidden bg-primary px-6 py-5 sm:px-10 sm:py-7 lg:pl-16 lg:py-1">
       {/* Soft decorative swoosh behind the photo */}
       <svg
         className="pointer-events-none absolute inset-0 hidden h-full w-full lg:block"
@@ -202,7 +202,7 @@ export default function Hero() {
 
         {/* Right: photo + floating transactions card */}
         <div className="relative flex-1">
-          <div className="relative mx-auto aspect-[3/5] w-full max-w-sm overflow-hidden rounded-t-[160px] rounded-b-[2rem] sm:max-w-md lg:max-w-none">
+          <div className="relative mx-auto aspect-[3/5] w-full max-w-sm rounded-t-[160px] rounded-b-[2rem] sm:max-w-md lg:max-w-none">
             {/* Drop your hero photo in here */}
             <img
               src="/girl.png"
