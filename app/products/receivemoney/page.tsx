@@ -5,7 +5,6 @@ import Link from "next/link";
 import { Apple, PlayCircle, Users, Plus, ShieldCheck, Lock, ShieldAlert, } from "lucide-react";
 import Footer from "@/component/footer";
 import Navbar from "@/component/navbar";
-import Button from "@/component/button-white";
 import Button2 from "@/component/button-blue";
 import Download from "@/component/download";
 
@@ -95,7 +94,7 @@ function ReceiveMoneyHero() {
             <img
               src="/receivemoneyhero.webp"
               alt="Person smiling while checking their phone"
-              className="h-[492px] w-full"
+              className="h-123 w-full"
             />
           </div>
         </div>
@@ -175,7 +174,7 @@ function ReceiveFeatureShowcase() {
               key={feature.key}
               type="button"
               onClick={() => setActiveIndex(index)}
-              className={`rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
+              className={`rounded-full px-4 py-2 text-sm font-semibold cursor-pointer transition-colors ${
                 index === activeIndex
                   ? "bg-[#160F3D] text-white"
                   : "bg-white text-neutral-900 hover:bg-neutral-50"
@@ -197,17 +196,20 @@ function ReceiveFeatureShowcase() {
 const RECEIVE_STEPS = [
   {
     number: 1,
+    imagesrc: "/rrr.svg",
     title: "Open the Raenest app",
     description: "Log in to your account.",
   },
   {
     number: 2,
+    imagesrc: "/rrr2.svg",
     title: "Share account number or payment link",
     description:
       "A quick and secure verification process. This is important to help you keep your account safe.",
   },
   {
     number: 3,
+    imagesrc: "/rrr3.svg",
     title: "Fast, Reliable Delivery",
     description: "Check your account to confirm deposit",
   },
@@ -239,6 +241,7 @@ function ReceiveFirstPaymentSteps() {
               <span className="mb-6 flex h-8 w-8 items-center justify-center rounded-full bg-white/15 text-sm font-semibold text-white">
                 {step.number}
               </span>
+              <img src={step.imagesrc} alt="" className="mb-6 h-75 w-full object-contain" />
               <h3 className="text-lg font-semibold text-white">{step.title}</h3>
               <p className="mt-1 text-sm leading-relaxed text-white/75">{step.description}</p>
             </div>

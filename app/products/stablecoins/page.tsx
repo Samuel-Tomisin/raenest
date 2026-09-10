@@ -5,6 +5,8 @@ import Link from "next/link";
 import { Apple, PlayCircle, Users, Plus, ShieldCheck, Lock, ShieldAlert, Play } from "lucide-react";
 import Footer from "@/component/footer";
 import Navbar from "@/component/navbar";
+import Button2 from "@/component/button-blue";
+import Download from "@/component/download";
 
 /* ------------------------------------------------------------------ */
 /*  Shared: flag badges                                               */
@@ -58,12 +60,12 @@ function FlagBadge({ country }: { country: CountryCode }) {
 
 function StablecoinsHero() {
   return (
-    <section className="relative overflow-hidden bg-white px-6 pt-14 pb-16 sm:px-10 lg:px-16 lg:pt-20">
+    <section className="relative overflow-hidden bg-white px-6 pt-14 sm:px-10 lg:px-16 lg:pt-2">
       <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-2 lg:items-center lg:gap-10">
         <div className="flex flex-col gap-6">
-          <p className="text-sm font-medium text-neutral-400">Stablecoins on Raenest</p>
+          <p className="text-sm sm:text-2xl font-semibold text-neutral-400">Stablecoins on Raenest</p>
 
-          <h1 className="text-5xl font-semibold leading-[1.05] text-neutral-950 sm:text-6xl lg:text-[64px]">
+          <h1 className="text-5xl font-normal leading-[1.05] text-neutral-950 sm:text-6xl lg:text-[70px]">
             USDT &amp; USDC. Settled in USD.
           </h1>
 
@@ -72,26 +74,14 @@ function StablecoinsHero() {
           </p>
 
           <div className="flex flex-wrap items-center gap-3 pt-2">
-            <Link
-              href="/register"
-              className="rounded-2xl bg-[#5433C9] px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-[#4527ad]"
-            >
-              Create an account
-            </Link>
-            <button
-              type="button"
-              className="flex items-center gap-2 rounded-full bg-[#EDE9FE] px-5 py-3.5 text-sm font-semibold text-neutral-900 transition-colors hover:bg-[#E0D9FC]"
-            >
-              <Apple className="h-4 w-4" />
-              <PlayCircle className="h-4 w-4" />
-              Download app
-            </button>
+          <Button2/>
+          <Download/>
           </div>
 
           <div className="flex items-center gap-3 pt-2">
             {/* PLACEHOLDER: drop your QR code image here */}
             <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-lg bg-neutral-100 text-[9px] font-medium text-neutral-400">
-              QR
+            <img src="/qrcode.png" alt="" />
             </div>
             <p className="text-xs text-neutral-500">
               Scan the QR code below to download the app
@@ -101,9 +91,9 @@ function StablecoinsHero() {
 
         <div className="relative mx-auto flex w-full max-w-md flex-col items-center">
           {/* PLACEHOLDER: drop your stablecoins hero photo (people + USDT/USDC coin graphics) here */}
-          <div className="relative aspect-square w-full bg-[#EDE9FE]">
+          <div className="relative aspect-square w-full">
             <img
-              src="/stablecoins-hero.jpg"
+              src="/stablecoin.png"
               alt="People smiling, with USDT and USDC coin graphics overlaid"
               className="h-full w-full object-cover"
             />
@@ -133,7 +123,7 @@ const MONEY_FEATURES: MoneyFeature[] = [
     heading: "Use Your Money, Your Way",
     description:
       "Withdraw to local currency, spend globally with your Raenest card, or hold your USD balance—all from one account.",
-    image: "/stablecoins-flexibility.webp",
+    image: "/receivemoney.png",
   },
   {
     key: "certainty",
@@ -141,7 +131,7 @@ const MONEY_FEATURES: MoneyFeature[] = [
     heading: "Guaranteed 1:1 USD Conversion",
     description:
       "Every stablecoin you receive is automatically converted to real USD at a true 1:1 rate. No volatility. No hidden spreads.",
-    image: "/stablecoins-certainty.webp",
+    image: "/receivemoney2.png",
   },
   {
     key: "speed",
@@ -149,7 +139,7 @@ const MONEY_FEATURES: MoneyFeature[] = [
     heading: "Get Paid in Minutes, Not Days",
     description:
       "Receive USDT or USDC from anywhere in the world and access your money almost instantly—no bank delays, no cut-off times.",
-    image: "/stablecoins-speed.webp",
+    image: "/receivemoney3.png",
   },
 ];
 
@@ -158,10 +148,10 @@ function MoneyFeatureShowcase() {
   const active = MONEY_FEATURES[activeIndex];
 
   return (
-    <section className="bg-white px-4 py-12 sm:px-6 lg:px-8">
+    <section className="bg-black px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-6xl">
         <div
-          className="relative h-[420px] overflow-hidden rounded-[32px] bg-neutral-900 bg-cover bg-center bg-no-repeat transition-[background-image] duration-500 sm:h-[480px]"
+          className="relative h-[420px]  rounded-[32px] bg-neutral-900 bg-cover bg-center bg-no-repeat transition-[background-image] duration-500 sm:h-[480px]"
           style={{ backgroundImage: `url('${active.image}')` }}
         >
           <div className="absolute inset-0 bg-black/40" />
@@ -204,17 +194,20 @@ function MoneyFeatureShowcase() {
 const STABLECOIN_STEPS = [
   {
     number: 1,
+    imagesrc: "/aaa.png",
     title: "Open the Raenest app.",
     description: "Log into your account.",
   },
   {
     number: 2,
+    imagesrc: "/moreoption.png",
     title: "Go to Accounts in the app.",
     description:
       "Select 'Create Stablecoin account from the USD drop-down. Fill a short questionnaire.",
   },
   {
     number: 3,
+    imagesrc: "/account.png",
     title: "Once approved.",
     description: "Your USDC and USDT wallet addresses will be created.",
   },
@@ -246,6 +239,7 @@ function ReceivingStablecoinsSteps() {
               <span className="mb-6 flex h-8 w-8 items-center justify-center rounded-full bg-white/15 text-sm font-semibold text-white">
                 {step.number}
               </span>
+              <img src={step.imagesrc} alt="" className="mb-6 h-75 w-full object-contain" />
               <h3 className="text-lg font-semibold text-white">{step.title}</h3>
               <p className="mt-1 text-sm leading-relaxed text-white/75">{step.description}</p>
             </div>
@@ -274,7 +268,6 @@ function SecuritySection() {
         <p className="mx-auto mt-4 max-w-xl text-sm text-white/80 sm:text-base">
           Spend, withdraw, or save anytime, knowing your money is protected at every step.
         </p>
-        <img src="/getcard.png" alt="" />
 
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
           {SECURITY_POINTS.map(({ icon: Icon, title, description }) => (
