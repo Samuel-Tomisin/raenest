@@ -5,6 +5,9 @@ import Link from "next/link";
 import { Apple, PlayCircle, Users, Plus, ShieldCheck, Lock, ShieldAlert, Play } from "lucide-react";
 import Footer from "@/component/footer";
 import Navbar from "@/component/navbar";
+import Button2 from "@/component/button-blue";
+import Download from "@/component/download";
+import { title } from "process";
 
 /* ------------------------------------------------------------------ */
 /*  Shared: flag badges                                               */
@@ -58,40 +61,28 @@ function FlagBadge({ country }: { country: CountryCode }) {
 
 function UpworkHero() {
   return (
-    <section className="relative overflow-hidden bg-white px-6 pt-14 pb-16 sm:px-10 lg:px-16 lg:pt-20">
+    <section className="relative bg-white px-6 pt-14 sm:px-10 lg:px-16 lg:pt-20">
       <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-2 lg:items-center lg:gap-10">
         <div className="flex flex-col gap-6">
-          <p className="text-sm font-medium text-neutral-400">Raenest FastTrack with Upwork</p>
+          <p className="text-sm sm:text-2xl font-bold text-neutral-400">Raenest FastTrack with Upwork</p>
 
-          <h1 className="text-5xl font-semibold leading-[1.05] text-neutral-950 sm:text-6xl lg:text-[64px]">
-            Upwork Payments in Under 1 Hour
+          <h1 className="text-5xl font-normal leading-[1.05] text-neutral-950 sm:text-6xl lg:text-[64px]">
+            Upwork <br /> Payments in <br /> Under 1 Hour
           </h1>
 
-          <p className="max-w-md text-base text-neutral-600 sm:text-lg">
+          <p className="max-w-md text-base  text-black sm:text-lg">
             Raenest FastTrack helps you receive your Upwork earnings in under 1 hour—trusted by thousands of freelancers who want faster access to their money.
           </p>
 
           <div className="flex flex-wrap items-center gap-3 pt-2">
-            <Link
-              href="/register"
-              className="rounded-2xl bg-[#5433C9] px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-[#4527ad]"
-            >
-              Create an account
-            </Link>
-            <button
-              type="button"
-              className="flex items-center gap-2 rounded-full bg-[#EDE9FE] px-5 py-3.5 text-sm font-semibold text-neutral-900 transition-colors hover:bg-[#E0D9FC]"
-            >
-              <Apple className="h-4 w-4" />
-              <PlayCircle className="h-4 w-4" />
-              Download app
-            </button>
+            <Button2 />
+            <Download />
           </div>
 
           <div className="flex items-center gap-3 pt-2">
             {/* PLACEHOLDER: drop your QR code image here */}
             <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-lg bg-neutral-100 text-[9px] font-medium text-neutral-400">
-              QR
+              <img src="/qrcode.png" alt="" />
             </div>
             <p className="text-xs text-neutral-500">
               Scan the QR code below to download the app
@@ -101,9 +92,9 @@ function UpworkHero() {
 
         <div className="relative mx-auto flex w-full max-w-md flex-col items-center">
           {/* PLACEHOLDER: drop your Upwork hero photo here (woman on phone + Upwork logo graphic) */}
-          <div className="aspect-square w-full overflow-hidden rounded-[32px] bg-[#EDE9FE]">
+          <div className="aspect-square w-full">
             <img
-              src="/upwork-hero.jpg"
+              src="/upworkhero.png"
               alt="Person checking phone with Upwork logo graphic"
               className="h-full w-full object-cover"
             />
@@ -134,7 +125,7 @@ const UPWORK_FEATURES: UpworkFeature[] = [
     heading: "Get Paid in Under 1 Hour",
     description:
       "Your Upwork earnings don't have to wait. With Raenest FastTrack, payments land in your account in under 1 hour—so you stay in control of your cash flow.",
-    image: "/upwork-speed.webp",
+    image: "/receivemoney.png",
   },
   {
     key: "trust",
@@ -142,7 +133,7 @@ const UPWORK_FEATURES: UpworkFeature[] = [
     heading: "Trusted by Thousands of Freelancers",
     description:
       "From designers to developers, thousands of freelancers already use Raenest FastTrack to access their Upwork earnings faster and without stress.",
-    image: "/upwork-trust.webp",
+    image: "/receivemoney2.png",
   },
   {
     key: "flexibility",
@@ -150,7 +141,7 @@ const UPWORK_FEATURES: UpworkFeature[] = [
     heading: "Built for Global Earners",
     description:
       "Receive Upwork payments into your USD account, spend globally with your Raenest USD card, or withdraw locally—seamless from start to finish.",
-    image: "/upwork-flexibility.webp",
+    image: "/receivemoney3.png",
   },
 ];
 
@@ -159,10 +150,10 @@ function UpworkFeatureShowcase() {
   const active = UPWORK_FEATURES[activeIndex];
 
   return (
-    <section className="bg-white px-4 py-12 sm:px-6 lg:px-8">
+    <section className="bg-black pb-10 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-6xl">
         <div
-          className="relative h-[420px] overflow-hidden rounded-[32px] bg-neutral-900 bg-cover bg-center bg-no-repeat transition-[background-image] duration-500 sm:h-[480px]"
+          className="relative h-[420px] bg-neutral-900 bg-cover bg-center bg-no-repeat transition-[background-image] duration-500 sm:h-[480px]"
           style={{ backgroundImage: `url('${active.image}')` }}
         >
           <div className="absolute inset-0 bg-black/40" />
@@ -205,16 +196,19 @@ function UpworkFeatureShowcase() {
 const CONNECT_STEPS = [
   {
     number: 1,
+    imagesrc:"/upwork1.png",
     title: "Log into the Raenest app",
     description: "Link your accounts in the Raenest app.",
   },
   {
     number: 2,
+    imagesrc:"/upwork2.png",
     title: "Select Connected Apps.",
     description: "Go to the Connected Apps section in your Raenest app.",
   },
   {
     number: 3,
+    imagesrc:"/upwork3.png",
     title: "Tap Upwork and follow the prompts",
     description:
       "Choose Upwork, sign in, and authorise the connection to complete the setup.",
@@ -242,12 +236,13 @@ function ConnectingUpworkSteps() {
           {CONNECT_STEPS.map((step) => (
             <div
               key={step.number}
-              className="relative flex flex-col overflow-hidden rounded-3xl bg-gradient-to-b from-[#5433C9] to-[#3D2299] px-8 py-10"
+              className="relative flex flex-col overflow-hidden rounded-3xl bg-gradient-to-b from-primary to-[#3D2299] px-8 py-10"
             >
               <span className="mb-6 flex h-8 w-8 items-center justify-center rounded-full bg-white/15 text-sm font-semibold text-white">
                 {step.number}
               </span>
-              <h3 className="text-lg font-semibold text-white">{step.title}</h3>
+              <img src={step.imagesrc} alt="" className="mb-6 h-75 w-full object-contain" />
+              <h3 className="text-lg font-semibold text-white ">{step.title}</h3>
               <p className="mt-1 text-sm leading-relaxed text-white/75">{step.description}</p>
             </div>
           ))}
@@ -270,7 +265,7 @@ const TRUST_POINTS = [
 
 function TrustSection() {
   return (
-    <section className="bg-[#40339E] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+    <section className="bg-primary px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
           <div>
@@ -278,6 +273,7 @@ function TrustSection() {
             <p className="mt-4 max-w-lg text-sm text-white/80 sm:text-base">
               Upwork FastTrack moves your earnings to your Raenest account in under one hour, combining speed with bank-grade security. Get paid quickly, stay in control, and know your money is protected every step of the way.
             </p>
+            <img src="/getcard.png" alt="" className="mt-6 w-full rounded-2xl object-cover" />
           </div>
 
           <div className="flex flex-col gap-8">
@@ -517,8 +513,8 @@ function FAQItem({
           {item.question}
         </span>
         <span
-          className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-colors duration-300 ${
-            isOpen ? "bg-neutral-300" : "bg-[#4B2E83]"
+          className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full transition-colors duration-300 ${
+            isOpen ? "bg-neutral-300" : "bg-primary"
           }`}
         >
           <Plus
@@ -552,12 +548,10 @@ function FAQSection() {
 
   return (
     <section className="w-full bg-white px-6 py-16 sm:py-24 lg:px-12">
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 lg:grid-cols-[minmax(0,320px)_1fr] lg:gap-16">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-[minmax(0,320px)_1fr] lg:gap-16">
         <div className="lg:sticky lg:top-24 lg:self-start">
-          <h2 className="text-4xl sm:text-5xl font-bold leading-[1.1] text-neutral-950">
-            Frequently
-            <br />
-            asked
+          <h2 className="text-2xl sm:text-3xl font-bold leading-[1.1] text-neutral-950">
+            Frequently asked
             <br />
             questions
           </h2>
@@ -566,7 +560,7 @@ function FAQSection() {
           </p>
         </div>
 
-        <div className="max-h-[640px] overflow-y-auto pr-2 [scrollbar-width:thin] lg:pr-6">
+        <div className="max-h-[580px] overflow-y-auto pr-2 [scrollbar-width:thin] ">
           {UPWORK_FAQS.map((item, index) => (
             <FAQItem
               key={item.question}

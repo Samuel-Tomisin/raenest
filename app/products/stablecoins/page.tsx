@@ -101,7 +101,7 @@ function StablecoinsHero() {
 
         <div className="relative mx-auto flex w-full max-w-md flex-col items-center">
           {/* PLACEHOLDER: drop your stablecoins hero photo (people + USDT/USDC coin graphics) here */}
-          <div className="relative aspect-square w-full overflow-hidden rounded-[32px] bg-[#EDE9FE]">
+          <div className="relative aspect-square w-full bg-[#EDE9FE]">
             <img
               src="/stablecoins-hero.jpg"
               alt="People smiling, with USDT and USDC coin graphics overlaid"
@@ -241,7 +241,7 @@ function ReceivingStablecoinsSteps() {
           {STABLECOIN_STEPS.map((step) => (
             <div
               key={step.number}
-              className="relative flex flex-col overflow-hidden rounded-3xl bg-gradient-to-b from-[#5433C9] to-[#3D2299] px-8 py-10"
+              className="relative flex flex-col overflow-hidden rounded-3xl bg-gradient-to-b from-primary to-[#3D2299] px-8 py-10"
             >
               <span className="mb-6 flex h-8 w-8 items-center justify-center rounded-full bg-white/15 text-sm font-semibold text-white">
                 {step.number}
@@ -268,12 +268,13 @@ const SECURITY_POINTS = [
 
 function SecuritySection() {
   return (
-    <section className="bg-[#40339E] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+    <section className="bg-primary px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
       <div className="mx-auto max-w-7xl text-center">
         <h2 className="text-3xl font-bold text-white sm:text-4xl">Security you can rely on</h2>
         <p className="mx-auto mt-4 max-w-xl text-sm text-white/80 sm:text-base">
           Spend, withdraw, or save anytime, knowing your money is protected at every step.
         </p>
+        <img src="/getcard.png" alt="" />
 
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
           {SECURITY_POINTS.map(({ icon: Icon, title, description }) => (
@@ -513,8 +514,8 @@ function FAQItem({
           {item.question}
         </span>
         <span
-          className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-colors duration-300 ${
-            isOpen ? "bg-neutral-300" : "bg-[#4B2E83]"
+          className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full transition-colors duration-300 ${
+            isOpen ? "bg-neutral-300" : "bg-primary"
           }`}
         >
           <Plus
@@ -550,10 +551,8 @@ function FAQSection() {
     <section className="w-full bg-white px-6 py-16 sm:py-24 lg:px-12">
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 lg:grid-cols-[minmax(0,320px)_1fr] lg:gap-16">
         <div className="lg:sticky lg:top-24 lg:self-start">
-          <h2 className="text-4xl sm:text-5xl font-bold leading-[1.1] text-neutral-950">
-            Frequently
-            <br />
-            asked
+          <h2 className="text-2xl sm:text-3xl font-bold leading-[1.1] text-neutral-950">
+            Frequently asked
             <br />
             questions
           </h2>
@@ -562,7 +561,7 @@ function FAQSection() {
           </p>
         </div>
 
-        <div className="max-h-[640px] overflow-y-auto pr-2 [scrollbar-width:thin] lg:pr-6">
+        <div className="max-h-[640px] overflow-y-auto pr-2 [scrollbar-width:thin] ">
           {STABLECOIN_FAQS.map((item, index) => (
             <FAQItem
               key={item.question}

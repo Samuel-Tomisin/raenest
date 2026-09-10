@@ -2,10 +2,12 @@
 
 import { useState, useId } from "react";
 import Link from "next/link";
-import { Apple, PlayCircle, Users, Plus, ShieldCheck, Lock, ShieldAlert, Download } from "lucide-react";
+import { Apple, PlayCircle, Users, Plus, ShieldCheck, Lock, ShieldAlert, } from "lucide-react";
 import Footer from "@/component/footer";
 import Navbar from "@/component/navbar";
 import Button from "@/component/button-white";
+import Button2 from "@/component/button-blue";
+import Download from "@/component/download";
 
 /* ------------------------------------------------------------------ */
 /*  Shared: flag badges                                               */
@@ -73,20 +75,8 @@ function ReceiveMoneyHero() {
           </p>
 
           <div className="flex flex-wrap items-center gap-3 pt-2">
-            <Link
-              href="/register"
-              className="rounded-2xl bg-primary px-6 py-3.5 text-sm font-semibold text-white transition-colors"
-            >
-              Create an account
-            </Link> 
-            <a
-              href="/download-app"
-              type="button"
-              className="flex items-center gap-2 rounded-2xl bg-[#CAC5F3] px-5 py-2 text-sm font-semibold text-neutral-900 transition-colors "
-            >
-              <img src="/apple-you.svg" alt=""  className="w-8 h-8 grayscale hover:text-black"/>
-              Download app
-            </a>
+           <Button2 />
+           <Download />
           </div>
 
           <div className="flex items-center gap-3 pt-2">
@@ -101,7 +91,7 @@ function ReceiveMoneyHero() {
 
         <div className="relative mx-auto flex w-full max-w-md flex-col items-center">
           {/* Drop your receive-money hero photo in here */}
-          <div className="aspect-square w-full overflow-hidden">
+          <div className="aspect-square w-full ">
             <img
               src="/receivemoneyhero.webp"
               alt="Person smiling while checking their phone"

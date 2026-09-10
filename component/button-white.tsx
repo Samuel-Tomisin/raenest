@@ -1,7 +1,7 @@
 "use client";
 
 
-export default function Button2() {
+export default function Button() {
 return (
   <div>
     <a
@@ -9,7 +9,7 @@ return (
       className="rounded-2xl bg-[#FFFFFF] px-6 py-3.5 text-sm font-semibold text-primary transition-colors"
       >
       Create an account
-      </a> 
+    </a>
     </div>
 );
 }
