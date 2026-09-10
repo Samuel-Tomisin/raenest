@@ -67,7 +67,7 @@ function FlagBadge({ country }: { country: CountryCode }) {
 
 function CardsHero() {
   return (
-    <section className="relative overflow-hidden bg-white px-6 pt-14 pb-20 sm:px-10 lg:px-16 lg:pt-20">
+    <section className="relative overflow-hidden bg-white px-6 pt-14 pb-10 sm:px-10 lg:px-16 lg:pt-4">
       <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-2 lg:items-center lg:gap-10">
         <div className="flex flex-col gap-6">
           <p className="text-sm sm:text-2xl font-bold text-neutral-400">Cards</p>
@@ -81,7 +81,7 @@ function CardsHero() {
           <div className="flex flex-wrap items-center gap-3 pt-2">
             <Link
               href="/register"
-              className="rounded-2xl bg-primary px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-[#4527ad]"
+              className="rounded-2xl bg-primary px-6 py-3.5 text-sm font-semibold text-white transition-colors"
             >
               Request a card
             </Link>
@@ -112,7 +112,7 @@ function CardTravelBanner() {
       <div className="mx-auto max-w-7xl">
         {/* Drop your travel photo (e.g. Arc de Triomphe with card in hand) in here */}
         <img src="/visahand.png" alt="" />
-        <div className="h-[260px] w-full rounded-[32px] bg-gradient-to-br from-[#2b6ff0] to-[#8fb8ff] sm:h-[320px]" />
+        <div className="h-[260px] w-full rounded-[32px] bg-gradient-to-br from-primary to-[#8fb8ff] sm:h-[320px]" />
       </div>
     </section>
   );
@@ -199,7 +199,7 @@ function CardFeaturesCarousel() {
                   onClick={() => setActiveIndex(index)}
                   className={`rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
                     index === activeIndex
-                      ? "bg-[#1D1B4E] text-white"
+                      ? "bg-primary text-white"
                       : "bg-white text-neutral-900 hover:bg-white/90"
                   }`}
                 >
@@ -340,7 +340,7 @@ const SECURITY_POINTS = [
 
 function SecuritySection() {
   return (
-    <section className="bg-[#40339E] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+    <section className="bg-primary px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
       <div className="mx-auto max-w-7xl text-center">
         <h2 className="text-3xl font-bold text-white sm:text-4xl">
           Security you can rely on
@@ -594,7 +594,7 @@ function FAQItem({
         </span>
         <span
           className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-colors duration-300 ${
-            isOpen ? "bg-neutral-300" : "bg-[#4B2E83]"
+            isOpen ? "bg-neutral-300" : "bg-primary"
           }`}
         >
           <Plus

@@ -77,7 +77,7 @@ function FAQItem({ item, isOpen, onToggle }: FAQItemProps) {
 
         <span
           className={`flex h-7 w-7 sm:h-8 sm:w-8 shrink-0 items-center justify-center rounded-full transition-colors duration-300 ${
-            isOpen ? "bg-neutral-300" : "bg-[#4B2E83]"
+            isOpen ? "bg-neutral-300" : "bg-primary"
           }`}
         >
           <Plus

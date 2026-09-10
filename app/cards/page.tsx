@@ -67,7 +67,7 @@ function FlagBadge({ country }: { country: CountryCode }) {
 
 function CardsHero() {
   return (
-    <section className="relative overflow-hidden bg-white px-6 pt-14 pb-20 sm:px-10 lg:px-16 lg:pt-20">
+    <section className="relative overflow-hidden bg-white px-6 pt-14 sm:px-10 lg:px-16 lg:pt-4">
       <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-2 lg:items-center lg:gap-10">
         <div className="flex flex-col gap-6">
           <p className="text-sm sm:text-2xl font-bold text-neutral-400">Cards</p>
@@ -81,11 +81,11 @@ function CardsHero() {
           <div className="flex flex-wrap items-center gap-3 pt-2">
             <Link
               href="/register"
-              className="rounded-2xl bg-primary px-6 py-3.5 text-sm font-semibold text-white transition-colors]"
+              className="rounded-2xl bg-primary px-6 py-3.5 text-sm font-semibold text-white transition-colors"
             >
               Request a card
             </Link>
-            <Download/>
+            <Download />
           </div>
         </div>
 
@@ -112,7 +112,7 @@ function CardTravelBanner() {
       <div className="mx-auto max-w-7xl">
         {/* Drop your travel photo (e.g. Arc de Triomphe with card in hand) in here */}
         <img src="/visahand.png" alt="" />
-        <div className="h-[260px] w-full rounded-[32px] bg-gradient-to-br from-[#2b6ff0] to-[#8fb8ff] sm:h-[320px]" />
+        <div className="h-65 w-full rounded-4xl bg-linear-to-br from-primary to-[#8fb8ff] sm:h-80" />
       </div>
     </section>
   );
@@ -138,7 +138,7 @@ const FEATURE_SLIDES: FeatureSlide[] = [
     heading: "The smarter way to pay",
     description:
       "Simply bring your device near the payment terminal to pay in seconds. Works with Google pay and Apple pay.",
-    image: "/womanphone.webp",
+    image: "/card2.webp",
   },
   {
     key: "easy-funding",
@@ -146,7 +146,7 @@ const FEATURE_SLIDES: FeatureSlide[] = [
     heading: "Access your money anywhere",
     description:
       "Fund with NGN (Naira), USD, GBP, EUR, USDT or USDC at competitive rates in the market.",
-    image: "/cards-slide-funding.webp",
+    image: "/womanphone.webp",
   },
   {
     key: "card-control",
@@ -154,7 +154,7 @@ const FEATURE_SLIDES: FeatureSlide[] = [
     heading: "Cards you fully control",
     description:
       "Set spending limits on a daily, weekly, or monthly basis. Freeze or terminate your cards at any time.",
-    image: "/cards-slide-control.webp",
+    image: "/card.png",
   },
 ];
 
@@ -179,7 +179,7 @@ function CardFeaturesCarousel() {
     <section className="px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div
-          className="relative h-[480px] overflow-hidden bg-neutral-900 bg-cover bg-center bg-no-repeat transition-[background-image] duration-500 sm:h-[520px]"
+          className="relative h-120 overflow-hidden bg-neutral-900 bg-cover bg-center bg-no-repeat transition-[background-image] duration-500 sm:h-[520px]"
           style={{ backgroundImage: `url('${active.image}')` }}
         >
           <img src="/money.webp" alt="" className="w-70 h-35 text-center"/>
@@ -199,7 +199,7 @@ function CardFeaturesCarousel() {
                   onClick={() => setActiveIndex(index)}
                   className={`rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
                     index === activeIndex
-                      ? "bg-[#1D1B4E] text-white"
+                      ? "bg-primary text-white"
                       : "bg-white text-neutral-900 hover:bg-white/90"
                   }`}
                 >
@@ -220,7 +220,7 @@ function CardFeaturesCarousel() {
 
 function FundCardSection() {
   return (
-    <section className="bg-gradient-to-br px-6 py-16 sm:px-10 sm:py-20 lg:px-16">
+    <section className="bg-linear-to-br px-6 py-16 sm:px-10 sm:py-20 lg:px-16">
       <div className="bg-[url('/phonecard2.png')] bg-cover bg-no-repeat bg-center bg-2/3 ">
       <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-2 lg:items-center">
         {/* <div className="flex flex-col gap-6">
@@ -237,7 +237,7 @@ function FundCardSection() {
         <div className="relative mx-auto w-full max-w-sm">
           {/* Drop your card render/phone mockup photo in here */}
           {/* <img src="/phonecard.webp" alt="" /> */}
-          <div className="aspect-[4/5] w-full rounded-[32px]" />
+          <div className="aspect-4/5 w-full rounded-4xl" />
         </div>
       </div>
 
@@ -340,7 +340,7 @@ const SECURITY_POINTS = [
 
 function SecuritySection() {
   return (
-    <section className="bg-[#40339E] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+    <section className="bg-primary px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
       <div className="mx-auto max-w-7xl text-center">
         <h2 className="text-3xl font-bold text-white sm:text-4xl">
           Security you can rely on
@@ -594,7 +594,7 @@ function FAQItem({
         </span>
         <span
           className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-colors duration-300 ${
-            isOpen ? "bg-neutral-300" : "bg-[#4B2E83]"
+            isOpen ? "bg-neutral-300" : "bg-primary"
           }`}
         >
           <Plus
@@ -669,7 +669,7 @@ export default function CardsPage() {
       <CardsHero />
       {/* <CardTravelBanner /> */}
       <CardFeaturesCarousel />
-      <FundCardSection />
+      {/* <FundCardSection /> */}
       <RequestCardSteps />
       <SecuritySection />
       <TestimonialsSection />
