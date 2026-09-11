@@ -149,7 +149,7 @@ function MoneyFeatureShowcase() {
 
   return (
     <section className="bg-black px-4 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-7xl">
         <div
           className="relative h-[420px]  rounded-[32px] bg-neutral-900 bg-cover bg-center bg-no-repeat transition-[background-image] duration-500 sm:h-[480px]"
           style={{ backgroundImage: `url('${active.image}')` }}
@@ -170,9 +170,9 @@ function MoneyFeatureShowcase() {
                   key={feature.key}
                   type="button"
                   onClick={() => setActiveIndex(index)}
-                  className={`rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
+                  className={`rounded-full px-4 py-2 text-sm cursor-pointer font-semibold transition-colors ${
                     index === activeIndex
-                      ? "bg-[#1D1B4E] text-white"
+                      ? "bg-primary text-white"
                       : "bg-white text-neutral-900 hover:bg-white/90"
                   }`}
                 >

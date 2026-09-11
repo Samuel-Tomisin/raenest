@@ -5,6 +5,9 @@ import Link from "next/link";
 import { Apple, PlayCircle, Users, Plus, ShieldCheck, Landmark, ShieldAlert, Play } from "lucide-react";
 import Footer from "@/component/footer";
 import Navbar from "@/component/navbar";
+import { MdImageSearch } from "react-icons/md";
+import Button2 from "@/component/button-blue";
+import Download from "@/component/download";
 
 /* ------------------------------------------------------------------ */
 /*  Shared: flag badges                                               */
@@ -61,9 +64,9 @@ function GlobalAccountsHero() {
     <section className="relative overflow-hidden bg-white px-6 pt-14 pb-16 sm:px-10 lg:px-16 lg:pt-20">
       <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-2 lg:items-center lg:gap-10">
         <div className="flex flex-col gap-6">
-          <p className="text-sm font-medium text-neutral-400">Global Accounts</p>
+          <p className="text-sm sm:text-2xl font-bold text-neutral-400">Global Accounts</p>
 
-          <h1 className="text-5xl font-semibold leading-[1.05] text-neutral-950 sm:text-6xl lg:text-[64px]">
+          <h1 className="text-5xl font-normal leading-[1.05] text-neutral-950 sm:text-6xl lg:text-[75px]">
             Get paid globally. Move money effortlessly.
           </h1>
 
@@ -72,26 +75,14 @@ function GlobalAccountsHero() {
           </p>
 
           <div className="flex flex-wrap items-center gap-3 pt-2">
-            <Link
-              href="/register"
-              className="rounded-2xl bg-[#5433C9] px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-[#4527ad]"
-            >
-              Create an account
-            </Link>
-            <button
-              type="button"
-              className="flex items-center gap-2 rounded-full bg-[#EDE9FE] px-5 py-3.5 text-sm font-semibold text-neutral-900 transition-colors hover:bg-[#E0D9FC]"
-            >
-              <Apple className="h-4 w-4" />
-              <PlayCircle className="h-4 w-4" />
-              Download app
-            </button>
+            <Button2 />
+            <Download/>
           </div>
 
           <div className="flex items-center gap-3 pt-2">
             {/* PLACEHOLDER: drop your QR code image here */}
             <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-lg bg-neutral-100 text-[9px] font-medium text-neutral-400">
-              QR
+              <img src="/qrcode.png" alt="" />
             </div>
             <p className="text-xs text-neutral-500">
               Scan the QR code below to download the app
@@ -101,9 +92,9 @@ function GlobalAccountsHero() {
 
         <div className="relative mx-auto flex w-full max-w-md flex-col items-center">
           {/* PLACEHOLDER: drop your global-accounts hero photo here (woman with curly hair, close-up smiling) */}
-          <div className="aspect-square w-full overflow-hidden rounded-[32px] bg-[#EDE9FE]">
+          <div className="aspect-square w-full bg-[#EDE9FE]">
             <img
-              src="/global-accounts-hero.webp"
+              src="/ghero.webp"
               alt="Person smiling"
               className="h-full w-full object-cover"
             />
@@ -134,7 +125,7 @@ const ACCOUNT_FEATURES: AccountFeature[] = [
     heading: "The global account you need",
     description:
       "Reduce cost and avoid payment delays from employers and clients with a reliable account. Set up a global account today.",
-    image: "/global-accounts-feature.webp",
+    image: "/g1.webp",
   },
   {
     key: "withdrawals",
@@ -142,7 +133,7 @@ const ACCOUNT_FEATURES: AccountFeature[] = [
     heading: "Withdraw to your local currency",
     description:
       "Withdraw your funds to banks and mobile money in over 100 countries from Paypal, Payoneer, Wise and Revolut at amazing rates.",
-    image: "/global-accounts-withdrawals.webp",
+    image: "/g2.webp",
   },
   {
     key: "free-transfers",
@@ -150,7 +141,7 @@ const ACCOUNT_FEATURES: AccountFeature[] = [
     heading: "Free transfers with Raenest tag",
     description:
       "Easily send and receive money from friends and families at zero cost using Raenest tag or email.",
-    image: "/global-accounts-transfers.webp",
+    image: "/g3.webp",
   },
 ];
 
@@ -159,10 +150,10 @@ function AccountFeatureShowcase() {
   const active = ACCOUNT_FEATURES[activeIndex];
 
   return (
-    <section className="bg-white px-4 py-12 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-6xl">
+    <section className="bg-black sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
         <div
-          className="relative h-[420px] overflow-hidden rounded-[32px] bg-neutral-900 bg-cover bg-center bg-no-repeat transition-[background-image] duration-500 sm:h-[480px]"
+          className="relative h-105  rounded-2xl bg-neutral-900 bg-cover bg-center bg-no-repeat transition-[background-image] duration-500 sm:h-130"
           style={{ backgroundImage: `url('${active.image}')` }}
         >
           <div className="absolute inset-0 bg-black/40" />
@@ -181,9 +172,9 @@ function AccountFeatureShowcase() {
                   key={feature.key}
                   type="button"
                   onClick={() => setActiveIndex(index)}
-                  className={`rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
+                  className={`rounded-full px-4 py-2 cursor-pointer text-sm font-semibold transition-colors ${
                     index === activeIndex
-                      ? "bg-[#1D1B4E] text-white"
+                      ? "bg-primary text-white"
                       : "bg-white text-neutral-900 hover:bg-white/90"
                   }`}
                 >
@@ -205,18 +196,21 @@ function AccountFeatureShowcase() {
 const ACCOUNT_STEPS = [
   {
     number: 1,
+    imagesrc: "/number1.png",
     title: "Quick Sign up",
     description:
       "Sign up with your legal names, set a strong password, and confirm verification code.",
   },
   {
     number: 2,
+    imagesrc: "/number3.png",
     title: "Verify Your Identity",
     description:
       "Validate your account with your profile, bank, employment, and ID details.",
   },
   {
     number: 3,
+    imagesrc: "/number2.webp",
     title: "Create bank accounts",
     description:
       "Now, you are on your way to paying and getting paid, swiftly. Or you can just watch this video",
@@ -244,11 +238,12 @@ function CreateAccountsSteps() {
           {ACCOUNT_STEPS.map((step) => (
             <div
               key={step.number}
-              className="relative flex flex-col overflow-hidden rounded-3xl bg-gradient-to-b from-[#5433C9] to-[#3D2299] px-8 py-10"
+              className="relative flex flex-col overflow-hidden rounded-3xl bg-linear-to-b from-primary to-[#3D2299] px-8 py-10"
             >
               <span className="mb-6 flex h-8 w-8 items-center justify-center rounded-full bg-white/15 text-sm font-semibold text-white">
                 {step.number}
               </span>
+              <img src={step.imagesrc} alt={`Step ${step.number}`} className="mb-6 h-full w-full" />
               <h3 className="text-lg font-semibold text-white">{step.title}</h3>
               <p className="mt-1 text-sm leading-relaxed text-white/75">{step.description}</p>
             </div>
@@ -271,7 +266,7 @@ const SECURITY_POINTS = [
 
 function SecuritySection() {
   return (
-    <section className="bg-[#40339E] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+    <section className="bg-primary px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
       <div className="mx-auto max-w-7xl text-center">
         <h2 className="text-3xl font-bold text-white sm:text-4xl">Security you can rely on</h2>
         <p className="mx-auto mt-4 max-w-xl text-sm text-white/80 sm:text-base">
@@ -517,7 +512,7 @@ function FAQItem({
         </span>
         <span
           className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-colors duration-300 ${
-            isOpen ? "bg-neutral-300" : "bg-[#4B2E83]"
+            isOpen ? "bg-neutral-300" : "bg-primary"
           }`}
         >
           <Plus
@@ -553,19 +548,17 @@ function FAQSection() {
     <section className="w-full bg-white px-6 py-16 sm:py-24 lg:px-12">
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 lg:grid-cols-[minmax(0,320px)_1fr] lg:gap-16">
         <div className="lg:sticky lg:top-24 lg:self-start">
-          <h2 className="text-4xl sm:text-5xl font-bold leading-[1.1] text-neutral-950">
-            Frequently
-            <br />
-            asked
+          <h2 className="text-2xl sm:text-3xl font-bold leading-[1.1] text-neutral-950">
+            Frequently asked
             <br />
             questions
           </h2>
-          <p className="mt-4 max-w-xs text-sm text-neutral-500">
+          {/* <p className="mt-4 max-w-xs text-sm text-neutral-500">
             Can't find what you're looking for? Reach out to our support team any time.
-          </p>
+          </p> */}
         </div>
 
-        <div className="max-h-[640px] overflow-y-auto pr-2 [scrollbar-width:thin] lg:pr-6">
+        <div className="max-h-160 overflow-y-auto pr-2 scrollbar-thin lg:pr-6">
           {GLOBAL_ACCOUNTS_FAQS.map((item, index) => (
             <FAQItem
               key={item.question}

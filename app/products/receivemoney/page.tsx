@@ -152,10 +152,10 @@ function ReceiveFeatureShowcase() {
   const active = RECEIVE_FEATURES[activeIndex];
 
   return (
-    <section className="bg-black px-4 pt-12 pb-18 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-6xl">
+    <section className="bg-black px-4 pb-5 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
         <div
-          className="relative h-[520px]  rounded-2xl bg-neutral-900 bg-cover bg-center bg-no-repeat transition-[background-image] duration-500 sm:h-[520px]"
+          className="relative h-130  rounded-2xl bg-neutral-900 bg-cover bg-center bg-no-repeat transition-[background-image] duration-500 sm:h-130"
           style={{ backgroundImage: `url('${active.image}')` }}
         >
           <div className="absolute inset-0 bg-black/40" />
@@ -176,7 +176,7 @@ function ReceiveFeatureShowcase() {
               onClick={() => setActiveIndex(index)}
               className={`rounded-full px-4 py-2 text-sm font-semibold cursor-pointer transition-colors ${
                 index === activeIndex
-                  ? "bg-[#160F3D] text-white"
+                  ? "bg-primary text-white"
                   : "bg-white text-neutral-900 hover:bg-neutral-50"
               }`}
             >

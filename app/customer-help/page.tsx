@@ -201,7 +201,7 @@ export default function HelpCenterPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header + search, on a purple-to-white gradient */}
-      <div className="bg-gradient-to-b from-[#5433C9] via-[#5433C9]/95 to-white px-4 pb-40 pt-8 sm:px-8 sm:pb-48 lg:px-16">
+      <div className="bg-linear-to-b from-primary via-[#5433C9]/95 to-white px-4 pb-40 pt-8 sm:px-8 sm:pb-48 lg:px-16">
         <div className="mx-auto max-w-6xl">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2">
@@ -269,14 +269,14 @@ export default function HelpCenterPage() {
                 className="flex flex-col overflow-hidden rounded-2xl border border-neutral-100 bg-white shadow-sm transition-shadow hover:shadow-md"
               >
                 <div className="flex h-32 items-center justify-center bg-neutral-100">
-                  <Icon className="h-9 w-9 text-[#5433C9]" strokeWidth={1.5} />
+                  <Icon className="h-9 w-9 text-primary" strokeWidth={1.5} />
                 </div>
                 <div className="flex flex-1 flex-col items-center p-6 text-center">
                   <h3 className="font-semibold text-neutral-900">{title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-neutral-600">
                     {description}
                   </p>
-                  <p className="mt-4 text-sm text-[#5433C9]">
+                  <p className="mt-4 text-sm text-primary">
                     {articleCount} {articleCount === 1 ? "article" : "articles"}
                   </p>
                 </div>
@@ -296,7 +296,7 @@ export default function HelpCenterPage() {
               <Link
                 key={article.href}
                 href={article.href}
-                className="flex items-center justify-between gap-4 text-sm font-medium text-[#5433C9] hover:underline"
+                className="flex items-center justify-between gap-4 text-sm font-medium text-primary hover:underline"
               >
                 <span>{article.title}</span>
                 <ChevronRight className="h-4 w-4 shrink-0" />
@@ -308,9 +308,7 @@ export default function HelpCenterPage() {
         {/* Footer logo */}
         <div className="mt-20 flex justify-center">
           <Link href="/" className="flex items-center gap-2">
-            <span className="text-2xl text-[#5433C9]">◔</span>
-            <img src="/raenest.svg" alt="Raenest Logo" className="" />
-            {/* <span className="text-2xl font-bold text-[#5433C9]">raenest</span> */}
+            <img src="/raenest.svg" alt="Raenest Logo" className="h-30 w-30" />
           </Link>
         </div>
       </div>

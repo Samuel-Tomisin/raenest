@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Apple, PlayCircle, Plus } from "lucide-react";
 import Navbar from "@/component/navbar";
 import Footer from "@/component/footer";
+import Download from "@/component/download";
 
 /* ------------------------------------------------------------------ */
 /*  Section 1: Hero                                                    */
@@ -12,12 +13,12 @@ import Footer from "@/component/footer";
 
 function ReferralHero() {
   return (
-    <section className="relative overflow-hidden bg-white px-6 pt-14 pb-16 sm:px-10 lg:px-16 lg:pt-20">
+    <section className="relative overflow-hidden bg-white px-6 pt-14 pb-16 sm:px-10 lg:px-16">
       <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-2 lg:items-center lg:gap-10">
         <div className="flex flex-col gap-6">
           <p className="text-sm font-medium text-neutral-400 sm:text-2xl">Referrals</p>
 
-          <h1 className="text-5xl font-semibold leading-[1.05] text-neutral-950 sm:text-6xl lg:text-[64px]">
+          <h1 className="text-5xl font-normal leading-[1.05] text-neutral-950 sm:text-6xl lg:text-[80px]">
             Share Raenest, Earn $5
           </h1>
 
@@ -30,23 +31,18 @@ function ReferralHero() {
           <div className="flex flex-wrap items-center gap-3 pt-2">
             <Link
               href="/referral-link"
-              className="rounded-2xl bg-[#5433C9] px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-[#4527ad]"
+              className="rounded-2xl bg-primary px-6 py-3.5 text-sm font-semibold text-white transition-colors"
             >
               Get your referral link
             </Link>
-            <button
-              type="button"
-              className="flex items-center gap-2 rounded-full bg-[#EDE9FE] px-5 py-3.5 text-sm font-semibold text-neutral-900 transition-colors hover:bg-[#E0D9FC]"
-            >
-              <Apple className="h-4 w-4" />
-              <PlayCircle className="h-4 w-4" />
-              Download app
-            </button>
+            <Download/>
           </div>
 
           <div className="flex items-center gap-3 pt-2">
             {/* Drop your QR code image in here */}
-            <div className="h-16 w-16 shrink-0 rounded-lg bg-neutral-100" />
+            <div className="h-16 w-16 shrink-0 rounded-lg bg-neutral-100">
+              <img src="/qrcode.png" alt="" className="w-16 h-16" />
+            </div>
             <p className="text-xs text-neutral-500">
               Scan the QR code below to download the app
             </p>
@@ -98,18 +94,18 @@ function ReferralHowItWorks() {
           How it works
         </h2>
 
-        <div className="mt-12 grid grid-col-1 gap-8 sm:grid-cols-3  ">
-          <div className="bg-white rounded-3xl p-6 sm:p-8">
+        <div className="mt-15 grid gap-8">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 flex gap-7 ">
           {STEPS.map(({ step, title, description, imageSrc }) => (
             <div key={step} className="flex flex-col">
               <p className="text-xs font-medium text-neutral-500">{step}</p>
-              <h3 className="mt-1 text-lg font-bold text-[#5433C9]">{title}</h3>
+              <h3 className="mt-1 text-lg font-bold text-primary">{title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-neutral-700">
                 {description}
               </p>
               {/* Drop your step photo in here */}
               {/* <div className="mt-6 aspect-[4/3] w-full rounded-[80px] rounded-tr-none bg-neutral-200" /> */}
-              <img src={imageSrc} alt="" className="mt-6 w-full rounded-[80px] rounded-tr-none" />
+              <img src={imageSrc} alt="" className="mt-6 w-full rounded-[30px] rounded-tr-none" />
             </div>
           ))}
         </div>
@@ -181,7 +177,7 @@ function FAQItem({
         </span>
         <span
           className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-colors duration-300 ${
-            isOpen ? "bg-neutral-300" : "bg-[#4B2E83]"
+            isOpen ? "bg-neutral-300" : "bg-primary"
           }`}
         >
           <Plus
@@ -217,17 +213,15 @@ function ReferralFAQSection() {
     <section className="w-full bg-white px-6 py-16 sm:py-24 lg:px-12">
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 lg:grid-cols-[minmax(0,320px)_1fr] lg:gap-16">
         <div className="lg:sticky lg:top-24 lg:self-start">
-          <h2 className="text-4xl sm:text-5xl font-bold leading-[1.1] text-neutral-950">
-            Frequently
-            <br />
-            asked
+          <h2 className="text-2xl sm:text-3xl font-bold leading-[1.1] text-neutral-950">
+            Frequently asked
             <br />
             questions
           </h2>
-          <p className="mt-4 max-w-xs text-sm text-neutral-500">
+          {/* <p className="mt-4 max-w-xs text-sm text-neutral-500">
             Can't find what you're looking for? Reach out to our support team
             any time.
-          </p>
+          </p> */}
         </div>
 
         <div className="max-h-[640px] overflow-y-auto pr-2 [scrollbar-width:thin] lg:pr-6">

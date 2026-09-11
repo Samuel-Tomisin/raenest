@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState, useId } from "react";
 import type { JSX } from "react";
 import Link from "next/link";
-import { Apple, PlayCircle, Users, Plus, Play } from "lucide-react";
+import { Users, Plus, Play } from "lucide-react";
 import Footer from "@/component/footer";
 import Navbar from "@/component/navbar";
 import Download from "@/component/download";
@@ -179,7 +179,7 @@ function CardFeaturesCarousel() {
     <section className="px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div
-          className="relative h-120 overflow-hidden bg-neutral-900 bg-cover bg-center bg-no-repeat transition-[background-image] duration-500 sm:h-[520px]"
+          className="relative h-120 overflow-hidden bg-neutral-900 bg-cover bg-center bg-no-repeat transition-[background-image] duration-500 sm:h-130"
           style={{ backgroundImage: `url('${active.image}')` }}
         >
           <img src="/money.webp" alt="" className="w-70 h-35 text-center"/>
@@ -197,7 +197,7 @@ function CardFeaturesCarousel() {
                   key={slide.key}
                   type="button"
                   onClick={() => setActiveIndex(index)}
-                  className={`rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
+                  className={`rounded-full px-4 py-2 text-sm cursor-pointer font-semibold transition-colors ${
                     index === activeIndex
                       ? "bg-primary text-white"
                       : "bg-white text-neutral-900 hover:bg-white/90"
@@ -298,7 +298,7 @@ function RequestCardSteps() {
           {REQUEST_STEPS.map((step) => (
             <div
               key={step.number}
-              className="relative flex flex-col overflow-hidden rounded-3xl bg-gradient-to-b from-[#5433C9] to-[#3D2299] px-8 py-15"
+              className="relative flex flex-col overflow-hidden rounded-3xl bg-linear-to-b from-[#5433C9] to-[#3D2299] px-8 py-15"
             >
               <span className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full bg-white/15 text-sm font-semibold text-white">
                 {step.number}
@@ -441,7 +441,7 @@ function VideoTestimonialCard({
 
   return (
     <div className="rounded-2xl bg-neutral-100 p-3 h-full flex flex-col">
-      <div className="relative flex-1 min-h-[220px] sm:min-h-[260px] lg:min-h-[280px] rounded-xl overflow-hidden">
+      <div className="relative flex-1 min-h-55 sm:min-h-65 lg:min-h-70 rounded-xl overflow-hidden">
         {isPlaying ? (
           <iframe
             src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1`}
@@ -520,7 +520,7 @@ function TestimonialsSection() {
           </div>
         </div>
 
-        <div className="mx-auto mt-6 flex w-full max-w-[324px] items-center justify-center gap-2 rounded-2xl bg-black px-3 py-2 cursor-pointer">
+        <div className="mx-auto mt-6 flex w-full max-w-81 items-center justify-center gap-2 rounded-2xl bg-black px-3 py-2 cursor-pointer">
           <img src="/rating.png" alt="Star Rating" className="max-h-4 shrink-0" />
           <h2 className="text-center text-[13px] sm:text-[15px] font-semibold text-gray-500">
             4.6 Apple store, Play store
@@ -630,20 +630,18 @@ function FAQSection() {
     <section className="w-full bg-white px-6 py-16 sm:py-24 lg:px-12">
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 lg:grid-cols-[minmax(0,320px)_1fr] lg:gap-16">
         <div className="lg:sticky lg:top-24 lg:self-start">
-          <h2 className="text-4xl sm:text-5xl font-bold leading-[1.1] text-neutral-950">
-            Frequently
-            <br />
-            asked
+          <h2 className="text-2xl sm:text-3xl font-bold leading-[1.1] text-neutral-950">
+            Frequently asked
             <br />
             questions
           </h2>
-          <p className="mt-4 max-w-xs text-sm text-neutral-500">
+          {/* <p className="mt-4 max-w-xs text-sm text-neutral-500">
             Can't find what you're looking for? Reach out to our support team
             any time.
-          </p>
+          </p> */}
         </div>
 
-        <div className="max-h-[640px] overflow-y-auto pr-2 [scrollbar-width:thin] lg:pr-6">
+        <div className="max-h-160 overflow-y-auto pr-2 scrollbar-thin lg:pr-6">
           {CARDS_FAQS.map((item, index) => (
             <FAQItem
               key={item.question}

@@ -91,7 +91,7 @@ function StocksHero() {
 
         <div className="relative mx-auto flex w-full max-w-md flex-col items-center">
           {/* PLACEHOLDER: drop your us-stocks hero photo here (man in teal sweater + stock-jar 3D graphic) */}
-          <div className="aspect-square w-full overflow-hidden rounded-[32px]">
+          <div className="aspect-square w-full overflow-hidden rounded-4xl">
             <img
               src="/heroguy.png"
               alt="Person smiling while checking phone, with a 3D jar graphic showing stock logos"
@@ -149,10 +149,10 @@ function StockFeatureShowcase() {
   const active = STOCK_FEATURES[activeIndex];
 
   return (
-    <section className="bg-black px-4 py-12 lg:px-8">
+    <section className="bg-black px-4  lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div
-          className="relative h-[420px] overflow-hidden rounded-[32px] bg-neutral-900 bg-cover bg-center bg-no-repeat transition-[background-image] duration-500 sm:h-[480px]"
+          className="relative h-105 overflow-hidden rounded-4xl bg-neutral-900 bg-cover bg-center bg-no-repeat transition-[background-image] duration-500 sm:h-120"
           style={{ backgroundImage: `url('${active.image}')` }}
         >
           <div className="absolute inset-0 bg-black/40" />
@@ -171,9 +171,9 @@ function StockFeatureShowcase() {
                   key={feature.key}
                   type="button"
                   onClick={() => setActiveIndex(index)}
-                  className={`rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
+                  className={`rounded-full px-4 py-2 text-sm cursor-pointer font-semibold transition-colors ${
                     index === activeIndex
-                      ? "bg-[#1D1B4E] text-white"
+                      ? "bg-primary text-white"
                       : "bg-white text-neutral-900 hover:bg-white/90"
                   }`}
                 >
@@ -273,7 +273,7 @@ function BuyingFirstStockSteps() {
           {BUYING_STEPS.map((step) => (
             <div
               key={step.number}
-              className="relative flex flex-col overflow-hidden rounded-3xl bg-gradient-to-b from-primary to-[#3D2299] px-8 py-10"
+              className="relative flex flex-col overflow-hidden rounded-3xl bg-linear-to-b from-primary to-[#3D2299] px-8 py-10"
             >
               <span className="mb-6 flex h-8 w-8 items-center justify-center rounded-full bg-white/15 text-sm font-semibold text-white">
                 {step.number}
@@ -417,7 +417,7 @@ function TestimonialsSection() {
           ))}
         </div>
 
-        <div className="mx-auto mt-6 flex w-full max-w-[324px] items-center justify-center gap-2 rounded-2xl bg-black px-3 py-2 cursor-pointer">
+        <div className="mx-auto mt-6 flex w-full max-w-81 items-center justify-center gap-2 rounded-2xl bg-black px-3 py-2 cursor-pointer">
           <img src="/rating.png" alt="Star Rating" className="max-h-4 shrink-0" />
           <h2 className="text-center text-[13px] sm:text-[15px] font-semibold text-gray-500">
             4.6 Apple store, Play store
@@ -534,7 +534,7 @@ function FAQSection() {
           </p>
         </div>
 
-        <div className="max-h-[640px] overflow-y-auto pr-2 [scrollbar-width:thin] lg:pr-6">
+        <div className="max-h-160 overflow-y-auto pr-2 scrollbar-thin lg:pr-6">
           {STOCKS_FAQS.map((item, index) => (
             <FAQItem
               key={item.question}

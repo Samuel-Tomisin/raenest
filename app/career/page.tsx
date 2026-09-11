@@ -33,8 +33,7 @@ export default function CareerPage() {
         {/* Header */}
         <div className="flex items-center justify-between pb-8">
           <div className="flex items-center gap-1.5">
-            <span className="text-xl text-[#5433C9]">◔</span>
-            <span className="text-lg font-semibold text-neutral-900">raenest</span>
+            <img src="/raenest.svg" alt="raenest logo" className="h-30 w-30" />
           </div>
 
           <div className="flex items-center gap-3">
@@ -70,7 +69,7 @@ export default function CareerPage() {
 
         {/* Openings card */}
         <div className="rounded-2xl bg-white p-6 shadow-sm sm:p-8">
-          <h1 className="text-2xl font-bold text-[#5433C9]">Current Openings</h1>
+          <h1 className="text-2xl font-bold text-primary">Current Openings</h1>
           <p className="mt-2 text-sm text-neutral-600">
             Thanks for checking out our job openings. See something that
             interests you? Apply here.
@@ -84,7 +83,7 @@ export default function CareerPage() {
                 <div>
                   <a
                     href={job.href}
-                    className="font-medium text-[#3E4CE0] hover:underline"
+                    className="font-medium text-primary hover:underline"
                   >
                     {job.title}
                   </a>
