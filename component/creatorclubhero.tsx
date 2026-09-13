@@ -2,7 +2,7 @@
 
 export default function CreatorClubHero() {
   return (
-    <section className="bg-white px-6 pt-14 pb-10 sm:px-10 lg:px-16 lg:pt-20">
+    <section className="bg-white pl-6 pt-14 pb-10 sm:pl-10 lg:pl-16 lg:pt-20">
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2 lg:items-center">
         <div className="flex flex-col gap-6">
           <p className="text-sm font-medium text-neutral-400">Creator Club</p>
@@ -18,7 +18,7 @@ export default function CreatorClubHero() {
 
         <div className="relative mx-auto w-full max-w-lg">
           {/* Drop your hero creator photo in here */}
-          <div className="aspect-[4/3] w-full rounded-[48px] bg-neutral-100" />
+          <img src="/chero.webp" alt="Creator Club Hero" className="rounded-[48px] w-full h-full" />
         </div>
       </div>
     </section>

@@ -168,7 +168,7 @@ function HowToEnjoyRewards() {
                 {description}
               </p>
               {/* Drop your photo in here */}
-              <div className="mt-6 aspect-[4/3] w-full rounded-t-[100px] bg-neutral-200" />
+              <div className="mt-6 aspect-4/3 w-full rounded-t-[100px] bg-neutral-200" />
             </div>
           ))}
         </div>
@@ -237,7 +237,7 @@ function FAQItem({
         </span>
         <span
           className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-colors duration-300 ${
-            isOpen ? "bg-neutral-300" : "bg-[#4B2E83]"
+            isOpen ? "bg-neutral-300" : "bg-primary"
           }`}
         >
           <Plus
@@ -273,20 +273,18 @@ function RewardsFAQSection() {
     <section className="w-full bg-white px-6 py-16 sm:py-24 lg:px-12">
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 lg:grid-cols-[minmax(0,320px)_1fr] lg:gap-16">
         <div className="lg:sticky lg:top-24 lg:self-start">
-          <h2 className="text-4xl sm:text-5xl font-bold leading-[1.1] text-neutral-950">
-            Frequently
-            <br />
-            asked
+          <h2 className="text-2xl sm:text-3xl font-bold leading-[1.1] text-neutral-950">
+            Frequently asked
             <br />
             questions
           </h2>
-          <p className="mt-4 max-w-xs text-sm text-neutral-500">
+          {/* <p className="mt-4 max-w-xs text-sm text-neutral-500">
             Can't find what you're looking for? Reach out to our support team
             any time.
-          </p>
+          </p> */}
         </div>
 
-        <div className="max-h-[640px] overflow-y-auto pr-2 [scrollbar-width:thin] lg:pr-6">
+        <div className="max-h-160 overflow-y-auto pr-2 scrollbar-thin lg:pr-6">
           {REWARDS_FAQS.map((item, index) => (
             <FAQItem
               key={item.question}

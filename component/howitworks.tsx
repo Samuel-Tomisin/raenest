@@ -6,18 +6,21 @@ const STEPS = [
     title: "Apply to Join",
     description:
       "Fill out a simple application form with your details and content creation style. We welcome creators of all types - from tech community leaders to travel content creators.",
+      image: "/c1.webp",
   },
   {
     step: "Step 2",
     title: "Create & Share",
     description:
       "Post engaging content about your Raenest experience across your social platforms. We'll provide you with exclusive product updates and guides to help you create impactful content.",
+      image: "/c2.webp",
   },
   {
     step: "Step 3",
     title: "Earn Rewards",
     description:
       "Get $ stipends. Unlock exclusive merch, subscriptions, and premium perks based on your creator rank and posting consistency.",
+      image: "/c3.webp",
   },
 ];
 
@@ -42,7 +45,9 @@ export default function HowItWorks() {
               </p>
 
               {/* Drop your step photo in here */}
-              <div className="mt-6 aspect-[4/3] w-full rounded-3xl bg-neutral-200" />
+              {/* <img src={STEPS[1].image} alt="" />
+              <img src={STEPS[2].image} alt="" /> */}
+              {/* <div className="mt-6 aspect-[4/3] w-full rounded-3xl bg-neutral-200" /> */}
             </div>
           ))}
         </div>

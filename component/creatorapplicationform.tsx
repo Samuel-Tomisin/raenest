@@ -116,7 +116,7 @@ export default function CreatorApplicationForm() {
         {/* Left: copy */}
         <div className="flex flex-col gap-6 lg:sticky lg:top-24 lg:self-start">
           {/* Drop your 3D illustration/graphic in here */}
-          <div className="h-40 w-40 rounded-3xl bg-white/10" />
+          <img src="/cp.png" alt="Creator Club Hero" className="rounded-[48px] w-[240px] h-[240px]" />
 
           <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl">
             Join the Raenest Creator Program
@@ -131,8 +131,7 @@ export default function CreatorApplicationForm() {
             anywhere. Fill the form for a chance to join the program, and
             just maybe, this will be the beginning of something.
           </p>
-        </div>
-
+          </div>
         {/* Right: form */}
         <form
           onSubmit={handleSubmit}
@@ -281,7 +280,7 @@ export default function CreatorApplicationForm() {
             </p>
           )}
         </form>
-      </div>
-    </section>
+        </div>
+      </section>
   );
 }
