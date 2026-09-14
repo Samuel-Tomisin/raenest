@@ -104,8 +104,9 @@ function ReferralHowItWorks() {
                 {description}
               </p>
               {/* Drop your step photo in here */}
-              {/* <div className="mt-6 aspect-[4/3] w-full rounded-[80px] rounded-tr-none bg-neutral-200" /> */}
+              <div className="mt-6 aspect-4/3 w-full rounded-[80px] rounded-tr-none">
               <img src={imageSrc} alt="" className="mt-6 w-full rounded-[30px] rounded-tr-none" />
+              </div>
             </div>
           ))}
         </div>
@@ -176,7 +177,7 @@ function FAQItem({
           {item.question}
         </span>
         <span
-          className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-colors duration-300 ${
+          className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full transition-colors duration-300 ${
             isOpen ? "bg-neutral-300" : "bg-primary"
           }`}
         >

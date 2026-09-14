@@ -26,28 +26,29 @@ const STEPS = [
 
 export default function HowItWorks() {
   return (
-    <section className="bg-gradient-to-br from-[#F6F5DC] to-[#E9E7FB] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+    <section className="bg-linear-to-br from-[#F6F5DC] to-[#E9E7FB] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <h2 className="text-center text-3xl font-bold text-neutral-950 sm:text-4xl">
           How it works
         </h2>
 
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
-          {STEPS.map(({ step, title, description }) => (
+          {STEPS.map(({ step, title, description, image }) => (
             <div
               key={step}
               className="flex flex-col overflow-hidden rounded-3xl bg-white/70 p-6"
             >
               <p className="text-xs font-medium text-neutral-500">{step}</p>
-              <h3 className="mt-1 text-lg font-bold text-[#5433C9]">{title}</h3>
+              <h3 className="mt-1 text-lg font-bold text-primary">{title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-neutral-700">
                 {description}
               </p>
 
               {/* Drop your step photo in here */}
-              {/* <img src={STEPS[1].image} alt="" />
-              <img src={STEPS[2].image} alt="" /> */}
-              {/* <div className="mt-6 aspect-[4/3] w-full rounded-3xl bg-neutral-200" /> */}
+              <div className="mt-6 aspect-4/3 w-full rounded-t-[100px]">
+              <img src={image} alt={title} className="h-full w-full object-cover" />
+             </div>
+              
             </div>
           ))}
         </div>

@@ -5,6 +5,8 @@ import Link from "next/link";
 import { Apple, PlayCircle, Plus, ArrowLeftRight, Landmark, ShieldCheck } from "lucide-react";
 import Footer from "@/component/footer";
 import Navbar from "@/component/navbar";
+import Button2 from "@/component/button-blue";
+import Download from "@/component/download";
 
 /* ------------------------------------------------------------------ */
 /*  Section 1: Hero                                                    */
@@ -15,7 +17,7 @@ function RewardsHero() {
     <section className="relative overflow-hidden bg-white px-6 pt-14 pb-16 sm:px-10 lg:px-16 lg:pt-20">
       <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-2 lg:items-center lg:gap-10">
         <div className="flex flex-col gap-6">
-          <p className="text-sm font-medium text-neutral-400">Rewards</p>
+          <p className="text-sm sm:text-2xl font-medium text-neutral-400">Rewards</p>
 
           <h1 className="text-5xl font-semibold leading-[1.05] text-neutral-950 sm:text-6xl lg:text-[64px]">
             Earn while you spend
@@ -29,25 +31,15 @@ function RewardsHero() {
           </p>
 
           <div className="flex flex-wrap items-center gap-3 pt-2">
-            <Link
-              href="/register"
-              className="rounded-2xl bg-[#5433C9] px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-[#4527ad]"
-            >
-              Create an account
-            </Link>
-            <button
-              type="button"
-              className="flex items-center gap-2 rounded-full bg-[#EDE9FE] px-5 py-3.5 text-sm font-semibold text-neutral-900 transition-colors hover:bg-[#E0D9FC]"
-            >
-              <Apple className="h-4 w-4" />
-              <PlayCircle className="h-4 w-4" />
-              Download app
-            </button>
+            <Button2/>
+            <Download/>
           </div>
 
           <div className="flex items-center gap-3 pt-2">
             {/* Drop your QR code image in here */}
-            <div className="h-16 w-16 shrink-0 rounded-lg bg-neutral-100" />
+            <div className="h-16 w-16 shrink-0 rounded-lg bg-neutral-100" >
+              <img src="/qrcode.png" alt="QR code to download the app" className="h-full w-full object-cover"/>
+            </div>
             <p className="text-xs text-neutral-500">
               Scan the QR code below to download the app
             </p>
@@ -55,11 +47,11 @@ function RewardsHero() {
         </div>
 
         <div className="relative mx-auto flex w-full max-w-md flex-col items-center">
-          <div className="h-16 w-40 rounded-t-full bg-[#C97A5A] sm:h-20 sm:w-48" />
-          <div className="-mt-2 aspect-square w-full overflow-hidden rounded-t-full bg-[#C97A5A]">
+          <div className="h-16 w-40 rounded-t-full sm:h-20 sm:w-48" />
+          <div className="-mt-2 aspect-square w-full rounded-t-full">
             {/* Drop your rewards hero photo in here */}
             <img
-              src="/rewards-hero.jpg"
+              src="/rhero.webp"
               alt="Person smiling while checking their phone"
               className="h-full w-full object-cover"
             />
@@ -136,16 +128,19 @@ const WAYS_TO_EARN = [
     title: "Receive Payments Directly",
     description:
       "Payments you receive directly to your USD wallet count toward Rewards, so keep those projects coming.",
+      image: "/r1.webp",
   },
   {
     title: "Spend with Your USD Card",
     description:
       "Tap into your Rewards potential every time you make purchases with your USD card. So think of the Raenest virtual dollar card during your next big splurge.",
+      image: "/r2.webp",
   },
   {
     title: "Convert Currency",
     description:
       "Switching funds from USD to other currencies? Each conversion contributes, so use Raenest to handle all your currency conversion needs.",
+      image: "/r3.webp",
   },
 ];
 
@@ -158,17 +153,19 @@ function HowToEnjoyRewards() {
         </h2>
 
         <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-3">
-          {WAYS_TO_EARN.map(({ title, description }) => (
+          {WAYS_TO_EARN.map(({ title, description, image }) => (
             <div
               key={title}
               className="flex flex-col rounded-3xl bg-white p-6 shadow-sm"
             >
-              <h3 className="text-lg font-bold text-[#5433C9]">{title}</h3>
+              <h3 className="text-lg font-bold text-primary">{title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-neutral-700">
                 {description}
               </p>
               {/* Drop your photo in here */}
-              <div className="mt-6 aspect-4/3 w-full rounded-t-[100px] bg-neutral-200" />
+              <div className="mt-6 aspect-4/3 w-full rounded-t-[100px]">
+              <img src={image} alt={title} className="h-full w-full object-cover" />
+             </div>
             </div>
           ))}
         </div>
