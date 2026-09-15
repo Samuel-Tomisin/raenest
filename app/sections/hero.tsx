@@ -210,7 +210,7 @@ export default function Hero() {
             />
           </div>
 
-          <RecentTransactionsCard />
+          {/* <RecentTransactionsCard /> */}
         </div>
       </div>
     </section>
