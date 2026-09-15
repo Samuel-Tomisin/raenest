@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Download from "@/component/download";
-import { Apple, PlayCircle } from "lucide-react";
 import {
   TZ,
   UG,
@@ -60,7 +59,7 @@ function FlagMarquee() {
   const doubled = [...MARQUEE_FLAGS, ...MARQUEE_FLAGS];
 
   return (
-    <div className="relative w-full max-w-md overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] sm:max-w-lg">
+    <div className="relative w-full max-w-md overflow-hidden mask-[linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] sm:max-w-lg">
       <div className="flex w-max animate-flag-marquee items-center gap-2">
         {doubled.map(({ code, name, Icon }, i) => (
           <span
@@ -131,7 +130,7 @@ function RecentTransactionsCard() {
             <div className="flex items-center gap-3">
               <span
                 className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-[10px] font-bold text-white ${t.logoBg} ${
-                  t.logoBg === "bg-white" ? "!text-red-600" : ""
+                  t.logoBg === "bg-white" ? "text-red-600!" : ""
                 }`}
               >
                 {t.logoLabel}
@@ -156,7 +155,7 @@ function RecentTransactionsCard() {
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-primary px-6 py-5 sm:px-10 sm:py-7 lg:pl-16 lg:py-1">
+    <section className="relative bg-primary px-6 py-5 sm:px-10 sm:py-7 lg:pl-16 lg:py-1">
       {/* Soft decorative swoosh behind the photo */}
       <svg
         className="pointer-events-none absolute inset-0 hidden h-full w-full lg:block"
@@ -183,15 +182,15 @@ export default function Hero() {
           <FlagMarquee />
 
           <h1 className="text-4xl leading-[1.1] text-white sm:text-5xl lg:text-6xl">
-            Receive and spend
+            Save with discipline. 
           </h1>
           <h1 className="text-4xl leading-[1.1] text-white sm:text-5xl lg:text-6xl">
-            money globally
+            Spend with ease.
           </h1>
 
           <p className="max-w-md text-base text-white sm:text-lg">
-            Get paid from anywhere in global currencies and do more with
-            money—spend, earn on savings, and invest.
+            Lock savings for up to 12% p.a., set goals that stick, and still have 
+            instant transfers, cards, and bill payments in the same app.
           </p>
 
           <div className="flex items-center gap-4">
@@ -202,16 +201,16 @@ export default function Hero() {
 
         {/* Right: photo + floating transactions card */}
         <div className="relative flex-1">
-          <div className="relative mx-auto aspect-[3/5] w-full max-w-sm rounded-t-[160px] rounded-b-[2rem] sm:max-w-md lg:max-w-none">
+          <div className="relative mx-auto aspect-3/5 w-full max-w-sm rounded-t-[160px] rounded-b-4xl sm:max-w-md lg:max-w-none">
             {/* Drop your hero photo in here */}
             <img
-              src="/girl.png"
+              src="/firsthero.png"
               alt="Person checking transactions on their phone"
-              className="h-full w-full object-cover"
+              className="h-4/4 w-full object-cover"
             />
           </div>
 
-          <RecentTransactionsCard />
+          {/* <RecentTransactionsCard /> */}
         </div>
       </div>
     </section>

@@ -40,5 +40,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, sans-serif, Helvetica;
+  font-family: "National 2", Arial, sans-serif, Helvetica;
 }

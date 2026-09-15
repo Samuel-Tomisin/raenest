@@ -314,7 +314,7 @@ export default function BlogPage() {
       {/* Hero: heading, search, category pills */}
       <section className="relative overflow-hidden px-4 pb-12 pt-16 sm:px-8 sm:pt-20 lg:px-16">
         <div
-          className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-[#EDE9FE] via-white to-white"
+          className="pointer-events-none absolute inset-0 -z-10 bg-linear-to-br from-[#EDE9FE] via-white to-white"
           aria-hidden="true"
         />
 
@@ -374,7 +374,7 @@ export default function BlogPage() {
                 {activeSlide.eyebrow && (
                   <p
                     className={`mb-1 text-sm font-medium ${
-                      activeSlide.bg.includes("F3EEE1") ? "text-[#5433C9]" : "text-white/80"
+                      activeSlide.bg.includes("F3EEE1") ? "text-primary" : "text-white/80"
                     }`}
                   >
                     {activeSlide.eyebrow}
@@ -400,7 +400,7 @@ export default function BlogPage() {
                 type="button"
                 onClick={() => goToSlide(slideIndex - 1)}
                 aria-label="Previous featured article"
-                className="flex h-9 w-9 items-center justify-center cursor-pointer rounded-full bg-[#EDE9FE] text-[#5433C9] transition-colors hover:bg-[#E0D9FC]"
+                className="flex h-9 w-9 items-center justify-center cursor-pointer rounded-full bg-[#EDE9FE] text-primary transition-colors hover:bg-[#E0D9FC]"
               >
                 <ArrowLeft className="h-4 w-4" />
               </button>

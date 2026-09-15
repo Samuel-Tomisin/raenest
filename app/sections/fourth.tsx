@@ -4,23 +4,23 @@ import { useRef, useState } from "react"
 
 const categories = [
     {
-        key: "freelancers",
-        label: "Freelancers & Creators",
+        key: "Target & Locked Savings",
+        label: "Target & Locked Savings",
         image: "/freelancer.webp",
         description:
-            "Create global accounts and receive international payments easily from Freelance Marketplaces & Global Clients.",
+            "Set a savings goal and stay committed to it. Create a target, save gradually, and lock your funds for a set period to build financial discipline and achieve your goals without unnecessary withdrawals.",
     },
     {
-        key: "travelers",
-        label: "Travelers",
+        key: "Wallet & Transfers",
+        label: "Wallet & Transfers",
         image: "/traveler.webp",
-        description: "Use your card at Visa merchants worldwide while you travel.",
+        description: "Manage your money with ease from one secure wallet. Send, receive, and transfer funds quickly and conveniently while keeping track of your transactions in one place.",
     },
     {
-        key: "shoppers",
-        label: "Online Shoppers",
+        key: "Virtual & physical cards",
+        label: "Virtual & physical cards",
         image: "/onlineshopper.webp",
-        description: "Use virtual dollar cards for international shopping.",
+        description: "Pay with confidence using secure virtual and physical cards designed for everyday spending, online payments, and convenient access to your money wherever you need it.",
     },
     {
         key: "students",
@@ -70,7 +70,7 @@ export default function FourthSection() {
             <div className="mx-auto max-w-7xl bg-white py-7 px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
                     <h2 className="text-2xl sm:text-3xl lg:text-[45px] text-gray-800 font-semibold">
-                        Raenest for everyone
+                        What's Inside
                     </h2>
 
                     <div className="-mx-4 overflow-x-auto px-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:mx-0 lg:px-0 lg:overflow-visible">
@@ -103,7 +103,7 @@ export default function FourthSection() {
 
             <div
                 ref={scrollContainerRef}
-                className="mx-auto max-w-7xl bg-white py-7 px-4 sm:px-6 lg:px-8 flex items-center gap-4 sm:gap-5 overflow-x-auto scroll-smooth snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+                className="bg-white py-7 px-4 sm:px-6 lg:px-8 flex items-center gap-4 sm:gap-5 overflow-x-auto scroll-smooth snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
             >
                 {categories.map((category) => (
                     <div

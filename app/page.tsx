@@ -22,7 +22,7 @@ export default function Home (){
       <ThirdSection/>
       <FourthSection/>
       <FifthSection/>
-      <Sixthsection/>
+      {/* <Sixthsection/> */}
       <Sixthbsection/>
       <Seventhsection/>
       <Eightsection/>

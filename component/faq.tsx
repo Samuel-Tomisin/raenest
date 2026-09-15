@@ -115,7 +115,7 @@ export default function FAQSection() {
 
   return (
     <section className="w-full bg-white px-5 py-14 sm:py-16 md:px-12 lg:py-24">
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 sm:gap-10 lg:grid-cols-[minmax(0,320px)_1fr] lg:gap-16">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 sm:gap-10 lg:grid-cols-[minmax(0,320px)_1fr] lg:gap-16">
         {/* Left: heading, sticky on desktop only */}
         <div className="lg:sticky lg:top-24 lg:self-start">
           <h2 className="text-2xl sm:text-3xl font-bold leading-[1.1] text-neutral-950">

@@ -345,9 +345,9 @@ export default function BusinessHomePage() {
       <FeatureShowcase heading="Global Multi-currency Transactions" options={transactionOptions} renderVisual={TransactionVisual} />
 
       {/* ── Convert money across multiple currencies (dark form section) ── */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#241857] via-[#3B2A8C] to-[#241857] px-5 py-16 sm:py-20">
+      <section className="relative overflow-hidden bg-linear-to-br from-[#241857] via-[#3B2A8C] to-[#241857] px-5 py-16 sm:py-20">
         <div className="pointer-events-none absolute inset-0">
-          <div className="absolute right-[-200px] top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-[#6C5CE7]/30 blur-3xl" />
+          <div className="absolute -right-50 top-1/2 h-125 w-125 -translate-y-1/2 rounded-full bg-[#6C5CE7]/30 blur-3xl" />
         </div>
 
         <div className="relative mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
@@ -376,7 +376,7 @@ export default function BusinessHomePage() {
               <p className="text-xs text-[#667085]">Choose a Transfer type</p>
               <div className="mt-1 flex items-center justify-between">
                 <span className="text-sm font-semibold text-[#101828]">Bank Account Transfers</span>
-                <span className="text-xs font-semibold text-[#5B4FE5]">Change type</span>
+                <span className="text-xs font-semibold text-primary">Change type</span>
               </div>
             </div>
 

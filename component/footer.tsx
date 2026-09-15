@@ -4,8 +4,9 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <div className="relative overflow-hidden bg-[url('/footerbg.svg')] bg-no-repeat">
-            <div className="relative z-10 bg-black">
+        <div className="relative bg-[url('/herobg.svg')] bg-no-repeat bg-left bg-cover">
+            <div className="mx-auto max-w-7xl">
+            <div className="relative z-10 max-w-8xl mx-auto">
                 <div className="flex flex-col gap-12 px-6 py-12 text-[14px] sm:px-8 sm:py-16 lg:flex-row lg:justify-between lg:gap-0 lg:px-12 lg:py-20">
                     <div className="flex flex-col text-white">
                         <Link href="/" className="cursor-pointer">
@@ -116,6 +117,7 @@ export default function Footer() {
                         Financial Conduct Authority (FCA) as an Electronic Money Institution. U.S. securities brokerage services are provided by Alpaca Securities LLC (“Alpaca Securities”), a member of FINRA and SIPC,
                         and a wholly-owned subsidiary of AlpacaDB, Inc.</h2>
                 </div>
+            </div>
             </div>
         </div>
     );

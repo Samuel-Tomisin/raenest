@@ -23,7 +23,7 @@ export default function Personal(){
             <ThirdSection/>
             <FourthSection/>
             <FifthSection/>
-            <Sixthsection/>
+            {/* <Sixthsection/> */}
             <Sixthbsection/>
             <Seventhsection/>
             <Eightsection/>
