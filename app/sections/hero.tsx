@@ -155,7 +155,7 @@ function RecentTransactionsCard() {
 
 export default function Hero() {
   return (
-    <section className="relative bg-primary px-6 py-5 sm:px-10 sm:py-7 lg:pl-16 lg:py-1">
+    <section className="relative bg-primary px-6 py-5 sm:px-10 sm:py-7 lg:pl-16 lg:py-7">
       {/* Soft decorative swoosh behind the photo */}
       <svg
         className="pointer-events-none absolute inset-0 hidden h-full w-full lg:block"
@@ -204,9 +204,9 @@ export default function Hero() {
           <div className="relative mx-auto aspect-3/5 w-full max-w-sm rounded-t-[160px] rounded-b-4xl sm:max-w-md lg:max-w-none">
             {/* Drop your hero photo in here */}
             <img
-              src="/firsthero.png"
+              src="/white.png"
               alt="Person checking transactions on their phone"
-              className="h-4/4 w-full object-cover"
+              className="h-full w-full object-cover"
             />
           </div>
 
