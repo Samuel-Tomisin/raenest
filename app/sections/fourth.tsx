@@ -23,19 +23,19 @@ const categories = [
         description: "Pay with confidence using secure virtual and physical cards designed for everyday spending, online payments, and convenient access to your money wherever you need it.",
     },
     {
-        key: "students",
-        label: "Students",
+        key: "Bills & VTU",
+        label: "Bills & VTU",
         image: "/student.webp",
         description:
-            "Easily pay for courses, subscriptions, and study materials via our USD card.",
+            "Pay your bills and stay connected with ease. Buy airtime, data, and other essential services quickly and securely, all from one convenient platform.",
     },
-    {
-        key: "social-sellers",
-        label: "Social Sellers",
-        image: "/socialseller.webp",
-        description:
-            "Accept payments from customers worldwide through payment links.",
-    },
+    // {
+    //     key: "social-sellers",
+    //     label: "Social Sellers",
+    //     image: "/socialseller.webp",
+    //     description:
+    //         "Accept payments from customers worldwide through payment links.",
+    // },
 ]
 
 export default function FourthSection() {
@@ -73,7 +73,7 @@ export default function FourthSection() {
                         What's Inside
                     </h2>
 
-                    <div className="-mx-4 overflow-x-auto px-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:mx-0 lg:px-0 lg:overflow-visible">
+                    <div className="-mx-4 overflow-x-auto px-4 [-ms-overflow-style:none] scrollbar-none [&::-webkit-scrollbar]:hidden lg:mx-0 lg:px-0 lg:overflow-visible">
                         <div
                             role="tablist"
                             aria-label="Who Raenest is for"
@@ -89,8 +89,8 @@ export default function FourthSection() {
                                     onClick={() => handlePillClick(category.key)}
                                     className={`rounded-full py-1 px-2 text-sm sm:text-base cursor-pointer transition-colors whitespace-nowrap ${
                                         activeKey === category.key
-                                            ? "bg-black text-white"
-                                            : "bg-white text-black"
+                                            ? "bg-gray-800 text-white"
+                                            : "bg-white text-gray-800"
                                     }`}
                                 >
                                     {category.label}

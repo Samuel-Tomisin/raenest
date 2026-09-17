@@ -408,7 +408,7 @@ export default function BlogPage() {
                 type="button"
                 onClick={() => goToSlide(slideIndex + 1)}
                 aria-label="Next featured article"
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-[#EDE9FE] text-[#5433C9] transition-colors hover:bg-[#E0D9FC]"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-[#EDE9FE] text-primary transition-colors hover:bg-[#E0D9FC]"
               >
                 <ArrowRight className="h-4 w-4" />
               </button>

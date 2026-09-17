@@ -38,12 +38,12 @@ export default function Footer() {
                                 <li><Link href="/sendmoney" className="cursor-pointer">Send Money</Link></li>
                                 <li><Link href="/cards" className="cursor-pointer">Cards</Link></li>
                                 <li><Link href="/products/receivemoney" className="cursor-pointer">Receive Money</Link></li>
-                                <li><Link href="/products/global-accounts" className="cursor-pointer">Global Accounts</Link></li>
-                                <li><Link href="/products/invoices" className="cursor-pointer">Invoices</Link></li>
+                                {/* <li><Link href="/products/global-accounts" className="cursor-pointer">Global Accounts</Link></li> */}
+                                {/* <li><Link href="/products/invoices" className="cursor-pointer">Invoices</Link></li> */}
                             </ul>
                         </div>
 
-                        <div>
+                        {/* <div>
                             <h2 className="py-4 font-semibold text-gray-400">Business</h2>
                             <ul className="space-y-4">
                                 <li><Link href="/make-payments" className="cursor-pointer">Make Payments</Link></li>
@@ -52,12 +52,12 @@ export default function Footer() {
                                 <li><Link href="/products/global-accounts" className="cursor-pointer">Global Accounts</Link></li>
                                 <li><Link href="/products/invoices" className="cursor-pointer">Invoices</Link></li>
                             </ul>
-                        </div>
+                        </div> */}
 
                         <div>
                             <h2 className="py-4 font-semibold text-gray-400">Company</h2>
                             <ul className="space-y-4">
-                                <li><Link href="/our-story" className="cursor-pointer">Our Story</Link></li>
+                                {/* <li><Link href="/our-story" className="cursor-pointer">Our Story</Link></li> */}
                                 <li className="flex flex-wrap items-center gap-2">
                                     <Link href="/career" className="cursor-pointer">Career</Link>
                                     <Link
@@ -67,11 +67,11 @@ export default function Footer() {
                                         We are Hiring!
                                     </Link>
                                 </li>
-                                <li><Link href="/womens-mentorship" className="cursor-pointer">Women's Mentorship</Link></li>
+                                {/* <li><Link href="/womens-mentorship" className="cursor-pointer">Women's Mentorship</Link></li> */}
                                 <li><Link href="/news-&-blog" className="cursor-pointer">News & Blog</Link></li>
-                                <li><Link href="/india" className="cursor-pointer">India</Link></li>
+                                {/* <li><Link href="/india" className="cursor-pointer">India</Link></li>
                                 <li><Link href="/philippines" className="cursor-pointer">Philippines</Link></li>
-                                <li><Link href="/united-states" className="cursor-pointer">United States</Link></li>
+                                <li><Link href="/united-states" className="cursor-pointer">United States</Link></li> */}
                             </ul>
                         </div>
 
@@ -79,7 +79,7 @@ export default function Footer() {
                             <h2 className="py-4 font-semibold text-gray-400">Help</h2>
                             <ul className="space-y-4">
                                 <li><Link href="/customer-help" className="cursor-pointer">Customer Help</Link></li>
-                                <li><Link href="/contact" className="cursor-pointer">Contact us</Link></li>
+                                <li><Link href="/contact-us" className="cursor-pointer">Contact us</Link></li>
                             </ul>
                         </div>
                     </div>
@@ -98,22 +98,22 @@ export default function Footer() {
                 </div>
 
                 <div className="px-6 text-[13px] leading-relaxed text-gray-400 sm:px-8 sm:text-[14px] lg:px-12">
-                    <h2 className="pt-10">Raenest is a Financial Technology (FinTech) Company, not a Bank. Banking services are provided by Regent Bank, Member FDIC. Raenest is not FDIC insured. FDIC deposit insurance up to
+                    <h2 className="pt-10">Securevest is a Financial Technology (FinTech) Company, not a Bank. Banking services are provided by Regent Bank, Member FDIC. Securevest is not FDIC insured. FDIC deposit insurance up to
                         $250,000 per qualified customer account on a "pass-through" basis, for which certain conditions must be satisfied. FDIC insurance only covers the failure of Regent Bank, Member FDIC.
                         Mastercard Card services are provided by Raenest's technology partners, authorized by Visa and Mastercard to issue cards operating over their networks.</h2>
 
-                    <h2 className="pt-5">The Raenest USD Visa Card is a standalone payment card, powered by the Visa Inc.. Raenest provides the platform interface through which users can access and manage the card. The card itself is a separate
-                        product from the broader Raenest platform. Services such as global accounts, stablecoins, currency conversion, money transfers, and investments are independent offerings available within the Raenest platform.</h2>
+                    <h2 className="pt-5">The Securevest USD Visa Card is a standalone payment card, powered by the Visa Inc.. Raenest provides the platform interface through which users can access and manage the card. The card itself is a separate
+                        product from the broader Securevest platform. Services such as global accounts, stablecoins, currency conversion, money transfers, and investments are independent offerings available within the Raenest platform.</h2>
 
-                    <h2 className="pt-5">Raenest is not a broker-dealer, investment adviser or member of FINRA. Securities offered by Alpaca Securities LLC ("Alpaca Securities"). Alpaca Securities is a member of FINRA and the Securities Investor Protection
-                        Corporation. Raenest does not recommend any specific securities or investment strategies. Investing involves risk & investments may lose value, including the loss of principal. Past performance does not guarantee future results.
+                    <h2 className="pt-5">Securevest is not a broker-dealer, investment adviser or member of FINRA. Securities offered by Alpaca Securities LLC ("Alpaca Securities"). Alpaca Securities is a member of FINRA and the Securities Investor Protection
+                        Corporation. Securevest does not recommend any specific securities or investment strategies. Investing involves risk & investments may lose value, including the loss of principal. Past performance does not guarantee future results.
                         Investors should consider their investment objectives and risks carefully before investing. U.S. stock investments are held with Alpaca Securities LLC, a U.S.-licensed broker-dealer regulated by the SEC and FINRA. Your assets are
                         custodied under strict regulatory and security standards, and you retain full visibility into your holdings and performance at all times. Investment feature is offered in partnership with City Investment Capital Limited, a firm licensed
                         by the Securities and Exchange Commission of Nigeria.</h2>
 
-                    <h2 className="pt-5">Raenest Inc. Canada is registered with FINTRAC as a Money Services Business (Registration No. 1443707-1). Registered Office: 212 King Street West, 6th Floor, Toronto, ON M5H 1K5.</h2>
+                    <h2 className="pt-5">Securevest Inc. Canada is registered with FINTRAC as a Money Services Business (Registration No. 1443707-1). Registered Office: 212 King Street West, 6th Floor, Toronto, ON M5H 1K5.</h2>
 
-                    <h2 className="pt-5 pb-15">Raenest Inc. is licensed by the Central Bank of Nigeria as an International Money Transfer Operator. Banking services in the UK are provided by Clear Junction Ltd, authorised and regulated by the
+                    <h2 className="pt-5 pb-15">Securevest Inc. is licensed by the Central Bank of Nigeria as an International Money Transfer Operator. Banking services in the UK are provided by Clear Junction Ltd, authorised and regulated by the
                         Financial Conduct Authority (FCA) as an Electronic Money Institution. U.S. securities brokerage services are provided by Alpaca Securities LLC (“Alpaca Securities”), a member of FINRA and SIPC,
                         and a wholly-owned subsidiary of AlpacaDB, Inc.</h2>
                 </div>

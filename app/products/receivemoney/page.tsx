@@ -65,11 +65,11 @@ function ReceiveMoneyHero() {
         <div className="flex flex-col gap-6 pt-14">
           <p className="text-sm sm:text-2xl font-bold text-neutral-400">Receive money</p>
 
-          <h1 className="text-7xl font-normal leading-[1.05] text-neutral-950 sm:text-8xl lg:text-[80px]">
+          <h1 className="text-7xl font-normal leading-[1.05] text-gray-900 sm:text-8xl lg:text-[80px]">
             Receive money <br /> from over <br /> 190 countries.
           </h1>
 
-          <p className="max-w-md text-base text-black sm:text-lg">
+          <p className="max-w-md text-base text-gray-900 sm:text-lg">
             Get global USD, GBP and EUR bank accounts that helps you easily receive funds worldwide.
           </p>
 

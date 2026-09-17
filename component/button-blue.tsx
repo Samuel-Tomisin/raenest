@@ -1,13 +1,13 @@
 "use client"
 
-export default function Button() {
+export default function Button2() {
     return (
         <div>
             <a
-              href="/register"
+              href="https://play.google.com/store/apps?hl=en"
               className="py-3 px-4 bg-primary text-white rounded-2xl text-[12px] font-semibold transition-colors active:scale-95"
             >
-              Create an account
+              Download the app
             </a>
         </div>
     );

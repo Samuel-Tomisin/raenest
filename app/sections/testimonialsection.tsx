@@ -69,7 +69,7 @@ const leftTestimonials: Testimonial[] = [
   {
     title: "Unimaginably excellent",
     quote:
-      "I couldn't imagine how great SmhartPay works until I signed up. Honestly, this is my first time reviewing any website, but I'm happy to write about how excellent they operate.",
+      "I couldn't imagine how great Securevest works until I signed up. Honestly, this is my first time reviewing any website, but I'm happy to write about how excellent they operate.",
     name: "Kevin",
     country: "gh",
   },
@@ -190,7 +190,7 @@ export default function TestimonialSection() {
 
         <div className="px-4">
           <h1 className="pt-16 sm:pt-20 md:pt-28 text-center text-3xl sm:text-4xl md:text-5xl lg:text-[47px] font-semibold leading-tight text-gray-800">
-            Over 1,000,000 people
+            About 1,000,000 people
           </h1>
           <h1 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-[47px] font-semibold leading-tight text-gray-800">
             love us. You will too.

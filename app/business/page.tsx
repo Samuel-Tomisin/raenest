@@ -376,7 +376,7 @@ export default function BusinessHomePage() {
               <p className="text-xs text-[#667085]">Choose a Transfer type</p>
               <div className="mt-1 flex items-center justify-between">
                 <span className="text-sm font-semibold text-[#101828]">Bank Account Transfers</span>
-                <span className="text-xs font-semibold text-primary">Change type</span>
+                <span className="text-xs font-semibold text-[#5B4FE5]">Change type</span>
               </div>
             </div>
 
