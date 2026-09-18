@@ -118,8 +118,8 @@ function RecentTransactionsCard() {
   return (
     <div className="absolute inset-x-4 bottom-0 rounded-2xl bg-black/60 px-5 py-4 backdrop-blur-md sm:inset-x-8 lg:-bottom-2 lg:left-8 lg:right-auto lg:w-80">
       <div className="flex items-center justify-between">
-        <span className="text-sm font-medium text-white">Recent transactions</span>
-        <Link href="/transactions" className="text-sm font-medium text-white underline underline-offset-2">
+        <span className="text-sm font-medium text-gray-100">Recent transactions</span>
+        <Link href="/transactions" className="text-sm font-medium text-gray-100 underline underline-offset-2">
           See all
         </Link>
       </div>
@@ -130,7 +130,7 @@ function RecentTransactionsCard() {
             <div className="flex items-center gap-3">
               <span
                 className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-[10px] font-bold text-white ${t.logoBg} ${
-                  t.logoBg === "bg-white" ? "text-red-600!" : ""
+                  t.logoBg === "bg-gray-100" ? "text-red-600!" : ""
                 }`}
               >
                 {t.logoLabel}
@@ -181,14 +181,14 @@ export default function Hero() {
         <div className="flex flex-1 flex-col gap-6">
           <FlagMarquee />
 
-          <h1 className="text-4xl leading-[1.1] text-white sm:text-5xl lg:text-6xl">
+          <h1 className="text-4xl leading-[1.1] text-gray-100 sm:text-5xl lg:text-6xl">
             Save with discipline. 
           </h1>
-          <h1 className="text-4xl leading-[1.1] text-white sm:text-5xl lg:text-6xl">
+          <h1 className="text-4xl leading-[1.1] text-gray-100 sm:text-5xl lg:text-6xl">
             Spend with ease.
           </h1>
 
-          <p className="max-w-md text-base text-white sm:text-lg">
+          <p className="max-w-md text-base text-gray-100 sm:text-lg">
             Lock savings for up to 12% p.a., set goals that stick, and still have 
             instant transfers, cards, and bill payments in the same app.
           </p>

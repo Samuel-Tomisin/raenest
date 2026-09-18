@@ -227,7 +227,7 @@ function DropdownRow({ item }: { item: DropdownLink }) {
     <>
       {dropdownIcons[item.label] ?? null}
       <span className="flex flex-col min-w-0">
-        <span className="text-[13px] font-semibold text-black leading-tight">
+        <span className="text-[13px] font-semibold text-gray-800 leading-tight">
           {item.label}
         </span>
         <span className="text-[12px] text-gray-500 leading-snug">
@@ -249,7 +249,7 @@ function Dropdown({ label, items, isMobile = false, onNavigate }: DropdownProps)
         <button
           type="button"
           onClick={() => setOpen(!open)}
-          className="flex items-center justify-between w-full py-3 font-semibold text-[14px] text-black hover:text-[#44474e] transition-colors"
+          className="flex items-center justify-between w-full py-3 font-semibold text-[14px] text-gray-800 hover:text-[#44474e] transition-colors"
         >
           {label}
           <ChevronIcon open={open} />
@@ -265,7 +265,7 @@ function Dropdown({ label, items, isMobile = false, onNavigate }: DropdownProps)
                 key={item.label}
                 href={item.href}
                 onClick={onNavigate}
-                className="flex items-start gap-3 py-2 text-black hover:text-[#44474e] transition-colors"
+                className="flex items-start gap-3 py-2 text-gray-800 hover:text-[#44474e] transition-colors"
               >
                 <DropdownRow item={item} />
               </Link>
@@ -279,7 +279,7 @@ function Dropdown({ label, items, isMobile = false, onNavigate }: DropdownProps)
   /* ── Desktop hover dropdown ── */
   return (
     <div className="relative group">
-      <button className="flex items-center gap-1 cursor-pointer font-semibold text-[14px] text-black hover:text-[#44474e] transition-colors">
+      <button className="flex items-center gap-1 cursor-pointer font-semibold text-[14px] text-gray-800 hover:text-[#44474e] transition-colors">
         {label}
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -308,7 +308,7 @@ function Dropdown({ label, items, isMobile = false, onNavigate }: DropdownProps)
             <Link
               key={item.label}
               href={item.href}
-              className="flex items-start gap-3 px-2 py-2 rounded-lg text-black hover:bg-blue-50 hover:text-[#44474e] transition-colors"
+              className="flex items-start gap-3 px-2 py-2 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-[#44474e] transition-colors"
             >
               <DropdownRow item={item} />
             </Link>
@@ -433,7 +433,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setMobileOpen((prev) => !prev)}
-            className="lg:hidden p-2 rounded-lg text-black hover:bg-blue-50 active:bg-blue-100 transition-colors"
+            className="lg:hidden p-2 rounded-lg text-gray-800 hover:bg-blue-50 active:bg-blue-100 transition-colors"
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileOpen}
           >
@@ -487,7 +487,7 @@ export default function Navbar() {
           <Link
             href="/news-&-blog"
             onClick={() => setMobileOpen(false)}
-            className="py-3 font-semibold text-[14px] text-black border-b border-gray-100 hover:text-[#44474e] transition-colors"
+            className="py-3 font-semibold text-[14px] text-gray-800 border-b border-gray-100 hover:text-[#44474e] transition-colors"
           >
             News & Blog
           </Link>

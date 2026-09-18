@@ -5,23 +5,23 @@ export default function Seventhsection() {
         <div className="bg-white px-5 md:px-12 pt-16 md:pt-25 pb-10 md:pb-15">
             <div className="mx-auto max-w-7xl">            
         <div className="text-gray-800 text-center h-full">
-                    <h1 className="text-2xl sm:text-3xl md:text-[36px] font-semibold pb-10">The latest from Raenest: Tips, News and Updates</h1>
+                    <h1 className="text-2xl sm:text-3xl md:text-[36px] font-semibold pb-10">The latest from Securevest: Tips, News and Updates</h1>
             </div>
 
             <div className="flex flex-col md:flex-row gap-5 items-center pb-10 pt-8 md:pt-0">
-                <div className="bg-white border border-gray-200 rounded-2xl w-full max-w-[401px] h-auto md:h-[335px]">
+                <div className="bg-white border border-gray-200 rounded-2xl w-full max-w-100.25 h-auto md:h-83.75">
                     <img src="/ladywithring.jpg" alt="Lady with Nose Ring" className="p-3 rounded-3xl w-full h-[220px] sm:h-[250px] md:h-[280px] object-cover"/>
-                    <h2 className="text-gray-800 text-[14px] font-semibold px-5 pb-4">Raenest Diaries: How Visibility Took Ore Badmus from Teaching to Global Talent Visa</h2>
+                    <h2 className="text-gray-800 text-[14px] font-semibold px-5 pb-4">Securevest Diaries: How Visibility Took Ore Badmus from Teaching to Global Talent Visa</h2>
                 </div>
                 
-                <div className="bg-white border border-gray-200 rounded-2xl w-full max-w-[401px] h-auto md:h-[335px]">
-                    <img src="/twoladies.jpg" alt="Two ladies discussing" className="p-3 rounded-3xl w-full h-[220px] sm:h-[250px] md:h-[280px] object-cover"/>
+                <div className="bg-white border border-gray-200 rounded-2xl w-full max-w-100.25 h-auto md:h-83.75">
+                    <img src="/twoladies.jpg" alt="Two ladies discussing" className="p-3 rounded-3xl w-full h-55 sm:h-62.5 md:h-70 object-cover"/>
                     <h2 className="text-gray-800 text-[14px] font-semibold px-5 pb-4">10 Practical Ways To Increase Your Business's Visibility In AI Search</h2>
                 </div>
 
-                <div className="bg-white border border-gray-200 rounded-2xl w-full max-w-100.25 h-auto md:h-[335px]">
-                    <img src="/ghanafiverr.jpg" alt="Ghana with fiverr" className="p-3 rounded-3xl w-full h-[220px] sm:h-[250px] md:h-[280px] object-cover"/>
-                    <h2 className="text-gray-800 text-[14px] font-semibold px-5 pb-4">Raenest Diaries: How Visibility Took Ore Badmus from Teaching to Global Talent Visa</h2>
+                <div className="bg-white border border-gray-200 rounded-2xl w-full max-w-100.25 h-auto md:h-83.75">
+                    <img src="/ghanafiverr.jpg" alt="Ghana with fiverr" className="p-3 rounded-3xl w-full h-55 sm:h-62.5 md:h-70 object-cover"/>
+                    <h2 className="text-gray-800 text-[14px] font-semibold px-5 pb-4">Securevest Diaries: How Visibility Took Ore Badmus from Teaching to Global Talent Visa</h2>
                 </div>
             </div>
             <div className="text-gray-400">

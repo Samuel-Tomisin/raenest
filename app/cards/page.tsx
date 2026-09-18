@@ -70,18 +70,18 @@ function CardsHero() {
     <section className="relative overflow-hidden bg-white px-6 pt-14 sm:px-10 lg:px-16 lg:pt-4">
       <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-2 lg:items-center lg:gap-10">
         <div className="flex flex-col gap-6">
-          <p className="text-sm sm:text-2xl font-bold text-neutral-400">Cards</p>
-          <h1 className="text-5xl font-semibold leading-[1.05] text-neutral-950 sm:text-6xl lg:text-[64px]">
+          <p className="text-sm sm:text-2xl font-bold text-gray-400">Cards</p>
+          <h1 className="text-5xl font-semibold leading-[1.05] text-gray-800 sm:text-6xl lg:text-[64px]">
             Dollar cards for everyday use
           </h1>
-          <p className="max-w-md text-base text-neutral-600 sm:text-lg">
+          <p className="max-w-md text-base text-gray-800 sm:text-lg">
             Get Raenest virtual USD cards for online and offline transactions
             with transparent and competitive fees.
           </p>
           <div className="flex flex-wrap items-center gap-3 pt-2">
             <Link
               href="/register"
-              className="rounded-2xl bg-primary px-6 py-3.5 text-sm font-semibold text-white transition-colors"
+              className="rounded-2xl bg-primary px-6 py-3.5 text-sm font-semibold text-gray-100 transition-colors"
             >
               Request a card
             </Link>
@@ -186,8 +186,8 @@ function CardFeaturesCarousel() {
           <div className="absolute inset-0 bg-black/50" />
           <div className="absolute inset-x-0 bottom-0 flex flex-col items-center gap-6 px-6 pb-10 text-center sm:px-10">
             <div>
-              <h2 className="text-2xl font-bold text-white sm:text-4xl">{active.heading}</h2>
-              <p className="mx-auto mt-3 max-w-xl text-sm text-white/85 sm:text-base">
+              <h2 className="text-2xl font-bold text-gray-100 sm:text-4xl">{active.heading}</h2>
+              <p className="mx-auto mt-3 max-w-xl text-sm text-gray-100 sm:text-base">
                 {active.description}
               </p>
             </div>
@@ -199,8 +199,8 @@ function CardFeaturesCarousel() {
                   onClick={() => setActiveIndex(index)}
                   className={`rounded-full px-4 py-2 text-sm cursor-pointer font-semibold transition-colors ${
                     index === activeIndex
-                      ? "bg-primary text-white"
-                      : "bg-white text-neutral-900 hover:bg-white/90"
+                      ? "bg-primary text-gray-100"
+                      : "bg-gray-100 text-neutral-900 hover:bg-white/90"
                   }`}
                 >
                   {slide.pillLabel}
@@ -242,7 +242,7 @@ function FundCardSection() {
       </div>
 
       <div className="mx-auto mt-16 max-w-7xl">
-        <h3 className="max-w-xl text-2xl font-bold leading-tight text-white sm:text-3xl">
+        <h3 className="max-w-xl text-2xl font-bold leading-tight text-gray-100 sm:text-3xl">
           Accepted at over 150 million merchants where Visa is accepted.
         </h3>
       </div>
@@ -282,12 +282,12 @@ function RequestCardSteps() {
     <section className="bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col items-start justify-between gap-4 pb-10 sm:flex-row sm:items-center">
-          <h2 className="text-3xl font-bold text-neutral-950 sm:text-4xl">
+          <h2 className="text-3xl font-bold text-gray-800 sm:text-4xl">
             Request for a card today
           </h2>
           <button
             type="button"
-            className="flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm font-semibold text-neutral-900 transition-colors hover:bg-neutral-50"
+            className="flex items-center gap-2 rounded-full border border-neutral-200 bg-gray-100 px-4 py-2 text-sm font-semibold text-neutral-900 transition-colors hover:bg-neutral-50"
           >
             <Users className="h-4 w-4" />
             Watch this demo video
@@ -300,7 +300,7 @@ function RequestCardSteps() {
               key={step.number}
               className="relative flex flex-col overflow-hidden rounded-3xl bg-linear-to-b from-[#5433C9] to-[#3D2299] px-8 py-15"
             >
-              <span className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full bg-white/15 text-sm font-semibold text-white">
+              <span className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full bg-white/15 text-sm font-semibold text-gray-100">
                 {step.number}
               </span>
               {/* Drop your app screenshot / mockup image in here */}
@@ -342,10 +342,10 @@ function SecuritySection() {
   return (
     <section className="bg-primary px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
       <div className="mx-auto max-w-7xl text-center">
-        <h2 className="text-3xl font-bold text-white sm:text-4xl">
+        <h2 className="text-3xl font-bold text-gray-100 sm:text-4xl">
           Security you can rely on
         </h2>
-        <p className="mx-auto mt-4 max-w-xl text-sm text-white/80 sm:text-base">
+        <p className="mx-auto mt-4 max-w-xl text-sm text-gray-100 sm:text-base">
           We uphold industry-standard security across all our services,
           ensuring your transactions and funds are protected 24/7 so you can
           focus on what matters.
@@ -354,10 +354,10 @@ function SecuritySection() {
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
           {SECURITY_POINTS.map(({ title, description }) => (
             <div key={title} className="rounded-3xl bg-white/10 p-8 text-left">
-              <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white/15 text-white">
+              <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white/15 text-gray-100">
                 <Users className="h-6 w-6" />
               </span>
-              <h3 className="mt-6 text-lg font-semibold text-white">{title}</h3>
+              <h3 className="mt-6 text-lg font-semibold text-gray-100">{title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-white/75">{description}</p>
             </div>
           ))}
@@ -465,7 +465,7 @@ function VideoTestimonialCard({
             <span className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors" />
             <span className="absolute inset-0 flex items-center justify-center">
               <span className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-white/30 backdrop-blur-sm group-hover:scale-105 transition-transform">
-                <Play className="h-5 w-5 sm:h-6 sm:w-6 text-white fill-white ml-0.5" />
+                <Play className="h-5 w-5 sm:h-6 sm:w-6 text-gray-100 fill-white ml-0.5" />
               </span>
             </span>
           </button>
@@ -522,7 +522,7 @@ function TestimonialsSection() {
 
         <div className="mx-auto mt-6 flex w-full max-w-81 items-center justify-center gap-2 rounded-2xl bg-black px-3 py-2 cursor-pointer">
           <img src="/rating.png" alt="Star Rating" className="max-h-4 shrink-0" />
-          <h2 className="text-center text-[13px] sm:text-[15px] font-semibold text-gray-500">
+          <h2 className="text-center text-[13px] sm:text-[15px] font-semibold text-gray-100">
             4.6 Apple store, Play store
           </h2>
         </div>
@@ -599,7 +599,7 @@ function FAQItem({
         >
           <Plus
             className={`h-4 w-4 transition-transform duration-300 ${
-              isOpen ? "rotate-45 text-neutral-700" : "text-white"
+              isOpen ? "rotate-45 text-neutral-700" : "text-gray-100"
             }`}
             strokeWidth={2.5}
           />

@@ -4,6 +4,8 @@ import Link from "next/link";
 import { Lock, CalendarClock, TrendingUp } from "lucide-react";
 import Navbar from "@/component/navbar";
 import Footer from "@/component/footer";
+import Testimonialsection from "../sections/testimonialsection";
+import FAQSection from "@/component/faq";
 
 const FEATURES = [
   {
@@ -65,7 +67,7 @@ export default function LockedSavingsPage() {
           <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-3">
             {FEATURES.map(({ icon: Icon, title, description }) => (
               <div key={title} className="flex flex-col rounded-3xl bg-white p-6 shadow-sm">
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#EDE9FE] text-[#5433C9]">
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#EDE9FE] text-primary">
                   <Icon className="h-5 w-5" />
                 </span>
                 <h3 className="mt-4 text-lg font-bold text-[#5433C9]">{title}</h3>
@@ -77,6 +79,8 @@ export default function LockedSavingsPage() {
           </div>
         </div>
       </section>
+      <Testimonialsection/>
+      <FAQSection/>
       <Footer/>
     </main>
   );

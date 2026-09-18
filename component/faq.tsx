@@ -16,9 +16,9 @@ interface FAQItemProps {
 
 const FAQS: FAQ[] = [
   {
-    question: "Is Raenest a bank?",
+    question: "Is Securevest a bank?",
     answer:
-      "Raenest is a Financial Technology (FinTech) Company, not a Bank. Banking services are provided by Regent Bank, Member FDIC. Raenest is not FDIC insured. FDIC deposit insurance covers up to $250,000 per qualified customer account on a \u201cpass-through\u201d basis, for which certain conditions must be satisfied. FDIC insurance only covers the failure of Regent Bank, Member FDIC. Card services are provided by Raenest's technology partners, authorized by Visa and Mastercard to issue cards operating over their networks.",
+      "Securevest is a Financial Technology (FinTech) Company, not a Bank. Banking services are provided by Regent Bank, Member FDIC. Securevest is not FDIC insured. FDIC deposit insurance covers up to $250,000 per qualified customer account on a \u201cpass-through\u201d basis, for which certain conditions must be satisfied. FDIC insurance only covers the failure of Regent Bank, Member FDIC. Card services are provided by Securevest's technology partners, authorized by Visa and Mastercard to issue cards operating over their networks.",
   },
   {
     question: "How long does it take to get my bank account?",
@@ -28,7 +28,7 @@ const FAQS: FAQ[] = [
   {
     question: "What's the fee for receiving in my bank account?",
     answer:
-      "Receiving money into your Raenest USD account is completely free, with no limit on how much you can receive. Any fees are charged by the sender's bank, not by Raenest.",
+      "Receiving money into your Securevest USD account is completely free, with no limit on how much you can receive. Any fees are charged by the sender's bank, not by Securevest.",
   },
   {
     question: "What is the Raenest USD Visa Card and how is it related to Raenest?",

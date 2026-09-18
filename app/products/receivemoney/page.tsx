@@ -162,8 +162,8 @@ function ReceiveFeatureShowcase() {
 
           <div className="absolute inset-x-0 bottom-0 p-6 sm:p-10">
             <div className="rounded-2xl bg-black/70 p-5 backdrop-blur-sm sm:max-w-sm">
-              <h3 className="text-lg font-bold text-white sm:text-xl">{active.heading}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-white/80">{active.description}</p>
+              <h3 className="text-lg font-bold text-gray-100 sm:text-xl">{active.heading}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-gray-100">{active.description}</p>
             </div>
           </div>
         </div>
@@ -176,8 +176,8 @@ function ReceiveFeatureShowcase() {
               onClick={() => setActiveIndex(index)}
               className={`rounded-full px-4 py-2 text-sm font-semibold cursor-pointer transition-colors ${
                 index === activeIndex
-                  ? "bg-primary text-white"
-                  : "bg-white text-neutral-900 hover:bg-neutral-50"
+                  ? "bg-primary text-gray-100"
+                  : "bg-gray-100 text-gray-900 hover:bg-neutral-50"
               }`}
             >
               {feature.pillLabel}
@@ -220,12 +220,12 @@ function ReceiveFirstPaymentSteps() {
     <section className="bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col items-start justify-between gap-4 pb-10 sm:flex-row sm:items-center">
-          <h2 className="text-3xl font-bold text-neutral-950 sm:text-4xl">
+          <h2 className="text-3xl font-bold text-gray-800 sm:text-4xl">
             Receive your first payment
           </h2>
           <button
             type="button"
-            className="flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm font-semibold text-neutral-900 transition-colors hover:bg-neutral-50"
+            className="flex items-center gap-2 rounded-full border border-neutral-200 bg-gray-100 px-4 py-2 text-sm font-semibold text-neutral-900 transition-colors hover:bg-neutral-50"
           >
             <Users className="h-4 w-4" />
             Watch this demo video
@@ -236,13 +236,13 @@ function ReceiveFirstPaymentSteps() {
           {RECEIVE_STEPS.map((step) => (
             <div
               key={step.number}
-              className="relative flex flex-col overflow-hidden rounded-3xl bg-gradient-to-b from-primary to-[#3D2299] px-8 py-10"
+              className="relative flex flex-col overflow-hidden rounded-3xl bg-linear-to-b from-primary to-[#3D2299] px-8 py-10"
             >
-              <span className="mb-6 flex h-8 w-8 items-center justify-center rounded-full bg-white/15 text-sm font-semibold text-white">
+              <span className="mb-6 flex h-8 w-8 items-center justify-center rounded-full bg-white/15 text-sm font-semibold text-gray-100">
                 {step.number}
               </span>
               <img src={step.imagesrc} alt="" className="mb-6 h-75 w-full object-contain" />
-              <h3 className="text-lg font-semibold text-white">{step.title}</h3>
+              <h3 className="text-lg font-semibold text-gray-100">{step.title}</h3>
               <p className="mt-1 text-sm leading-relaxed text-white/75">{step.description}</p>
             </div>
           ))}
@@ -266,7 +266,7 @@ function SecuritySection() {
   return (
     <section className="bg-primary px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
       <div className="mx-auto max-w-7xl text-center">
-        <h2 className="text-3xl font-bold text-white sm:text-4xl">Security you can rely on</h2>
+        <h2 className="text-3xl font-bold text-gray-100 sm:text-4xl">Security you can rely on</h2>
         <p className="mx-auto mt-4 max-w-xl text-sm text-white/80 sm:text-base">
           International transfers made easy. Whether you're sending to Africa, the US, Europe, or the UK, we've got you covered.
         </p>
@@ -274,11 +274,11 @@ function SecuritySection() {
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
           {SECURITY_POINTS.map(({ icon: Icon, title, description }) => (
             <div key={title} className="rounded-3xl bg-white/10 p-8 text-left">
-              <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white/15 text-white">
+              <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white/15 text-gray-100">
                 <Icon className="h-6 w-6" />
               </span>
-              <h3 className="mt-6 text-lg font-semibold text-white">{title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-white/75">{description}</p>
+              <h3 className="mt-6 text-lg font-semibold text-gray-100">{title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-gray-200">{description}</p>
             </div>
           ))}
         </div>
@@ -335,7 +335,7 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   return (
     <div className="flex flex-col justify-between rounded-2xl bg-neutral-100 p-6 h-full">
       <div>
-        <h3 className="font-semibold text-neutral-900 mb-3">{testimonial.title}</h3>
+        <h3 className="font-semibold text-gray-800 mb-3">{testimonial.title}</h3>
         <p className="text-sm text-neutral-600 leading-relaxed">{testimonial.quote}</p>
       </div>
       <div className="flex items-center gap-2 mt-6">
@@ -390,9 +390,9 @@ function TestimonialsSection() {
           </div>
         </div>
 
-        <div className="mx-auto mt-6 flex w-full max-w-[324px] items-center justify-center gap-2 rounded-2xl bg-black px-3 py-2 cursor-pointer">
+        <div className="mx-auto mt-6 flex w-full max-w-81 items-center justify-center gap-2 rounded-2xl bg-gray-900 px-3 py-2 cursor-pointer">
           <img src="/rating.png" alt="Star Rating" className="max-h-4 shrink-0" />
-          <h2 className="text-center text-[13px] sm:text-[15px] font-semibold text-gray-500">
+          <h2 className="text-center text-[13px] sm:text-[15px] font-semibold text-gray-100">
             4.6 Apple store, Play store
           </h2>
         </div>
@@ -464,7 +464,7 @@ function FAQItem({
         >
           <Plus
             className={`h-4 w-4 transition-transform duration-300 ${
-              isOpen ? "rotate-45 text-neutral-700" : "text-white"
+              isOpen ? "rotate-45 text-neutral-700" : "text-gray-100"
             }`}
             strokeWidth={2.5}
           />
@@ -505,7 +505,7 @@ function FAQSection() {
           </p>
         </div>
 
-        <div className="max-h-[640px] overflow-y-auto pr-2 [scrollbar-width:thin] lg:pr-6">
+        <div className="max-h-160 overflow-y-auto pr-2 scrollbar-thin lg:pr-6">
           {RECEIVE_MONEY_FAQS.map((item, index) => (
             <FAQItem
               key={item.question}

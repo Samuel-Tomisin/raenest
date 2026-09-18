@@ -10,7 +10,7 @@ export default function Footer() {
                 <div className="flex flex-col gap-12 px-6 py-12 text-[14px] sm:px-8 sm:py-16 lg:flex-row lg:justify-between lg:gap-0 lg:px-12 lg:py-20">
                     <div className="flex flex-col text-white">
                         <Link href="/" className="cursor-pointer">
-                            <img src="/raenest.svg" alt="Raenest Logo" className="h-[40px] w-[120px] brightness-0 invert sm:h-[50px] sm:w-[150px]" />
+                            <img src="/raenest.svg" alt="Raenest Logo" className="h-10 w-30 brightness-0 invert sm:h-12.5 sm:w-37.5" />
                         </Link>
                         <h2 className="pt-5">7460 Warren Parkway, Suite 100,</h2>
                         <h2 className="pb-5">Frisco, TX 75034, US</h2>
@@ -33,9 +33,9 @@ export default function Footer() {
                     {/*right-side*/}
                     <div className="grid grid-cols-2 gap-x-8 gap-y-10 text-white sm:grid-cols-2 md:grid-cols-4 lg:gap-11">
                         <div className="text-[14px]">
-                            <h2 className="py-4 font-semibold text-gray-400">Personal</h2>
+                            <h2 className="py-4 font-semibold text-gray-400">Products</h2>
                             <ul className="space-y-4">
-                                <li><Link href="/sendmoney" className="cursor-pointer">Send Money</Link></li>
+                                {/* <li><Link href="/sendmoney" className="cursor-pointer">Send Money</Link></li> */}
                                 <li><Link href="/cards" className="cursor-pointer">Cards</Link></li>
                                 <li><Link href="/products/receivemoney" className="cursor-pointer">Receive Money</Link></li>
                                 {/* <li><Link href="/products/global-accounts" className="cursor-pointer">Global Accounts</Link></li> */}
@@ -62,7 +62,7 @@ export default function Footer() {
                                     <Link href="/career" className="cursor-pointer">Career</Link>
                                     <Link
                                         href="/career"
-                                        className="cursor-pointer rounded-2xl bg-[#E6FF00] px-2 py-1 text-[11px] text-black"
+                                        className="cursor-pointer rounded-2xl bg-[#E6FF00] px-2 py-1 text-[11px] text-gray-900"
                                     >
                                         We are Hiring!
                                     </Link>
@@ -100,10 +100,10 @@ export default function Footer() {
                 <div className="px-6 text-[13px] leading-relaxed text-gray-400 sm:px-8 sm:text-[14px] lg:px-12">
                     <h2 className="pt-10">Securevest is a Financial Technology (FinTech) Company, not a Bank. Banking services are provided by Regent Bank, Member FDIC. Securevest is not FDIC insured. FDIC deposit insurance up to
                         $250,000 per qualified customer account on a "pass-through" basis, for which certain conditions must be satisfied. FDIC insurance only covers the failure of Regent Bank, Member FDIC.
-                        Mastercard Card services are provided by Raenest's technology partners, authorized by Visa and Mastercard to issue cards operating over their networks.</h2>
+                        Mastercard Card services are provided by Securevest's technology partners, authorized by Visa and Mastercard to issue cards operating over their networks.</h2>
 
-                    <h2 className="pt-5">The Securevest USD Visa Card is a standalone payment card, powered by the Visa Inc.. Raenest provides the platform interface through which users can access and manage the card. The card itself is a separate
-                        product from the broader Securevest platform. Services such as global accounts, stablecoins, currency conversion, money transfers, and investments are independent offerings available within the Raenest platform.</h2>
+                    <h2 className="pt-5">The Securevest USD Visa Card is a standalone payment card, powered by the Visa Inc.. Securevest provides the platform interface through which users can access and manage the card. The card itself is a separate
+                        product from the broader Securevest platform. Services such as currency conversion, money transfers, and investments are independent offerings available within the Securevest platform.</h2>
 
                     <h2 className="pt-5">Securevest is not a broker-dealer, investment adviser or member of FINRA. Securities offered by Alpaca Securities LLC ("Alpaca Securities"). Alpaca Securities is a member of FINRA and the Securities Investor Protection
                         Corporation. Securevest does not recommend any specific securities or investment strategies. Investing involves risk & investments may lose value, including the loss of principal. Past performance does not guarantee future results.

@@ -75,7 +75,7 @@ const leftTestimonials: Testimonial[] = [
   },
   {
     title: "Best in class support",
-    quote: "SecureVest is a great company with one of the best support teams I've ever seen.",
+    quote: "Securevest is a great company with one of the best support teams I've ever seen.",
     name: "Theresa",
     country: "ng",
   },
@@ -92,7 +92,7 @@ const rightTestimonials: Testimonial[] = [
   {
     title: "Seamless for transfers",
     quote:
-      "SecureVest has been helping me since last year that I found it, I don't have to stress about transfers anymore as it comes quickly and very fast.",
+      "Securevest has been helping me since last year that I found it, I don't have to stress about transfers anymore as it comes quickly and very fast.",
     name: "Blessing",
     country: "ke",
   },
@@ -154,7 +154,7 @@ function VideoTestimonialCard({
             <span className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors" />
             <span className="absolute inset-0 flex items-center justify-center">
               <span className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-white/30 backdrop-blur-sm group-hover:scale-105 transition-transform">
-                <Play className="h-5 w-5 sm:h-6 sm:w-6 text-white fill-white ml-0.5" />
+                <Play className="h-5 w-5 sm:h-6 sm:w-6 text-gray-100 fill-gray-100 ml-0.5" />
               </span>
             </span>
           </button>
@@ -230,7 +230,7 @@ export default function TestimonialSection() {
 
         <div className="mx-auto mt-6 flex w-full max-w-[324px] items-center justify-center gap-2 rounded-2xl bg-black px-3 py-2 cursor-pointer">
           <img src="/rating.png" alt="Star Rating" className="max-h-4 shrink-0" />
-          <h2 className="text-center text-[13px] sm:text-[15px] font-semibold text-gray-500">
+          <h2 className="text-center text-[13px] sm:text-[15px] font-semibold text-gray-200">
             4.6 Apple store, Play store
           </h2>
         </div>

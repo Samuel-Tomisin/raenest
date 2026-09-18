@@ -89,7 +89,7 @@ export default function FourthSection() {
                                     onClick={() => handlePillClick(category.key)}
                                     className={`rounded-full py-1 px-2 text-sm sm:text-base cursor-pointer transition-colors whitespace-nowrap ${
                                         activeKey === category.key
-                                            ? "bg-gray-800 text-white"
+                                            ? "bg-gray-800 text-gray-100"
                                             : "bg-white text-gray-800"
                                     }`}
                                 >
@@ -103,7 +103,7 @@ export default function FourthSection() {
 
             <div
                 ref={scrollContainerRef}
-                className="bg-white py-7 px-4 sm:px-6 lg:px-8 flex items-center gap-4 sm:gap-5 overflow-x-auto scroll-smooth snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+                className="bg-white py-7 px-4 sm:px-6 lg:px-8 flex items-center gap-4 sm:gap-5 overflow-x-auto scroll-smooth snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] scrollbar-none"
             >
                 {categories.map((category) => (
                     <div
@@ -114,13 +114,13 @@ export default function FourthSection() {
                         ref={(el) => {
                             panelRefs.current[category.key] = el
                         }}
-                        className="bg-cover bg-center h-[300px] sm:h-[380px] lg:h-[500px] w-[85vw] sm:w-[560px] lg:w-[932px] max-w-[932px] flex-shrink-0 rounded-3xl flex flex-col justify-between snap-center"
+                        className="bg-cover bg-center h-75 sm:h-95 lg:h-125 w-[85vw] sm:w-140 lg:w-233 max-w-233 shrink-0 rounded-3xl flex flex-col justify-between snap-center"
                         style={{ backgroundImage: `url('${category.image}')` }}
                     >
-                        <h3 className="text-white text-lg sm:text-xl lg:text-2xl font-bold p-6 sm:p-8 lg:p-12">
+                        <h3 className="text-gray-100 text-lg sm:text-xl lg:text-2xl font-bold p-6 sm:p-8 lg:p-12">
                             {category.label}
                         </h3>
-                        <p className="text-white text-sm sm:text-base lg:text-[18px] font-semibold p-6 sm:p-8 lg:p-12 leading-relaxed">
+                        <p className="text-gray-100 text-sm sm:text-base lg:text-[18px] font-semibold p-6 sm:p-8 lg:p-12 leading-relaxed">
                             {category.description}
                         </p>
                     </div>

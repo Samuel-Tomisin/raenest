@@ -1,13 +1,14 @@
 "use client";
 
 import LearnMore from "@/component/learn-more";
+import { ArrowRight } from "lucide-react";
 
 export default function ThirdSection() {
   return (
     <section className="bg-[url('/india-guy.png')] bg-cover bg-center bg-no-repeat min-h-screen w-full pt-10 sm:pt-14 lg:pt-18 px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="w-full">
-          <h2 className="text-white text-xl sm:text-2xl lg:text-[28px] font-semibold px-1 sm:px-5">
+          <h2 className="text-gray-100 text-xl sm:text-2xl lg:text-[28px] font-semibold px-1 sm:px-5">
             Receive Money
           </h2>
         </div>
@@ -20,14 +21,19 @@ export default function ThirdSection() {
           />
 
           <div className="flex flex-col items-center gap-2 px-5 text-center sm:items-start sm:text-start sm:max-w-sm lg:max-w-md">
-            <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-semibold leading-tight text-white">
+            <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-semibold leading-tight text-gray-100">
               The reliable way to get paid
             </h2>
-            <p className="text-sm sm:text-base leading-relaxed text-white">
+            <p className="text-sm sm:text-base leading-relaxed text-gray-100">
               Get paid on time, every time, with accounts in USD, GBP, or EUR,
               plus easy invoicing and payment links.
             </p>
-            <LearnMore />
+            <div className="flex gap-2 cursor-pointer">
+            <a href="/products/receivemoney"
+            className="text-gray-100 font-semibold">Learn More</a>
+            <ArrowRight/>
+            </div>
+            {/* <LearnMore /> */}
           </div>
         </div>
       </div>
