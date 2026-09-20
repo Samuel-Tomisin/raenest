@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Smartphone, CreditCard, ShieldCheck } from "lucide-react";
 import Navbar from "@/component/navbar";
 import Footer from "@/component/footer";
+import Securitysection from "@/component/securitysection";
 
 const FEATURES = [
   {
@@ -77,6 +78,7 @@ export default function VirtualPhysicalCardsPage() {
           </div>
         </div>
       </section>
+      <Securitysection/>
       <Footer/>
     </main>
   );

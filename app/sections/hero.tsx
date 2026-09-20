@@ -156,7 +156,7 @@ function RecentTransactionsCard() {
 
 export default function Hero() {
   return (
-    <section className="relative bg-primary px-2 sm:px-10 sm:pt-7 lg:px-16 lg:pt-7 flex">
+    <section className="relative w-full overflow-x-hidden bg-primary px-4 sm:px-10 sm:pt-7 lg:px-16 lg:pt-7">
       {/* Soft decorative swoosh behind the photo */}
       <svg
         className="pointer-events-none absolute inset-0 hidden h-full w-full lg:block"
@@ -177,33 +177,33 @@ export default function Hero() {
         />
       </svg>
 
-      <div className="relative z-10 mx-auto flex max-w-7xl flex-col gap-12 lg:flex-row lg:items-center lg:gap-8">
+      <div className="relative z-10 mx-auto flex w-full max-w-7xl min-w-0 flex-col gap-12 lg:flex-row lg:items-center lg:gap-8">
         {/* Left: copy */}
-        <div className="flex flex-1 flex-col gap-6">
+        <div className="flex min-w-0 flex-1 flex-col gap-6">
           <FlagMarquee />
 
-          <h1 className="text-4xl leading-[1.1] text-gray-100 sm:text-5xl lg:text-6xl font-serif">
-            Save with discipline. 
+          <h1 className="text-3xl leading-[1.1] text-gray-100 sm:text-5xl lg:text-6xl font-serif">
+            Save with discipline.
           </h1>
-          <h1 className="text-4xl leading-[1.1] text-gray-100 sm:text-5xl lg:text-6xl font-serif">
+          <h1 className="text-3xl leading-[1.1] text-gray-100 sm:text-5xl lg:text-6xl font-serif">
             Spend with ease.
           </h1>
 
           <p className="max-w-md text-base text-gray-100 sm:text-lg font-sans">
-            Lock savings for up to 12% p.a., set goals that stick, and still have 
+            Lock savings for up to 12% p.a., set goals that stick, and still have
             instant transfers, cards, and bill payments in the same app.
           </p>
 
-          <div className="flex items-center gap-4 flex-col lg:flex lg:flex-row">
+          <div className="flex flex-col items-center gap-4 lg:flex-row">
             <div className="hidden lg:block">
-            <Button/>
+              <Button />
             </div>
             <Download />
           </div>
         </div>
 
         {/* Right: photo + floating transactions card */}
-        <div className="relative flex-1">
+        <div className="relative min-w-0 flex-1">
           <div className="relative mx-auto aspect-5/5 w-full max-w-sm rounded-t-[160px] rounded-b-4xl sm:max-w-md lg:max-w-none">
             {/* Drop your hero photo in here */}
             <img
@@ -213,7 +213,7 @@ export default function Hero() {
             />
           </div>
           <div className="hidden lg:block">
-          <RecentTransactionsCard />
+            <RecentTransactionsCard />
           </div>
         </div>
       </div>

@@ -200,7 +200,7 @@ export default function TestimonialSection() {
           </h2>
         </div>
 
-        <div className="mx-auto max-w-6xl flex flex-col lg:start lg:left">
+        <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {/* Left column */}
             <div className="flex flex-col gap-5">
@@ -210,7 +210,7 @@ export default function TestimonialSection() {
             </div>
 
             {/* Center video */}
-            <div className="md:row-span-1">
+            <div className="md:row-span-1 hidden md:block lg:block">
               <VideoTestimonialCard
                 youtubeId="g3D_YGKjyms"
                 posterSrc="/testimonials/moyinoluwa-thumbnail.jpg"
