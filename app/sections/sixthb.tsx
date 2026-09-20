@@ -28,7 +28,7 @@ export default function Sixthbsection() {
         <div className="flex flex-col items-center justify-center gap-3">
         <div className="text-gray-800 text-center h-full">
             {/* Fixed-height viewport so the layout doesn't jump between words */}
-            <div className="relative h-[60px] sm:h-[72px] md:h-[84px] lg:h-[84px] overflow-hidden">
+            <div className="relative h-15 sm:h-18 md:h-21 lg:h-21 overflow-hidden">
                 {ROLES.map((role, i) => {
                     const offset = i - index;
                     return (
@@ -56,31 +56,29 @@ export default function Sixthbsection() {
             <h2>Get Paid Globally in 3 Easy Steps</h2>
         </div>
 
-        <div>
-            <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-5">
-                <div className="w-full max-w-100.5 h-auto md:h-125 bg-primary px-6 sm:px-8 pt-8 flex flex-col items-center justify-center gap-3 rounded-3xl">
-                <img src="/number1.png" alt="Number 1" className="w-[300px] h-auto"/>
-                <div className="w-full h-auto md:h-75 bg-[#28179F] py-3 px-5 rounded-b-3xl">
-                <h2 className="text-lg sm:text-[20px] text-gray-100 font-semibold">Quick Sign up</h2>
-                <h2 className="text-sm sm:text-[16px] pt-3 text-gray-100">Create your account in minutes—input legal name, strong password, and confirm verification code.</h2>
-                </div>
-                </div>
-                <div className="w-full max-w-100.5 h-auto md:h-125 bg-primary px-6 sm:px-8 pt-8 flex flex-col items-center justify-center gap-3 rounded-3xl">
-                <img src="/number3.png" alt="Number 2" className="w-auto h-auto"/>
-                <div className="w-full h-auto md:h-75 bg-[#28179F] py-3 px-5 rounded-b-3xl">
-                <h2 className="text-lg sm:text-[20px] text-gray-100 font-semibold">Verify Your Identity</h2>
-                <h2 className="text-sm sm:text-[16px] pt-3 text-gray-100">A quick and secure verification process. This is important to help you keep your account safe.</h2>
-                </div>
-                </div>
-                <div className="w-full max-w-100.5 h-auto md:h-125 bg-primary px-6 sm:px-8 pt-8 flex flex-col items-center justify-center gap-3 rounded-3xl">
-                <img src="/number2.webp" alt="Number 3" className="w-auto h-auto" />
-                <div className="w-full h-auto md:h-75 bg-[#28179F] py-3 px-5 rounded-b-3xl">
-                <h2 className="text-lg sm:text-[20px] text-gray-100 font-semibold">Get Your Accounts</h2>
-                <h2 className="text-sm sm:text-[16px] text-gray-100 pt-3">Start receiving payments, saving in foreign currencies, and spending globally.</h2>
-                </div>
-                </div>
-            </div>
-        </div>
+  <div className="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-5">
+    <div className="w-full max-w-100.5 h-auto lg:h-125 bg-primary px-6 sm:px-8 pt-8 flex flex-col items-center justify-center gap-3 rounded-3xl">
+    <img src="/number1.png" alt="Number 1" className="w-[300px] h-auto"/>
+    <div className="w-full h-auto lg:h-75 bg-[#28179F] py-3 px-5 rounded-b-3xl">
+    <h2 className="text-lg sm:text-[20px] text-gray-100 font-semibold">Quick Sign up</h2>
+    <h2 className="text-sm sm:text-[16px] pt-3 text-gray-100">Create your account in minutes—input legal name, strong password, and confirm verification code.</h2>
     </div>
-    );
+    </div>
+    <div className="w-full max-w-100.5 h-auto lg:h-125 bg-primary px-6 sm:px-8 pt-8 flex flex-col items-center justify-center gap-3 rounded-3xl">
+    <img src="/number3.png" alt="Number 2" className="w-auto h-auto"/>
+    <div className="w-full h-auto lg:h-75 bg-[#28179F] py-3 px-5 rounded-b-3xl">
+    <h2 className="text-lg sm:text-[20px] text-gray-100 font-semibold">Verify Your Identity</h2>
+    <h2 className="text-sm sm:text-[16px] pt-3 text-gray-100">A quick and secure verification process. This is important to help you keep your account safe.</h2>
+    </div>
+    </div>
+    <div className="w-full max-w-100.5 h-auto lg:h-125 bg-primary px-6 sm:px-8 pt-8 flex flex-col items-center justify-center gap-3 rounded-3xl">
+    <img src="/number2.webp" alt="Number 3" className="w-auto h-auto" />
+    <div className="w-full h-auto lg:h-75 bg-[#28179F] py-3 px-5 rounded-b-3xl">
+    <h2 className="text-lg sm:text-[20px] text-gray-100 font-semibold">Get Your Accounts</h2>
+    <h2 className="text-sm sm:text-[16px] text-gray-100 pt-3">Start receiving payments, saving in foreign currencies, and spending globally.</h2>
+    </div>
+    </div>
+   </div>
+  </div>
+ );
 }

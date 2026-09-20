@@ -200,7 +200,7 @@ export default function TestimonialSection() {
           </h2>
         </div>
 
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-6xl flex flex-col lg:start lg:left">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {/* Left column */}
             <div className="flex flex-col gap-5">
@@ -228,7 +228,7 @@ export default function TestimonialSection() {
           </div>
         </div>
 
-        <div className="mx-auto mt-6 flex w-full max-w-[324px] items-center justify-center gap-2 rounded-2xl bg-black px-3 py-2 cursor-pointer">
+        <div className="mx-auto mt-6 flex w-full max-w-81 items-center justify-center gap-2 rounded-2xl bg-black px-3 py-2 cursor-pointer">
           <img src="/rating.png" alt="Star Rating" className="max-h-4 shrink-0" />
           <h2 className="text-center text-[13px] sm:text-[15px] font-semibold text-gray-200">
             4.6 Apple store, Play store

@@ -174,7 +174,7 @@ function ReceiveFeatureShowcase() {
               key={feature.key}
               type="button"
               onClick={() => setActiveIndex(index)}
-              className={`rounded-full px-4 py-2 text-sm font-semibold cursor-pointer transition-colors ${
+              className={`rounded-full px-4 py-2 text-sm hidden lg:block font-semibold cursor-pointer transition-colors ${
                 index === activeIndex
                   ? "bg-primary text-gray-100"
                   : "bg-gray-100 text-gray-900 hover:bg-neutral-50"

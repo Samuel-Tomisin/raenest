@@ -7,11 +7,11 @@ export default function Download() {
   return (
     <div>
       <a
-        href="/download-app"
+        href="https://play.google.com/store/apps?"
         type="button"
-        className="flex items-center gap-2 rounded-2xl bg-[#CAC5F3] px-4 py-1 text-sm font-semibold text-neutral-900 transition-colors "
+        className="flex items-center gap-2 rounded-2xl bg-gray-300 px-4 py-1 text-sm font-semibold text-primary transition-colors"
         >
-        <img src="/apple-you.svg" alt=""  className="w-8 h-8 grayscale hover:text-black"/>
+        <img src="/apple-you.svg" alt=""  className="w-8 h-8 hover:gray-100"/>
         Download the app
         </a>
     </div>

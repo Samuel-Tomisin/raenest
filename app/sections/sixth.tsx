@@ -56,7 +56,7 @@ export default function Sixthsection() {
           <div
             className="absolute inset-0 rounded-2xl border-[3px] border-[#FF3B30] overflow-hidden shadow-xl bg-white transition-transform duration-500 ease-out [transform-style:preserve-3d]"
             style={{
-              transform: isStackHovered ? "rotateY(35deg)" : "rotateY(0deg)",
+              transform: isStackHovered ? "rotateY(90deg)" : "rotateY(0deg)",
               zIndex: 1,
             }}
           >
@@ -75,7 +75,7 @@ export default function Sixthsection() {
           <div
             className="absolute inset-0 rounded-2xl border-[3px] border-[#2E2EFF] overflow-hidden shadow-lg bg-white transition-transform duration-500 ease-out transform-3d"
             style={{
-              transform: isStackHovered ? "rotateY(-35deg)" : "rotateY(0deg)",
+              transform: isStackHovered ? "rotateY(-90deg)" : "rotateY(0deg)",
               zIndex: 3,
             }}
           >

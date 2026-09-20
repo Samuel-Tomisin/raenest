@@ -6,6 +6,7 @@ import Navbar from "@/component/navbar";
 import Footer from "@/component/footer";
 import Testimonialsection from "../sections/testimonialsection";
 import FAQSection from "@/component/faq";
+import Download from "@/component/download";
 
 const FEATURES = [
   {
@@ -29,31 +30,32 @@ export default function LockedSavingsPage() {
   return (
     <main>
     <Navbar/>
-      <section className="bg-white px-6 pt-14 pb-16 sm:px-10 lg:px-16 lg:pt-20">
+      <section className="bg-white px-6 pt-14 sm:px-6 lg:px-10 lg:pt-20">
         <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-2 lg:items-center">
           <div className="flex flex-col gap-6">
-            <p className="text-sm font-medium text-neutral-400">Locked Savings</p>
-            <h1 className="text-5xl font-semibold leading-[1.05] text-neutral-950 sm:text-6xl">
+            <p className="text-sm sm:text-3xl font-medium text-gray-400">Locked Savings</p>
+            <h1 className="text-7xl font-normal leading-[1.05] text-gray-800 sm:text-8xl font-serif">
               Lock it in, earn more
             </h1>
-            <p className="max-w-md text-base text-neutral-600 sm:text-lg">
+            <p className="max-w-md text-base sm:text-2xl text-gray-800 ">
               Set money aside for a fixed period and earn a better rate than
               your regular wallet — perfect for savings goals you don't want
               to touch too soon.
             </p>
             <div className="pt-2">
-              <Link
-                href="/register"
-                className="inline-block rounded-2xl bg-[#5433C9] px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-[#4527ad]"
-              >
-                Create an account
-              </Link>
+              <Download/>
             </div>
           </div>
 
           <div className="relative mx-auto w-full max-w-md">
             {/* Drop your Locked Savings screenshot/illustration in here */}
-            <div className="aspect-[4/3] w-full rounded-[32px] bg-neutral-100" />
+            <div className="w-full bg-[#EDE9FE]">
+            <img
+              src="/ghero.webp"
+              alt="Person smiling"
+              className="h-full w-full object-cover"
+            />
+          </div>
           </div>
         </div>
       </section>

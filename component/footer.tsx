@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <div className="relative bg-[url('/herobg.svg')] bg-no-repeat bg-left bg-cover">
+        <div className="relative bg-gray-900 lg:bg-[url('/herobg.svg')] md:bg-gray-900 bg-no-repeat bg-left bg-cover">
             <div className="mx-auto max-w-7xl">
             <div className="relative z-10 max-w-8xl mx-auto">
                 <div className="flex flex-col gap-12 px-6 py-12 text-[14px] sm:px-8 sm:py-16 lg:flex-row lg:justify-between lg:gap-0 lg:px-12 lg:py-20">

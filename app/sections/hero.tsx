@@ -17,6 +17,7 @@ import {
   KE,
 } from "country-flag-icons/react/3x2";
 import Button from "@/component/button-white";
+import Download2 from "@/component/download2";
 
 /**
  * The EU flag isn't an ISO 3166-1 country code, so it isn't included in
@@ -155,7 +156,7 @@ function RecentTransactionsCard() {
 
 export default function Hero() {
   return (
-    <section className="relative bg-primary pl-2 sm:pl-10 sm:pt-7 lg:pl-16 lg:pt-7">
+    <section className="relative bg-primary pl-2 sm:pl-10 sm:pt-7 lg:pl-16 lg:pt-7 flex flex-col items-center text-center lg:items-start lg:text-left">
       {/* Soft decorative swoosh behind the photo */}
       <svg
         className="pointer-events-none absolute inset-0 hidden h-full w-full lg:block"
@@ -181,20 +182,22 @@ export default function Hero() {
         <div className="flex flex-1 flex-col gap-6">
           <FlagMarquee />
 
-          <h1 className="text-4xl leading-[1.1] text-gray-100 sm:text-5xl lg:text-6xl">
+          <h1 className="text-4xl leading-[1.1] text-gray-100 sm:text-5xl lg:text-6xl font-serif">
             Save with discipline. 
           </h1>
-          <h1 className="text-4xl leading-[1.1] text-gray-100 sm:text-5xl lg:text-6xl">
+          <h1 className="text-4xl leading-[1.1] text-gray-100 sm:text-5xl lg:text-6xl font-serif">
             Spend with ease.
           </h1>
 
-          <p className="max-w-md text-base text-gray-100 sm:text-lg">
+          <p className="max-w-md text-base text-gray-100 sm:text-lg font-sans">
             Lock savings for up to 12% p.a., set goals that stick, and still have 
             instant transfers, cards, and bill payments in the same app.
           </p>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 flex-col lg:flex lg:flex-row">
+            <div className="hidden lg:block">
             <Button/>
+            </div>
             <Download />
           </div>
         </div>

@@ -79,12 +79,14 @@ function CardsHero() {
             with transparent and competitive fees.
           </p>
           <div className="flex flex-wrap items-center gap-3 pt-2">
+            <div className="hidden lg:block">
             <Link
               href="/register"
               className="rounded-2xl bg-primary px-6 py-3.5 text-sm font-semibold text-gray-100 transition-colors"
             >
               Request a card
             </Link>
+            </div>
             <Download />
           </div>
         </div>
@@ -179,7 +181,7 @@ function CardFeaturesCarousel() {
     <section className="px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div
-          className="relative h-120 overflow-hidden bg-neutral-900 bg-cover bg-center bg-no-repeat transition-[background-image] duration-500 sm:h-130"
+          className="relative h-120  bg-neutral-900 bg-cover bg-center bg-no-repeat transition-[background-image] duration-500 sm:h-130"
           style={{ backgroundImage: `url('${active.image}')` }}
         >
           <img src="/money.webp" alt="" className="w-70 h-35 text-center"/>
@@ -197,7 +199,7 @@ function CardFeaturesCarousel() {
                   key={slide.key}
                   type="button"
                   onClick={() => setActiveIndex(index)}
-                  className={`rounded-full px-4 py-2 text-sm cursor-pointer font-semibold transition-colors ${
+                  className={`rounded-full px-4 py-2 text-sm cursor-pointer hidden lg:block font-semibold transition-colors ${
                     index === activeIndex
                       ? "bg-primary text-gray-100"
                       : "bg-gray-100 text-neutral-900 hover:bg-white/90"
