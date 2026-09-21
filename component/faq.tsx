@@ -31,29 +31,29 @@ const FAQS: FAQ[] = [
       "Receiving money into your Securevest USD account is completely free, with no limit on how much you can receive. Any fees are charged by the sender's bank, not by Securevest.",
   },
   {
-    question: "What is the Raenest USD Visa Card and how is it related to Raenest?",
+    question: "What is the Securevest USD Visa Card and how is it related to Securevest?",
     answer:
-      "The Raenest USD Visa Card is a virtual and physical card linked directly to your Raenest USD balance, issued by our technology partners under license from Visa. You can fund it instantly from your wallet and use it anywhere Visa is accepted.",
+      "The Securevest USD Visa Card is a virtual and physical card linked directly to your Securevest USD balance, issued by our technology partners under license from Visa. You can fund it instantly from your wallet and use it anywhere Visa is accepted.",
   },
   {
     question: "Can I use my USD account on Upwork, Deel, Fiverr, or Payoneer?",
     answer:
-      "Yes. Your Raenest USD account comes with real US account details, so you can receive payments directly from Upwork, Deel, Fiverr, Payoneer, and most other platforms that pay out in USD.",
+      "Yes. Your Securevest USD account comes with real US account details, so you can receive payments directly from Upwork, Deel, Fiverr, Payoneer, and most other platforms that pay out in USD.",
   },
   {
-    question: "How do I fund my Raenest wallet?",
+    question: "How do I fund my Securevest wallet?",
     answer:
       "You can fund your wallet via bank transfer, debit card, or by receiving a direct USD payment from clients, employers, or platforms into your account details.",
   },
   {
-    question: "Is my money safe with Raenest?",
+    question: "Is my money safe with Securevest?",
     answer:
       "Your funds are held in partnership with our regulated banking partners, and we use bank-level encryption and monitoring across every transaction to keep your account secure.",
   },
   {
-    question: "Can I use Raenest outside Nigeria?",
+    question: "Can I use Securevest outside Nigeria?",
     answer:
-      "Yes, Raenest is built for a global lifestyle. You can fund, spend, and withdraw from your account wherever you are, as long as you have an internet connection.",
+      "Yes, Securevest is built for a global lifestyle. You can fund, spend, and withdraw from your account wherever you are, as long as you have an internet connection.",
   },
 ];
 
@@ -126,7 +126,7 @@ export default function FAQSection() {
         </div>
 
         {/* Right: accordion list - scroll container only kicks in on desktop */}
-        <div className="lg:max-h-[640px] lg:overflow-y-auto pr-0 lg:pr-6 [scrollbar-width:thin]">
+        <div className="lg:max-h-160 lg:overflow-y-auto pr-0 lg:pr-6 scrollbar-thin">
           {FAQS.map((item, index) => (
             <FAQItem
               key={item.question}

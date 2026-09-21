@@ -50,7 +50,7 @@ export default function Securitysection() {
 
         <div className="hidden justify-center lg:flex">
           <img
-            src="/images/business/lock-illustration.png"
+            src="/key.webp"
             alt="Security lock illustration"
             className="w-64"
           />

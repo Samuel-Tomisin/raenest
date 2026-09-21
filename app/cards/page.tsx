@@ -181,7 +181,7 @@ function CardFeaturesCarousel() {
     <section className="px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div
-          className="relative h-120  bg-neutral-900 bg-cover bg-center bg-no-repeat transition-[background-image] duration-500 sm:h-130"
+          className="relative h-120 overflow-hidden bg-neutral-900 bg-cover bg-center bg-no-repeat transition-[background-image] duration-500 sm:h-130"
           style={{ backgroundImage: `url('${active.image}')` }}
         >
           <img src="/money.webp" alt="" className="w-70 h-35 text-center"/>
@@ -296,7 +296,7 @@ function RequestCardSteps() {
           </button>
         </div>
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {REQUEST_STEPS.map((step) => (
             <div
               key={step.number}

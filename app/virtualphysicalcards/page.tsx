@@ -5,6 +5,10 @@ import { Smartphone, CreditCard, ShieldCheck } from "lucide-react";
 import Navbar from "@/component/navbar";
 import Footer from "@/component/footer";
 import Securitysection from "@/component/securitysection";
+import FAQSection from "@/component/faq";
+import Buttonbusiness2 from "@/component/button-business2";
+import Trustsection from "@/component/trustsection";
+import Testimonialsection from "../sections/testimonialsection";
 
 const FEATURES = [
   {
@@ -28,38 +32,33 @@ export default function VirtualPhysicalCardsPage() {
   return (
     <main>
       <Navbar/>
-      <section className="bg-white px-6 pt-14 pb-16 sm:px-10 lg:px-16 lg:pt-20">
+      <section className="bg-white px-6 pt-14  sm:px-10 lg:px-16 lg:pt-20">
         <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-2 lg:items-center">
           <div className="flex flex-col gap-6">
-            <p className="text-sm font-medium text-neutral-400">Virtual & Physical Cards</p>
-            <h1 className="text-5xl font-semibold leading-[1.05] text-neutral-950 sm:text-6xl">
+            <p className="text-sm sm:text-2xl font-medium text-neutral-400">Virtual & Physical Cards</p>
+            <h1 className="text-5xl font-semibold leading-[1.05] text-gray-800 sm:text-6xl font-sans">
               A card for every kind of spend
             </h1>
-            <p className="max-w-md text-base text-neutral-600 sm:text-lg">
+            <p className="max-w-md text-base text-neutral-600 sm:text-lg font-sans">
               Get a virtual card for online purchases in minutes, or request
               a physical card for spending wherever you are — both linked to
               the same balance.
             </p>
             <div className="pt-2">
-              <Link
-                href="/register"
-                className="inline-block rounded-2xl bg-[#5433C9] px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-[#4527ad]"
-              >
-                Create an account
-              </Link>
+              <Buttonbusiness2/>
             </div>
           </div>
 
           <div className="relative mx-auto w-full max-w-md">
             {/* Drop your Virtual & Physical Cards screenshot/illustration in here */}
-            <div className="aspect-[4/3] w-full rounded-[32px] bg-neutral-100" />
+            <img src="/visahand.png" alt="" />
           </div>
         </div>
       </section>
 
       <section className="bg-[#F6F5FB] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <h2 className="text-center text-3xl font-bold text-neutral-950 sm:text-4xl">
+          <h2 className="text-center text-3xl font-bold text-gray-800 sm:text-4xl">
             Why get both
           </h2>
 
@@ -78,7 +77,10 @@ export default function VirtualPhysicalCardsPage() {
           </div>
         </div>
       </section>
+      <Trustsection/>
+      <Testimonialsection/>
       <Securitysection/>
+      <FAQSection/>
       <Footer/>
     </main>
   );

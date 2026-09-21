@@ -56,7 +56,7 @@ const earnItems: Record<AccountType, DropdownLink[]> = {
 function ItemIcon({ children, bg }: { children: React.ReactNode; bg: string }) {
   return (
     <span
-      className="flex items-center justify-center w-9 h-9 rounded-lg flex-shrink-0"
+      className="flex items-center justify-center w-9 h-9 rounded-lg shrink-0"
       style={{ background: bg }}
     >
       {children}

@@ -206,7 +206,7 @@ export default function HelpCenterPage() {
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2">
               <span className="text-2xl text-white">◔</span>
-              <span className="text-xl font-bold text-white">raenest</span>
+              <span className="text-xl font-bold text-white">Securevest</span>
             </Link>
 
             <div className="relative">
@@ -242,7 +242,7 @@ export default function HelpCenterPage() {
           </div>
 
           <h1 className="mt-10 max-w-2xl text-2xl font-bold text-white sm:text-3xl">
-            Answers from the Raenest (formerly Geegpay) team
+            Answers from the Securevest team
           </h1>
 
           <div className="relative mt-6 max-w-2xl">

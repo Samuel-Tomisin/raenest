@@ -7,6 +7,7 @@ import Footer from "@/component/footer";
 import Testimonialsection from "../sections/testimonialsection";
 import FAQSection from "@/component/faq";
 import Download from "@/component/download";
+import Securitysection from "@/component/securitysection";
 
 const FEATURES = [
   {
@@ -37,7 +38,7 @@ export default function LockedSavingsPage() {
             <h1 className="text-7xl font-normal leading-[1.05] text-gray-800 sm:text-8xl font-serif">
               Lock it in, earn more
             </h1>
-            <p className="max-w-md text-base sm:text-2xl text-gray-800 ">
+            <p className="max-w-md text-base sm:text-2xl text-gray-800 font-serif">
               Set money aside for a fixed period and earn a better rate than
               your regular wallet — perfect for savings goals you don't want
               to touch too soon.
@@ -62,7 +63,7 @@ export default function LockedSavingsPage() {
 
       <section className="bg-[#F6F5FB] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <h2 className="text-center text-3xl font-bold text-neutral-950 sm:text-4xl">
+          <h2 className="text-center text-3xl font-bold text-gray-800 sm:text-4xl">
             How it works
           </h2>
 
@@ -81,6 +82,7 @@ export default function LockedSavingsPage() {
           </div>
         </div>
       </section>
+      <Securitysection/>
       <Testimonialsection/>
       <FAQSection/>
       <Footer/>

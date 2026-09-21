@@ -65,11 +65,11 @@ function ReceiveMoneyHero() {
         <div className="flex flex-col gap-6 pt-14">
           <p className="text-sm sm:text-2xl font-bold text-neutral-400">Receive money</p>
 
-          <h1 className="text-7xl font-normal leading-[1.05] text-gray-900 sm:text-8xl lg:text-[80px]">
+          <h1 className="text-7xl font-normal leading-[1.05] text-gray-800 sm:text-8xl lg:text-[80px] font-sans">
             Receive money <br /> from over <br /> 190 countries.
           </h1>
 
-          <p className="max-w-md text-base text-gray-900 sm:text-lg">
+          <p className="max-w-md text-base text-gray-800 sm:text-lg font-sans">
             Get global USD, GBP and EUR bank accounts that helps you easily receive funds worldwide.
           </p>
 
@@ -232,7 +232,7 @@ function ReceiveFirstPaymentSteps() {
           </button>
         </div>
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {RECEIVE_STEPS.map((step) => (
             <div
               key={step.number}
@@ -242,7 +242,7 @@ function ReceiveFirstPaymentSteps() {
                 {step.number}
               </span>
               <img src={step.imagesrc} alt="" className="mb-6 h-75 w-full object-contain" />
-              <h3 className="text-lg font-semibold text-gray-100">{step.title}</h3>
+              <h3 className="text-lg  font-semibold text-gray-100">{step.title}</h3>
               <p className="mt-1 text-sm leading-relaxed text-white/75">{step.description}</p>
             </div>
           ))}
