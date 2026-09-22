@@ -63,7 +63,7 @@ export default function TermsOfServicePage() {
                     onClick={() => setActiveSection(s.id)}
                     className={`text-left text-[14.5px] leading-snug transition-colors ${
                       activeSection === s.id
-                        ? "font-semibold text-[#4F3DF5]"
+                        ? "font-semibold text-primary"
                         : "text-[#B5B3BE] hover:text-[#6B6B76]"
                     }`}
                   >
@@ -79,7 +79,7 @@ export default function TermsOfServicePage() {
             <h2 className="text-2xl font-semibold text-[#0E0E12]">
               {COMPANY_NAME} Terms of Use
             </h2>
-            <p className="mt-3 italic text-[#6B6B76]">Last modified: [Month Year]</p>
+            <p className="mt-3 italic text-[#6B6B76]">Last modified: August 2026</p>
 
             <div className="mt-8 space-y-6 text-[15px] leading-relaxed text-[#3A3A42]">
               {/* ---------------------------------------------------------------
@@ -90,18 +90,18 @@ export default function TermsOfServicePage() {
                   legal text — see the note above this file.
               ---------------------------------------------------------------- */}
               <p>
-                [Placeholder] Please read these Terms of Service (&quot;Terms&quot;), which set
+                Please read these Terms of Service (&quot;Terms&quot;), which set
                 forth the legally binding terms and conditions between you and {COMPANY_NAME},
                 Inc. and its affiliates (collectively &quot;{COMPANY_NAME}&quot;, &quot;we,&quot;
                 or &quot;us&quot;). It governs your access to and use of {COMPANY_NAME}&apos;s
                 website, mobile application, and the services provided by {COMPANY_NAME}.
               </p>
               <p>
-                [Placeholder] Our collection and use of your personal information in connection
+                Our collection and use of your personal information in connection
                 with your use of our services are described in our Privacy Policy.
               </p>
               <p>
-                [Placeholder] Your access to and use of our services is conditioned on your
+                Your access to and use of our services is conditioned on your
                 acceptance of and compliance with these Terms. These Terms apply to all visitors,
                 business owners, and any other person who accesses or uses our services.
               </p>
@@ -110,32 +110,32 @@ export default function TermsOfServicePage() {
                 <p className="font-bold">1. Definitions</p>
                 <p className="mt-2">In these Terms,</p>
                 <p className="mt-2">
-                  <span className="font-bold">&quot;Account&quot;.</span> [Placeholder] means a
+                  <span className="font-bold">&quot;Account&quot;.</span> means a
                   unique account registered with the details of the User and which contains
                   details of the User&apos;s transactions/operations on the Platform (as defined
                   below).
                 </p>
                 <p className="mt-2">
-                  <span className="font-bold">&quot;Applicable Laws&quot;</span> [Placeholder]
+                  <span className="font-bold">&quot;Applicable Laws&quot;</span>
                   means all applicable regulations, laws, codes, guidelines, policies, rules, and
                   directives of any competent regulatory authority in [your jurisdiction].
                 </p>
                 <p className="mt-2">
-                  <span className="font-bold">&quot;Platform&quot;</span> [Placeholder] means
-                  collectively {COMPANY_NAME}&apos;s website and other related applications
-                  provided by {COMPANY_NAME}.
+                  <span className="font-bold">&quot;Platform&quot;</span> means
+                  collectively Securevest &apos;s website and other related applications
+                  provided by Securevest.
                 </p>
               </div>
 
               <div>
                 <p className="font-bold">2. Acceptance of Terms</p>
                 <p className="mt-2">
-                  [Placeholder] The Service is offered subject to acceptance of all the terms and
+                  The Service is offered subject to acceptance of all the terms and
                   conditions contained in these Terms and all other operating rules, policies, and
                   procedures that may be published on the Platform.
                 </p>
                 <p className="mt-2">
-                  [Placeholder] {COMPANY_NAME} reserves the right, at its sole discretion, to
+                 Securevest reserves the right, at its sole discretion, to
                   modify or replace these Terms from time to time by posting the updated terms on
                   the Platform.
                 </p>
@@ -144,23 +144,22 @@ export default function TermsOfServicePage() {
               <div>
                 <p className="font-bold">3. Eligibility</p>
                 <p className="mt-2">
-                  [Placeholder] Only individuals who are legal residents of [list your supported
-                  countries] are eligible to apply for a {COMPANY_NAME} personal account.
+                  Only individuals who are legal residents of US, UK, Canada Ghana, South Africa are eligible to apply for a Securevest account.
                 </p>
               </div>
 
               <div>
                 <p className="font-bold">4. Account Requirements</p>
                 <p className="mt-2">
-                  [Placeholder] All information provided to {COMPANY_NAME} must be current,
+                  All information provided to Securevest are current,
                   accurate, and complete.
                 </p>
               </div>
 
-              <p className="rounded-xl border border-dashed border-[#C9C4F5] bg-[#F7F6FE] p-4 text-[13.5px] text-[#6B63C7]">
+              {/* <p className="rounded-xl border border-dashed border-[#C9C4F5] bg-[#F7F6FE] p-4 text-[13.5px] text-[#6B63C7]">
                 This entire content block is placeholder copy for layout purposes only. Replace it
                 with your actual, legally-reviewed Terms of Service before publishing this page.
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
