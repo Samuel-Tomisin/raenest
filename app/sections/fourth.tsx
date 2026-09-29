@@ -66,8 +66,8 @@ export default function FourthSection() {
     }
 
     return (
-        <div className="bg-white">
-            <div className="mx-auto max-w-7xl bg-white py-7 px-4 sm:px-6 lg:px-8">
+        <div className="bg-gray-100">
+            <div className="mx-auto max-w-7xl bg-gray-100 py-7 px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
                     <h2 className="text-2xl sm:text-3xl lg:text-[45px] text-gray-800 font-semibold">
                         What's Inside
@@ -90,7 +90,7 @@ export default function FourthSection() {
                                     className={`rounded-full py-1 px-2 text-sm sm:text-base cursor-pointer transition-colors whitespace-nowrap ${
                                         activeKey === category.key
                                             ? "bg-gray-800 text-gray-100"
-                                            : "bg-white text-gray-800"
+                                            : "bg-gray-100 text-gray-800"
                                     }`}
                                 >
                                     {category.label}
@@ -103,7 +103,7 @@ export default function FourthSection() {
 
             <div
                 ref={scrollContainerRef}
-                className="bg-white py-7 px-4 sm:px-6 lg:px-8 flex items-center gap-4 sm:gap-5 overflow-x-auto scroll-smooth snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] scrollbar-none"
+                className="bg-gray-100 py-7 px-4 sm:px-6 lg:px-8 flex items-center gap-4 sm:gap-5 overflow-x-auto scroll-smooth snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] scrollbar-none"
             >
                 {categories.map((category) => (
                     <div

@@ -274,7 +274,7 @@ function ArticleCard({ article }: { article: Article }) {
         <Link
           href={article.href}
           aria-label={`Read: ${article.linkText}`}
-          className="flex h-9 w-9 shrink-0 items-center cursor-pointer justify-center rounded-full bg-[#5433C9] text-white transition-colors hover:bg-[#4527ad]"
+          className="flex h-9 w-9 shrink-0 items-center cursor-pointer justify-center rounded-full bg-[#5433C9] text-gray transition-colors hover:bg-[#4527ad]"
         >
           <ArrowUpRight className="h-4 w-4" />
         </Link>
@@ -309,7 +309,7 @@ export default function BlogPage() {
   const activeSlide = FEATURED_SLIDES[slideIndex];
 
   return (
-    <div className="bg-white">
+    <div className="bg-gray">
         <Navbar/>
       {/* Hero: heading, search, category pills */}
       <section className="relative overflow-hidden px-4 pb-12 pt-16 sm:px-8 sm:pt-20 lg:px-16">
@@ -320,7 +320,7 @@ export default function BlogPage() {
 
         <div className="mx-auto max-w-4xl text-center">
           <h1 className="text-3xl leading-tight text-neutral-950 sm:text-5xl">
-            The Latest From Raenest: <br /> Tips, News and Updates!
+            The Latest From Securevest: <br /> Tips, News and Updates!
           </h1>
 
           <div className="relative mx-auto mt-8 max-w-xl">

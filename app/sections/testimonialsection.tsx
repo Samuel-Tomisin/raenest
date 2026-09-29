@@ -71,7 +71,7 @@ const leftTestimonials: Testimonial[] = [
     quote:
       "I couldn't imagine how great Securevest works until I signed up. Honestly, this is my first time reviewing any website, but I'm happy to write about how excellent they operate.",
     name: "Kevin",
-    country: "gh",
+    country: "ng",
   },
   {
     title: "Best in class support",
@@ -94,7 +94,7 @@ const rightTestimonials: Testimonial[] = [
     quote:
       "Securevest has been helping me since last year that I found it, I don't have to stress about transfers anymore as it comes quickly and very fast.",
     name: "Blessing",
-    country: "ke",
+    country: "ng",
   },
 ];
 
@@ -170,11 +170,11 @@ function VideoTestimonialCard({
 
 export default function TestimonialSection() {
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray">
       {/* Capped container so nothing stretches edge-to-edge on large/ultra-wide screens */}
       <div className="mx-auto max-w-7xl">
         <div>
-          <h1 className="py-8 text-center text-xs sm:text-sm tracking-wide text-gray-800">
+          <h1 className="py-8 text-center text-xs sm:text-sm tracking-wide text-tertiary">
             BACKED AND TRUSTED BY THE BEST IN FINTECH AND VENTURE CAPITAL
           </h1>
         </div>
@@ -189,13 +189,13 @@ export default function TestimonialSection() {
         </div>
 
         <div className="px-4">
-          <h1 className="pt-16 sm:pt-20 md:pt-28 text-center text-3xl sm:text-4xl md:text-5xl lg:text-[47px] font-semibold leading-tight text-gray-800">
+          <h1 className="pt-16 sm:pt-20 md:pt-28 text-center text-3xl sm:text-4xl md:text-5xl lg:text-[47px] font-semibold leading-tight text-tertiary">
             About 1,000,000 people
           </h1>
-          <h1 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-[47px] font-semibold leading-tight text-gray-800">
+          <h1 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-[47px] font-semibold leading-tight text-tertiary">
             love us. You will too.
           </h1>
-          <h2 className="pb-12 pt-5 text-center text-lg sm:text-xl md:text-2xl lg:text-[28px] text-gray-800">
+          <h2 className="pb-12 pt-5 text-center text-lg sm:text-xl md:text-2xl lg:text-[28px] text-tertiary">
             Hear some of them yourself.
           </h2>
         </div>
@@ -230,7 +230,7 @@ export default function TestimonialSection() {
 
         <div className="mx-auto mt-6 flex w-full max-w-81 items-center justify-center gap-2 rounded-2xl bg-black px-3 py-2 cursor-pointer">
           <img src="/rating.png" alt="Star Rating" className="max-h-4 shrink-0" />
-          <h2 className="text-center text-[13px] sm:text-[15px] font-semibold text-gray-200">
+          <h2 className="text-center text-[13px] sm:text-[15px] font-semibold text-gray">
             4.6 Apple store, Play store
           </h2>
         </div>

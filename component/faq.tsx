@@ -77,12 +77,12 @@ function FAQItem({ item, isOpen, onToggle }: FAQItemProps) {
 
         <span
           className={`flex h-7 w-7 sm:h-8 sm:w-8 shrink-0 items-center justify-center rounded-full transition-colors duration-300 ${
-            isOpen ? "bg-neutral-300" : "bg-primary"
+            isOpen ? "bg-neutral-300" : "bg-primary-hover"
           }`}
         >
           <Plus
             className={`h-4 w-4 transition-transform duration-300 ${
-              isOpen ? "rotate-45 text-neutral-700" : "text-white"
+              isOpen ? "rotate-45 text-neutral-700" : "text-gray"
             }`}
             strokeWidth={2.5}
           />
@@ -96,7 +96,7 @@ function FAQItem({ item, isOpen, onToggle }: FAQItemProps) {
         }}
         className="grid transition-[grid-template-rows] duration-300 ease-in-out"
       >
-        <div className="overflow-hidden">
+        <div className="overflow-hidden text-tertiary">
           <p className="pb-6 pr-4 sm:pr-8 lg:pr-12 text-sm sm:text-base leading-relaxed text-neutral-500">
             {item.answer}
           </p>
@@ -114,11 +114,11 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="w-full bg-white px-5 py-14 sm:py-16 md:px-12 lg:py-24">
+    <section className="w-full bg-gray px-5 py-14 sm:py-16 md:px-12 lg:py-24">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 sm:gap-10 lg:grid-cols-[minmax(0,320px)_1fr] lg:gap-16">
         {/* Left: heading, sticky on desktop only */}
         <div className="lg:sticky lg:top-24 lg:self-start">
-          <h2 className="text-2xl sm:text-3xl font-bold leading-[1.1] text-neutral-950">
+          <h2 className="text-2xl text-tertiary sm:text-3xl font-bold leading-[1.1]">
             Frequently asked
             <br />
             questions
@@ -126,7 +126,7 @@ export default function FAQSection() {
         </div>
 
         {/* Right: accordion list - scroll container only kicks in on desktop */}
-        <div className="lg:max-h-160 lg:overflow-y-auto pr-0 lg:pr-6 scrollbar-thin">
+        <div className="lg:max-h-160 pr-0 lg:pr-6 scrollbar-thin">
           {FAQS.map((item, index) => (
             <FAQItem
               key={item.question}

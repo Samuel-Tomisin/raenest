@@ -1,94 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import Download from "@/component/download";
-import {
-  TZ,
-  UG,
-  EG,
-  CN,
-  UA,
-  CF,
-  US,
-  GH,
-  GB,
-  CA,
-  NG,
-  KE,
-} from "country-flag-icons/react/3x2";
 import Button from "@/component/button-white";
 import Download2 from "@/component/download2";
-
-/**
- * The EU flag isn't an ISO 3166-1 country code, so it isn't included in
- * country-flag-icons. Hand-rolled here so it still renders in full color.
- */
-function EUFlag({ className }: { className?: string }) {
-  const stars = Array.from({ length: 12 }, (_, i) => {
-    const angle = (i / 12) * 2 * Math.PI - Math.PI / 2;
-    const cx = 12 + 7 * Math.cos(angle);
-    const cy = 8 + 7 * Math.sin(angle);
-    return <circle key={i} cx={cx} cy={cy} r="0.9" fill="#FFCC00" />;
-  });
-  return (
-    <svg viewBox="0 0 24 16" className={className} aria-hidden="true">
-      <rect width="24" height="16" fill="#003399" />
-      {stars}
-    </svg>
-  );
-}
-
-const MARQUEE_FLAGS: { code: string; name: string; Icon: React.ComponentType<{ className?: string }> }[] = [
-  { code: "US", name: "United States", Icon: US },
-  { code: "GH", name: "Ghana", Icon: GH },
-  { code: "GB", name: "United Kingdom", Icon: GB },
-  { code: "CA", name: "Canada", Icon: CA },
-  { code: "NG", name: "Nigeria", Icon: NG },
-  { code: "KE", name: "Kenya", Icon: KE },
-  { code: "TZ", name: "Tanzania", Icon: TZ },
-  { code: "EU", name: "European Union", Icon: EUFlag },
-  { code: "UG", name: "Uganda", Icon: UG },
-  { code: "EG", name: "Egypt", Icon: EG },
-  { code: "CN", name: "China", Icon: CN },
-  { code: "UA", name: "Ukraine", Icon: UA },
-  { code: "CF", name: "Central African Republic", Icon: CF },
-];
-
-function FlagMarquee() {
-  // Render the list twice back-to-back so the CSS animation can loop
-  // seamlessly from -50% back to 0 with no visible seam.
-  const doubled = [...MARQUEE_FLAGS, ...MARQUEE_FLAGS];
-
-  return (
-    <div className="relative w-full max-w-md overflow-hidden mask-[linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] sm:max-w-lg">
-      <div className="flex w-max animate-flag-marquee items-center gap-2">
-        {doubled.map(({ code, name, Icon }, i) => (
-          <span
-            key={`${code}-${i}`}
-            title={name}
-            className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white/10 ring-1 ring-white/20 sm:h-10 sm:w-10"
-          >
-            <Icon className="h-full w-full object-cover" />
-          </span>
-        ))}
-      </div>
-
-      <style jsx>{`
-        @keyframes flag-marquee {
-          from {
-            transform: translateX(0);
-          }
-          to {
-            transform: translateX(-50%);
-          }
-        }
-        .animate-flag-marquee {
-          animation: flag-marquee 22s linear infinite;
-        }
-      `}</style>
-    </div>
-  );
-}
 
 type Transaction = {
   name: string;
@@ -119,8 +35,8 @@ function RecentTransactionsCard() {
   return (
     <div className="absolute inset-x-4 bottom-0 rounded-2xl bg-black/60 px-5 py-4 backdrop-blur-md sm:inset-x-8 lg:-bottom-2 lg:left-8 lg:right-auto lg:w-80">
       <div className="flex items-center justify-between">
-        <span className="text-sm font-medium text-gray-100">Recent transactions</span>
-        <Link href="/transactions" className="text-sm font-medium text-gray-100 underline underline-offset-2">
+        <span className="text-sm font-medium text-gray">Recent transactions</span>
+        <Link href="/transactions" className="text-sm font-medium text-gray underline underline-offset-2">
           See all
         </Link>
       </div>
@@ -130,21 +46,21 @@ function RecentTransactionsCard() {
           <div key={t.name} className="flex items-center justify-between gap-3">
             <div className="flex items-center gap-3">
               <span
-                className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-[10px] font-bold text-white ${t.logoBg} ${
-                  t.logoBg === "bg-gray-100" ? "text-red-600!" : ""
+                className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-[10px] font-bold text-gray ${t.logoBg} ${
+                  t.logoBg === "bg-gray" ? "text-red-600!" : ""
                 }`}
               >
                 {t.logoLabel}
               </span>
               <div>
-                <p className="text-sm font-medium text-white">{t.name}</p>
-                <span className="inline-flex items-center rounded-full bg-emerald-500/20 px-2 py-0.5 text-[11px] font-medium text-emerald-400">
+                <p className="text-sm font-medium text-gray">{t.name}</p>
+                <span className="inline-flex items-center rounded-full bg-emerald-500/20 px-2 py-0.5 text-[11px] font-medium text-positive">
                   Success
                 </span>
               </div>
             </div>
             <div className="text-right">
-              <p className="text-sm font-medium text-white">{t.amount}</p>
+              <p className="text-sm font-medium text-gray">{t.amount}</p>
               <p className="text-[11px] text-white/50">{t.date}</p>
             </div>
           </div>
@@ -156,7 +72,7 @@ function RecentTransactionsCard() {
 
 export default function Hero() {
   return (
-    <section className="relative w-full overflow-x-hidden bg-primary px-4 sm:px-10 sm:pt-7 lg:px-16 lg:pt-7">
+    <section className="relative w-full bg-primary-hover px-4 sm:px-10 sm:pt-7 lg:px-16 lg:pt-7">
       {/* Soft decorative swoosh behind the photo */}
       <svg
         className="pointer-events-none absolute inset-0 hidden h-full w-full lg:block"
@@ -180,16 +96,14 @@ export default function Hero() {
       <div className="relative z-10 mx-auto flex w-full max-w-7xl min-w-0 flex-col gap-12 lg:flex-row lg:items-center lg:gap-8">
         {/* Left: copy */}
         <div className="flex min-w-0 flex-1 flex-col gap-6">
-          <FlagMarquee />
-
-          <h1 className="text-3xl leading-[1.1] text-gray-100 sm:text-5xl lg:text-6xl font-serif">
+          <h1 className="text-3xl leading-[1.1] text-gray sm:text-5xl lg:text-6xl font-serif">
             Save with discipline.
           </h1>
-          <h1 className="text-3xl leading-[1.1] text-gray-100 sm:text-5xl lg:text-6xl font-serif">
+          <h1 className="text-3xl leading-[1.1] text-gray sm:text-5xl lg:text-6xl font-serif">
             Spend with ease.
           </h1>
 
-          <p className="max-w-md text-base text-gray-100 sm:text-lg font-sans">
+          <p className="max-w-md text-base text-gray sm:text-lg font-sans">
             Lock savings for up to 12% p.a., set goals that stick, and still have
             instant transfers, cards, and bill payments in the same app.
           </p>
@@ -204,12 +118,14 @@ export default function Hero() {
 
         {/* Right: photo + floating transactions card */}
         <div className="relative min-w-0 flex-1">
-          <div className="relative mx-auto aspect-5/5 w-full max-w-sm rounded-t-[160px] rounded-b-4xl sm:max-w-md lg:max-w-none">
-            {/* Drop your hero photo in here */}
-            <img
+          <div className="relative mx-auto aspect-5/5 w-full max-w-sm rounded-t-[160px] rounded-b-4xl sm:max-w-md lg:max-w-none overflow-hidden">
+            <Image
               src="/girl.png"
               alt="Person checking transactions on their phone"
-              className="h-full w-full object-cover"
+              fill
+              className="object-cover"
+              sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 40vw"
+              priority
             />
           </div>
           <div className="hidden lg:block">

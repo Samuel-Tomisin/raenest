@@ -2,7 +2,7 @@
 
 export default function Eightsection() {
     return(
-        <div className="px-5 md:px-12 bg-white py-15">
+        <div className="px-5 md:px-12 bg-gray py-15">
             <div className="mx-auto max-w-8xl">
             <div className="text-center font-semibold text-2xl sm:text-3xl md:text-[36px] text-gray-800">
                 <h2>Securevest in the News!</h2>

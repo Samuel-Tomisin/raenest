@@ -2,9 +2,13 @@
 
 :root {
   --color-primary: #4F3FD7;
-  --color-primary-hover: #2f1250;
-  --color-primary-foreground: #ffffff;
-  --color-footer: #080615;
+  --color-primary-hover: #173A2C;
+  --color-secondary: #E8A33D;
+  --color-tertiary: #1E2939;
+  --color-footer: #0F2B22;
+  --color-gray: #F3F4F6;
+  --color-positive: #5BC493;
+  --color-button:  #4F3FD7;
 
   --color-background: #ffffff;
   --color-foreground: #111111;
@@ -22,10 +26,14 @@
 
 @theme inline {
   --color-primary: var(--color-primary);
+  --color-button: var(--color-button);
+  --color-positive: var(--color-positive);
+  --color-tertiary: var(--color-tertiary);
   --color-footer: var(--color-footer);
+  --color-gray: var(--color-gray);
   --color-primary-hover: var(--color-primary-hover);
   --color-background: var(--color-background);
-  --color-foreground: var(--color-foreground);
+  --color-secondary: var(--color-secondary);
   --color-muted: var(--color-muted);
   --color-border: var(--color-border);
 }
@@ -39,6 +47,6 @@
 
 body {
   background: var(--background);
-  color: var(--foreground);
+  color: var(--color-secondary);
   font-family: "National 2", Arial, sans-serif, Helvetica;
 }

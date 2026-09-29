@@ -2,9 +2,9 @@
 
 export default function Seventhsection() {
     return (
-    <div className="bg-white px-5 md:px-12 pt-16 md:pt-25 pb-10 md:pb-15">
+    <div className="bg-primary-hover px-5 md:px-12 pt-16 md:pt-25 pb-10 md:pb-15">
         <div className="mx-auto max-w-7xl ">            
-            <div className="text-gray-800 text-center h-full">
+            <div className="text-gray-100 text-center h-full">
                 <h1 className="text-2xl sm:text-3xl md:text-[30px] lg:text-[36px] font-semibold pb-10">The latest from Securevest: Tips, News and Updates</h1>
             </div>
 
@@ -24,18 +24,18 @@ export default function Seventhsection() {
                     <h2 className="text-gray-800 text-[14px] font-semibold px-5 pb-4">Securevest Diaries: How Visibility Took Ore Badmus from Teaching to Global Talent Visa</h2>
                 </div>
             </div>
-            <div className="text-gray-400">
+            <div className="text-gray-100">
             <hr/>
             </div>
 
             <div className="flex flex-col lg:flex-row justify-between items-center md:items-center gap-5 md:gap-0 pt-7 text-center md:text-left">
-                <h2 className="text-xl sm:text-2xl md:text-[24px] lg:text-[28px] font-semibold text-gray-900">Get the latest update straight into your mail</h2>
+                <h2 className="text-xl sm:text-2xl md:text-[24px] lg:text-[28px] font-semibold text-gray-100">Get the latest update straight into your mail</h2>
                 <div className="gap-3 flex flex-col sm:flex-row w-full md:w-auto">
                 <div className="w-full sm:w-auto">
-                    <input type="text" placeholder="Enter your email address" className="border text-gray-400 px-3 w-full sm:w-75 md:w-114 py-3 rounded-2xl text-[13px] border-gray-300"/>
+                    <input type="text" placeholder="Enter your email address" className="border text-gray-200 px-3 w-full sm:w-75 md:w-114 py-3 rounded-2xl text-[13px] border-gray-300"/>
                 </div>
                 <div>
-                    <button className="border-0 px-4 py-3 bg-primary font-semibold text-white w-full sm:w-36.25 rounded-2xl text-[14px] cursor-pointer">Join newsletter</button>
+                    <button className="border-0 px-4 py-3 bg-secondary font-semibold text-primary-hover w-full sm:w-36.25 rounded-2xl text-[14px] cursor-pointer">Join newsletter</button>
                 </div>
                 </div>
             </div>
