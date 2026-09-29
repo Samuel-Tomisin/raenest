@@ -109,7 +109,7 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col items-center gap-4 lg:flex-row">
-            <div className="hidden lg:block">
+            <div className="">
               <Button />
             </div>
             <Download />

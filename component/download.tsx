@@ -9,8 +9,8 @@ export default function Download() {
         type="button"
         className="flex items-center gap-2 rounded-2xl bg-secondary px-4 py-1 text-sm font-semibold text-primary-hover transition-colors"
         >
-        <img src="/apple-you.svg" alt=""  className="w-8 h-8 hover:gray-100"/>
-        Download the app
+        <img src="/android.png" alt=""  className="w-7 h-7 hover:gray"/>
+        Android Download
         </a>
     </div>
   );

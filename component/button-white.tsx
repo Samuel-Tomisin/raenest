@@ -5,10 +5,11 @@ export default function Button() {
 return (
   <div>
     <a
-      href="/register"
-      className="rounded-2xl bg-secondary px-6 py-3.5 text-sm font-semibold text-primary-hover transition-colors"
+      href="https://www.apple.com/store"
+      className="flex items-center gap-2 rounded-2xl bg-secondary px-4 py-1 text-sm font-semibold text-primary-hover transition-colors"
       >
-      See how it works
+      <img src="/apple.png" alt=""  className="w-7 h-7 hover:gray"/>
+      iOS Download
     </a>
   </div>
 );
