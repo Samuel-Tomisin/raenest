@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="relative bg-primary-hover lg:bg-[url('/herobg.svg')] md:bg-primary-hover bg-no-repeat bg-left bg-cover">
             <div className="mx-auto max-w-7xl">
             <div className="relative z-10 max-w-8xl mx-auto">
-                <div className="flex flex-col gap-12 px-6 py-12 text-[14px] sm:px-8 sm:py-16 lg:flex-row lg:justify-between lg:gap-0 lg:px-12 lg:py-20">
+                <div className="flex flex-col gap-12 px-6 py-12 text-[14px] sm:px-6 sm:py-16 lg:flex-row lg:justify-between lg:gap-0 lg:px-8 lg:py-20">
                     <div className="flex flex-col text-white">
                         <Link href="/" className="cursor-pointer">
                             <img src="/raenest.svg" alt="Raenest Logo" className="h-10 w-30 brightness-0 invert sm:h-12.5 sm:w-37.5" />

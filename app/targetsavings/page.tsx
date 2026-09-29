@@ -30,11 +30,11 @@ export default function TargetSavingsPage() {
   return (
     <main>
       <Navbar/>
-      <section className="bg-white px-6 pt-14 pb-16 sm:px-10 lg:px-16 lg:pt-20">
+      <section className="bg-gray px-6 pt-14 pb-16 sm:px-10 lg:px-16 lg:pt-20">
         <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-2 lg:items-center">
           <div className="flex flex-col gap-6">
             <p className="text-sm sm:text-2xl font-medium text-gray-400">Target Savings</p>
-            <h1 className="text-5xl font-semibold leading-[1.05] text-gray-800 sm:text-6xl font-sans">
+            <h1 className="text-5xl font-semibold leading-[1.05] text-tertiary sm:text-6xl font-sans">
               Save toward what matters
             </h1>
             <p className="max-w-md text-base text-gray-600 sm:text-lg font-sans">
@@ -53,19 +53,19 @@ export default function TargetSavingsPage() {
         </div>
       </section>
 
-      <section className="bg-[#F6F5FB] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+      <section className="bg-primary-hover px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <h2 className="text-center text-3xl font-bold text-neutral-950 sm:text-4xl">
+          <h2 className="text-center text-3xl font-bold text-gray sm:text-4xl">
             How it works
           </h2>
 
           <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-3">
             {FEATURES.map(({ icon: Icon, title, description }) => (
-              <div key={title} className="flex flex-col rounded-3xl bg-white p-6 shadow-sm">
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#EDE9FE] text-primary">
+              <div key={title} className="flex flex-col rounded-3xl bg-gray p-6 shadow-sm">
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#EDE9FE] text-primary-hover">
                   <Icon className="h-5 w-5" />
                 </span>
-                <h3 className="mt-4 text-lg font-bold text-primary">{title}</h3>
+                <h3 className="mt-4 text-lg font-bold text-primary-hover">{title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-neutral-700">
                   {description}
                 </p>

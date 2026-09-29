@@ -14,7 +14,7 @@ interface DropdownLink {
 
 const productItems: Record<AccountType, DropdownLink[]> = {
   personal: [
-    { label: "Cards", href: "/cards", description: "Virtual and physical cards for you" },
+    // { label: "Cards", href: "/cards", description: "Virtual and physical cards for you" },
     { label: "Target Savings", href: "/targetsavings", description: "Save toward a goal, automatically." },
     { label: "Locked Savings", href: "/lockedsavings", description: "Lock funds away and earn more." },
     { label: "Virtual & Physical Cards", href: "/virtualphysicalcards", description: "Get a card for every kind of spend." },
@@ -72,13 +72,13 @@ const dropdownIcons: Record<string, React.ReactNode> = {
     </ItemIcon>
   ),
   
-  Cards: (
-    <ItemIcon bg="#F8F9FF">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4F3FD7" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="1" y="4" width="22" height="16" rx="2" ry="2" /><line x1="1" y1="10" x2="23" y2="10" />
-      </svg>
-    </ItemIcon>
-  ),
+  // Cards: (
+  //   <ItemIcon bg="#F8F9FF">
+  //     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4F3FD7" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+  //       <rect x="1" y="4" width="22" height="16" rx="2" ry="2" /><line x1="1" y1="10" x2="23" y2="10" />
+  //     </svg>
+  //   </ItemIcon>
+  // ),
   "Virtual & Physical Cards": (
     <ItemIcon bg="#F8F9FF">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4F3FD7" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -297,7 +297,7 @@ export default function Navbar() {
               <img
                 src="/raenest.svg"
                 alt="Raenest Logo"
-                className="h-6 sm:h-7 cursor-pointer object-contain"
+                className="h-6 sm:h-7 cursor-pointer object-contain grayscale"
               />
             </Link>
 

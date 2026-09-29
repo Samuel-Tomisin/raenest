@@ -21,14 +21,14 @@ const FAQS: FAQ[] = [
       "Securevest is a Financial Technology (FinTech) Company, not a Bank. Banking services are provided by Regent Bank, Member FDIC. Securevest is not FDIC insured. FDIC deposit insurance covers up to $250,000 per qualified customer account on a \u201cpass-through\u201d basis, for which certain conditions must be satisfied. FDIC insurance only covers the failure of Regent Bank, Member FDIC. Card services are provided by Securevest's technology partners, authorized by Visa and Mastercard to issue cards operating over their networks.",
   },
   {
-    question: "How long does it take to get my bank account?",
+    question: "How long does it take to get my account?",
     answer:
       "Most accounts are ready in minutes once you've verified your identity. In rare cases where extra checks are needed, it can take up to 24 hours \u2014 we'll keep you posted the whole way.",
   },
   {
-    question: "What's the fee for receiving in my bank account?",
+    question: "What's the fee for receiving in my account?",
     answer:
-      "Receiving money into your Securevest USD account is completely free, with no limit on how much you can receive. Any fees are charged by the sender's bank, not by Securevest.",
+      "Receiving money into your Securevest account is completely free, with no limit on how much you can receive. Any fees are charged by the sender's bank, not by Securevest.",
   },
   {
     question: "What is the Securevest USD Visa Card and how is it related to Securevest?",

@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 
-
 type InvoiceFeature = {
   key: string;
   pillLabel: string;
@@ -43,39 +42,35 @@ export default function InvoiceFeatureShowcase() {
   const active = INVOICE_FEATURES[activeIndex];
 
   return (
-    <section className="bg-black px-4 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl">
-        <div
-          className="relative h-130 overflow-hidden bg-neutral-900 bg-cover bg-center bg-no-repeat transition-[background-image] duration-500 sm:h-130"
-          style={{ backgroundImage: `url('${active.image}')` }}
-        >
-          <div className="absolute inset-0 bg-black/40" />
+    <section
+      className="relative h-130 overflow-hidden bg-neutral-900 bg-cover bg-center bg-no-repeat transition-[background-image] duration-500 px-4 sm:h-130 sm:px-6 lg:px-8"
+      style={{ backgroundImage: `url('${active.image}')` }}
+    >
+      <div className="absolute inset-0 bg-black/40" />
 
-          <div className="absolute inset-x-0 bottom-0 flex flex-col items-center gap-4 px-6 pb-10 text-center sm:px-10">
-            <div>
-              <h2 className="text-2xl font-bold text-white sm:text-4xl">{active.heading}</h2>
-              <p className="mx-auto mt-3 max-w-xl text-sm text-white/85 sm:text-base">
-                {active.description}
-              </p>
-            </div>
+      <div className="relative mx-auto flex h-full max-w-7xl flex-col items-center justify-end gap-4 pb-10 text-center">
+        <div>
+          <h2 className="text-2xl font-bold text-gray sm:text-4xl">{active.heading}</h2>
+          <p className="mx-auto mt-3 max-w-xl text-sm text-gray sm:text-base">
+            {active.description}
+          </p>
+        </div>
 
-            <div className="mt-2 flex flex-wrap items-center justify-center gap-2 rounded-full border border-white/30 p-1.5">
-              {INVOICE_FEATURES.map((feature, index) => (
-                <button
-                  key={feature.key}
-                  type="button"
-                  onClick={() => setActiveIndex(index)}
-                  className={`rounded-full px-4 py-2 text-sm cursor-pointer font-semibold transition-colors ${
-                    index === activeIndex
-                      ? "bg-primary text-white"
-                      : "bg-white text-neutral-900 hover:bg-white/90"
-                  }`}
-                >
-                  {feature.pillLabel}
-                </button>
-              ))}
-            </div>
-          </div>
+        <div className="mt-2 flex flex-wrap items-center justify-center gap-2 rounded-full border border-white/30 p-1.5">
+          {INVOICE_FEATURES.map((feature, index) => (
+            <button
+              key={feature.key}
+              type="button"
+              onClick={() => setActiveIndex(index)}
+              className={`rounded-full px-4 py-2 text-sm cursor-pointer font-semibold transition-colors ${
+                index === activeIndex
+                  ? "bg-primary-hover text-gray"
+                  : "bg-gray text-neutral-900 hover:bg-white/90"
+              }`}
+            >
+              {feature.pillLabel}
+            </button>
+          ))}
         </div>
       </div>
     </section>
