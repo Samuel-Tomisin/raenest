@@ -117,20 +117,20 @@ type ReceiveFeature = {
 
 const RECEIVE_FEATURES: ReceiveFeature[] = [
   {
-    key: "usd-account",
-    pillLabel: "USD Account",
-    heading: "U.S Bank Account",
+    key: "local account payments",
+    pillLabel: "Local Account",
+    heading: "Local Account Payment",
     description:
-      "Open a real U.S. checking account in minutes. Receive ACH and wire payments from anywhere, fast and securely — no middlemen, no hidden fees.",
+      "Receive payments directly into your Securevest account without the complexity of international banking. Accept funds from supported banks and payment channels in Nigeria quickly, securely, and transparently.",
     image: "/receivemoney.png",
-    caption: "U.S Bank Account",
+    caption: "Local Bank Account",
   },
   {
     key: "spend-anywhere",
     pillLabel: "Spend Anywhere",
     heading: "Marketplace Platform Support",
     description:
-      "Wherever you work, Raenest helps you get paid. Receive funds from Upwork, Fiverr, and top global marketplaces — quickly, transparently, and without borders.",
+      "Get paid easily from the marketplaces and platforms you use. Receive your earnings securely and conveniently, with your funds deposited directly into your Securevest account and ready for saving or investing toward your financial goals.",
     image: "/receivemoney2.png",
     caption: "Marketplace Platform Support",
   },
@@ -139,7 +139,7 @@ const RECEIVE_FEATURES: ReceiveFeature[] = [
     pillLabel: "Payment Link Support",
     heading: "Payment Links",
     description:
-      "Turn opportunities into earnings. Create personalized payment links to receive funds from anyone, anywhere — fast, simple, and secure.",
+      "Turn opportunities into payments. Create personalized payment links and share them with your customers to receive payments quickly, securely, and conveniently into your Securevest account.",
     image: "/receivemoney3.png",
     caption: "Payment Links",
   },
@@ -195,21 +195,21 @@ const RECEIVE_STEPS = [
   {
     number: 1,
     imagesrc: "/rrr.svg",
-    title: "Open the Raenest app",
-    description: "Log in to your account.",
+    title: "Get Your Account Details",
+    description: "Open your Securevest account and access your dedicated account details for receiving payments.",
   },
   {
     number: 2,
     imagesrc: "/rrr2.svg",
-    title: "Share account number or payment link",
+    title: "Share Your Details",
     description:
-      "A quick and secure verification process. This is important to help you keep your account safe.",
+      "Send your Securevest account details to the person or business making the payment. Payments can be made from any bank in Nigeria.",
   },
   {
     number: 3,
     imagesrc: "/rrr3.svg",
-    title: "Fast, Reliable Delivery",
-    description: "Check your account to confirm deposit",
+    title: "Receive & Manage Your Funds",
+    description: "Once the payment is received, the funds are credited to your account. You can then keep them in your savings plan or allocate them toward your investment goals.",
   },
 ];
 
@@ -217,7 +217,7 @@ function ReceiveFirstPaymentSteps() {
   return (
     <section className="bg-gray px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-20">
       <div className="mx-auto max-w-7xl">
-        <div className="flex flex-col items-start justify-between gap-4 pb-10 sm:flex-row sm:items-center">
+        <div className="flex flex-col items-start justify-between gap-4 pb-10 pt-20 sm:flex-row sm:items-center">
           <h2 className="text-3xl font-bold text-tertiary sm:text-4xl">
             Receive your first payment
           </h2>

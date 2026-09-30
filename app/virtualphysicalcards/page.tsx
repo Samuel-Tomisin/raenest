@@ -9,6 +9,7 @@ import FAQSection from "@/component/faq";
 import Buttonbusiness2 from "@/component/button-business2";
 import Trustsection from "@/component/trustsection";
 import Testimonialsection from "../sections/testimonialsection";
+import Image from "next/image";
 
 const FEATURES = [
   {
@@ -51,7 +52,7 @@ export default function VirtualPhysicalCardsPage() {
 
           <div className="relative mx-auto w-full max-w-md">
             {/* Drop your Virtual & Physical Cards screenshot/illustration in here */}
-            <img src="/visahand.png" alt="" />
+            <img src="/visahand.png" alt="A man holding Visa card" />
           </div>
         </div>
       </section>

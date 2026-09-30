@@ -50,7 +50,7 @@ export default function Billsvtu() {
           <div className="relative mx-auto w-full max-w-md">
             {/* Drop your Bills & VTU screenshot/illustration in here */}
             <div className="aspect-4/3 w-full rounded-4xl bg-neutral-100">
-            <img src="/okay2.webp" alt="" />
+            <img src="/billsvtu.webp" alt="" />
             </div>
           </div>
         </div>

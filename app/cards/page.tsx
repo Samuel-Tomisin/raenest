@@ -10,6 +10,7 @@ import Navbar from "@/component/navbar";
 import Download from "@/component/download";
 import TestimonialSection from "../sections/testimonialsection";
 import Securitysection2 from "@/component/securitysection2";
+import Button from "@/component/button-white";
 
 /* ------------------------------------------------------------------ */
 /*  Shared: flag badges (SVG, no external flag-icon package needed)   */
@@ -70,25 +71,27 @@ function FlagBadge({ country }: { country: CountryCode }) {
 
 function CardsHero() {
   return (
-    <section className="relative overflow-hidden bg-white px-6 pt-14 sm:px-10 lg:px-16 lg:pt-4">
+    <section className="relative  bg-gray px-6 pt-14 sm:px-10 lg:px-16 lg:pt-4">
       <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-2 lg:items-center lg:gap-10">
         <div className="flex flex-col gap-6">
           <p className="text-sm sm:text-2xl font-bold text-gray-400">Cards</p>
-          <h1 className="text-5xl font-semibold leading-[1.05] text-gray-800 sm:text-6xl lg:text-[64px]">
-            Dollar cards for everyday use
+          <h1 className="text-5xl font-semibold leading-[1.05] text-tertiary sm:text-6xl lg:text-[64px]">
+            Virtual cards for everyday use
           </h1>
-          <p className="max-w-md text-base text-gray-800 sm:text-lg">
-            Get Raenest virtual USD cards for online and offline transactions
-            with transparent and competitive fees.
+          <p className="max-w-md text-base text-tertiary sm:text-lg">
+            Get a secure virtual card for convenient online payments, with transparent 
+            and competitive fees designed to give you greater control over your spending.
+
           </p>
           <div className="flex flex-wrap items-center gap-3 pt-2">
             <div className="hidden lg:block">
-            <Link
+            {/* <Link
               href="/register"
-              className="rounded-2xl bg-primary px-6 py-3.5 text-sm font-semibold text-gray-100 transition-colors"
+              className="rounded-2xl bg-primary px-6 py-3.5 text-sm font-semibold text-gray transition-colors"
             >
               Request a card
-            </Link>
+            </Link> */}
+            <Button/>
             </div>
             <Download />
           </div>
@@ -138,19 +141,19 @@ type FeatureSlide = {
 
 const FEATURE_SLIDES: FeatureSlide[] = [
   {
-    key: "contactless-pay",
-    pillLabel: "Contactless Pay",
+    key: "contactless payments",
+    pillLabel: "Contactless Payments",
     heading: "The smarter way to pay",
     description:
-      "Simply bring your device near the payment terminal to pay in seconds. Works with Google pay and Apple pay.",
+      "Pay quickly and securely by bringing your device close to a supported payment terminal. Enjoy convenient contactless payments without the need to carry your physical card.",
     image: "/card2.webp",
   },
   {
-    key: "easy-funding",
-    pillLabel: "Easy Funding",
+    key: "account funding",
+    pillLabel: "Account Funding",
     heading: "Access your money anywhere",
     description:
-      "Fund with NGN (Naira), USD, GBP, EUR, USDT or USDC at competitive rates in the market.",
+      "Fund your Securevest account with Nigerian Naira (NGN) and enjoy convenient, transparent funding options at competitive rates.",
     image: "/womanphone.webp",
   },
   {
@@ -181,18 +184,19 @@ function CardFeaturesCarousel() {
   const active = FEATURE_SLIDES[activeIndex];
 
   return (
-    <section className="px-4 sm:px-6 lg:px-8">
+    <section className="px-4 sm:px-6 lg:px-8 bg-cover bg-center bg-no-repeat transition-[background-image] duration-500 sm:h-130"
+    style={{ backgroundImage: `url('${active.image}')` }}
+    >
       <div className="mx-auto max-w-7xl">
         <div
-          className="relative h-120 overflow-hidden bg-neutral-900 bg-cover bg-center bg-no-repeat transition-[background-image] duration-500 sm:h-130"
-          style={{ backgroundImage: `url('${active.image}')` }}
+          className="relative h-120"
         >
           <img src="/money.webp" alt="" className="w-70 h-35 text-center"/>
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-black/1" />
           <div className="absolute inset-x-0 bottom-0 flex flex-col items-center gap-6 px-6 pb-10 text-center sm:px-10">
             <div>
-              <h2 className="text-2xl font-bold text-gray-100 sm:text-4xl">{active.heading}</h2>
-              <p className="mx-auto mt-3 max-w-xl text-sm text-gray-100 sm:text-base">
+              <h2 className="text-2xl font-bold text-gray sm:text-4xl">{active.heading}</h2>
+              <p className="mx-auto mt-3 max-w-xl text-sm text-gray sm:text-base">
                 {active.description}
               </p>
             </div>
@@ -204,8 +208,8 @@ function CardFeaturesCarousel() {
                   onClick={() => setActiveIndex(index)}
                   className={`rounded-full px-4 py-2 text-sm cursor-pointer hidden lg:block font-semibold transition-colors ${
                     index === activeIndex
-                      ? "bg-primary text-gray-100"
-                      : "bg-gray-100 text-neutral-900 hover:bg-white/90"
+                      ? "bg-primary-hover text-gray"
+                      : "bg-gray text-neutral-900 hover:bg-white/90"
                   }`}
                 >
                   {slide.pillLabel}
@@ -264,14 +268,14 @@ const REQUEST_STEPS = [
   {
     number: 1,
     image: "/create.webp",
-    title: "Go to cards in your Raenest app",
+    title: "Go to cards in your Securevest app",
     description: "Log in to your account.",
   },
   {
     number: 2,
     image: "/virtualcard.png",
     title: "Choose a card type",
-    description: "You get a virtual USD card.",
+    description: "You get a virtual or physical card.",
   },
   {
     number: 3,
@@ -284,15 +288,15 @@ const REQUEST_STEPS = [
 
 function RequestCardSteps() {
   return (
-    <section className="bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+    <section className="bg-gray px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col items-start justify-between gap-4 pb-10 sm:flex-row sm:items-center">
-          <h2 className="text-3xl font-bold text-gray-800 sm:text-4xl">
+          <h2 className="text-3xl font-bold text-tertiary sm:text-4xl">
             Request for a card today
           </h2>
           <button
             type="button"
-            className="flex items-center gap-2 rounded-full border border-neutral-200 bg-gray-100 px-4 py-2 text-sm font-semibold text-neutral-900 transition-colors hover:bg-neutral-50"
+            className="flex items-center gap-2 rounded-full border border-neutral-200 bg-gray px-4 py-2 text-sm font-semibold text-neutral-900 transition-colors hover:bg-neutral-50"
           >
             <Users className="h-4 w-4" />
             Watch this demo video
@@ -303,7 +307,7 @@ function RequestCardSteps() {
           {REQUEST_STEPS.map((step) => (
             <div
               key={step.number}
-              className="relative flex flex-col overflow-hidden rounded-3xl bg-linear-to-b from-[#5433C9] to-[#3D2299] px-8 py-15"
+              className="relative flex flex-col overflow-hidden rounded-3xl bg-linear-to-b from-primary-hover to-footer px-8 py-15"
             >
               <span className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full bg-white/15 text-sm font-semibold text-gray-100">
                 {step.number}

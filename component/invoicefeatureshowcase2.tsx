@@ -67,8 +67,8 @@ export default function InvoiceFeatureShowcase() {
                   onClick={() => setActiveIndex(index)}
                   className={`rounded-full px-4 py-2 text-sm cursor-pointer font-semibold transition-colors ${
                     index === activeIndex
-                      ? "bg-primary text-white"
-                      : "bg-white text-neutral-900 hover:bg-white/90"
+                      ? "bg-primary-hover text-gray"
+                      : "bg-gray text-tertiary hover:bg-white/90"
                   }`}
                 >
                   {feature.pillLabel}

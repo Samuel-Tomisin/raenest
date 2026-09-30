@@ -26,6 +26,7 @@ import {
   ShoppingCart,
   type LucideIcon,
 } from "lucide-react";
+import Navbar from "@/component/navbar";
 
 type Category = {
   slug: string;
@@ -199,14 +200,16 @@ export default function HelpCenterPage() {
   }, [query]);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div>
+      <Navbar/>
+    <div className="min-h-screen bg-gray">
       {/* Header + search, on a purple-to-white gradient */}
-      <div className="bg-linear-to-b from-primary via-[#5433C9]/95 to-white px-4 pb-40 pt-8 sm:px-8 sm:pb-48 lg:px-16">
+      <div className="bg-linear-to-b from-primary-hover via-footer to-primary-hover px-4 pb-40 pt-8 sm:px-8 sm:pb-48 lg:px-16">
         <div className="mx-auto max-w-6xl">
           <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-2">
-              <span className="text-2xl text-white">◔</span>
-              <span className="text-xl font-bold text-white">Securevest</span>
+            <Link href="/" className="flex items-center gap-1">
+              <span className="text-4xl text-gray">◔</span>
+              <span className="text-2xl font-bold text-gray">Securevest</span>
             </Link>
 
             <div className="relative">
@@ -214,7 +217,7 @@ export default function HelpCenterPage() {
                 type="button"
                 onClick={() => setLanguageOpen((prev) => !prev)}
                 aria-expanded={languageOpen}
-                className="flex items-center gap-1.5 text-sm font-medium text-white"
+                className="flex items-center gap-1.5 text-sm font-medium text-gray"
               >
                 <Globe className="h-4 w-4" />
                 {language}
@@ -222,7 +225,7 @@ export default function HelpCenterPage() {
               </button>
 
               {languageOpen && (
-                <div className="absolute right-0 top-full mt-2 w-36 rounded-xl bg-white p-1.5 shadow-lg">
+                <div className="absolute right-0 top-full mt-2 w-36 rounded-xl bg-gray p-1.5 shadow-lg">
                   {LANGUAGES.map((lang) => (
                     <button
                       key={lang}
@@ -241,7 +244,7 @@ export default function HelpCenterPage() {
             </div>
           </div>
 
-          <h1 className="mt-10 max-w-2xl text-2xl font-bold text-white sm:text-3xl">
+          <h1 className="mt-10 max-w-2xl text-2xl font-bold text-gray sm:text-3xl">
             Answers from the Securevest team
           </h1>
 
@@ -252,7 +255,7 @@ export default function HelpCenterPage() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search for articles..."
-              className="w-full rounded-full bg-white/20 py-4 pl-12 pr-5 text-white placeholder:text-white/70 outline-none backdrop-blur-sm focus:bg-white/25"
+              className="w-full rounded-full bg-white/20 py-4 pl-12 pr-5 text-gray placeholder:text-white/70 outline-none backdrop-blur-sm focus:bg-white/25"
             />
           </div>
         </div>
@@ -268,15 +271,15 @@ export default function HelpCenterPage() {
                 href={`/help/${slug}`}
                 className="flex flex-col overflow-hidden rounded-2xl border border-neutral-100 bg-white shadow-sm transition-shadow hover:shadow-md"
               >
-                <div className="flex h-32 items-center justify-center bg-neutral-100">
-                  <Icon className="h-9 w-9 text-primary" strokeWidth={1.5} />
+                <div className="flex h-32 items-center justify-center bg-gray-50">
+                  <Icon className="h-9 w-9 text-primary-hover" strokeWidth={1.5} />
                 </div>
                 <div className="flex flex-1 flex-col items-center p-6 text-center">
-                  <h3 className="font-semibold text-neutral-900">{title}</h3>
+                  <h3 className="font-semibold text-tertiary">{title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-neutral-600">
                     {description}
                   </p>
-                  <p className="mt-4 text-sm text-primary">
+                  <p className="mt-4 text-sm text-primary-hover">
                     {articleCount} {articleCount === 1 ? "article" : "articles"}
                   </p>
                 </div>
@@ -296,10 +299,10 @@ export default function HelpCenterPage() {
               <Link
                 key={article.href}
                 href={article.href}
-                className="flex items-center justify-between gap-4 text-sm font-medium text-primary hover:underline"
+                className="flex items-center justify-between gap-4 text-sm font-medium text-primary-hover hover:underline"
               >
                 <span>{article.title}</span>
-                <ChevronRight className="h-4 w-4 shrink-0" />
+                <ChevronRight className="h-4 w-4 shrink-0 text-primary-hover" />
               </Link>
             ))}
           </div>
@@ -308,10 +311,11 @@ export default function HelpCenterPage() {
         {/* Footer logo */}
         <div className="mt-20 flex justify-center">
           <Link href="/" className="flex items-center gap-2">
-            <img src="/raenest.svg" alt="Raenest Logo" className="h-30 w-30" />
+            <img src="/raenest.svg" alt="Securevest Logo" className="h-30 w-30 grayscale" />
           </Link>
         </div>
       </div>
+    </div>
     </div>
   );
 }

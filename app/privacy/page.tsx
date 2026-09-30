@@ -31,9 +31,9 @@ export default function PrivacyPolicyPage() {
   return (
     <div>
      <Navbar/>
-     <div className="min-h-screen bg-white">
+     <div className="min-h-screen bg-gray">
       {/* Diagonal purple hero header */}
-      <div className="relative overflow-hidden bg-gray-100 py-20 md:py-28">
+      <div className="relative overflow-hidden bg-gray-200 py-20 md:py-28">
         <div
           className="pointer-events-none absolute inset-0"
           style={{
@@ -41,14 +41,14 @@ export default function PrivacyPolicyPage() {
             clipPath: "polygon(0 0, 100% 0, 100% 45%, 0% 100%)",
           }}
         />
-        <div className="relative mx-auto max-w-[1200px] px-6 text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl md:text-6xl">
+        <div className="relative mx-auto max-w-300 px-6 text-center">
+          <h1 className="text-4xl font-bold tracking-tight text-tertiary sm:text-5xl md:text-6xl">
             Privacy Policy
           </h1>
         </div>
       </div>
 
-      <div className="mx-auto max-w-[1200px] px-6 py-14">
+      <div className="mx-auto max-w-300 px-6 py-14">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-[200px_1fr]">
           {/* Country selector sidebar */}
           <nav className="md:sticky md:top-24 md:h-fit">
@@ -64,7 +64,7 @@ export default function PrivacyPolicyPage() {
                       className={`text-[13.5px] leading-snug transition-colors ${
                         activeCountry === c.id
                           ? "font-semibold text-primary"
-                          : "text-[#B5B3BE] hover:text-[#6B6B76]"
+                          : "text-tertiary hover:text-[#6B6B76]"
                       }`}
                     >
                       {c.label}
@@ -77,11 +77,11 @@ export default function PrivacyPolicyPage() {
 
           {/* Content area */}
           <div className="max-w-3xl">
-            <p className="text-[15.5px] text-gray-800">
+            <p className="text-[15.5px] text-tertiary">
               Privacy Policy for Securevest
             </p>
 
-            <div className="mt-8 space-y-6 text-[15px] leading-relaxed text-gray-800">
+            <div className="mt-8 space-y-6 text-[15px] leading-relaxed text-tertiary">
               {/* ---------------------------------------------------------------
                   PLACEHOLDER CONTENT ONLY.
                   Replace every paragraph below with your own Privacy Policy,

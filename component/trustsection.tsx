@@ -7,7 +7,7 @@ import { Lock, ShieldAlert, ShieldCheck } from "lucide-react";
 const TRUST_POINTS = [
   { icon: ShieldCheck, title: "Speed", description: "No long waits. Your earnings arrive fast so you can access your money almost instantly." },
   { icon: Lock, title: "Security", description: "Your funds are handled using industry-standard security and trusted global infrastructure, giving you peace of mind while you get paid faster." },
-  { icon: ShieldAlert, title: "Control", description: "Withdraw, convert to local currencies, spend with your USD card, or invest the moment your earnings arrive." },
+  { icon: ShieldAlert, title: "Control", description: "Withdraw your funds, manage your balance, save toward your financial goals, or invest your earnings as soon as they arrive in your Securevest account." },
 ];
 
 export default function TrustSection() {
@@ -18,7 +18,7 @@ export default function TrustSection() {
           <div>
             <h2 className="text-3xl font-bold text-gray sm:text-4xl">Fast payouts, built on trust.</h2>
             <p className="mt-4 max-w-lg text-sm text-white/80 sm:text-base">
-              Upwork FastTrack moves your earnings to your Securevest account in under one hour, combining speed with bank-grade security. Get paid quickly, stay in control, and know your money is protected every step of the way.
+              Receive your marketplace earnings directly into your Securevest account quickly and securely. Track your incoming payments, stay in control of your funds, and move your earnings toward your savings and investment goals with ease.
             </p>
             <img src="/getcard.png" alt="" className="mt-6 w-full rounded-2xl object-cover" />
           </div>

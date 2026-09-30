@@ -67,32 +67,32 @@ interface Testimonial {
 
 const leftTestimonials: Testimonial[] = [
   {
-    title: "Unimaginably excellent",
+    title: "inexplainably excellent",
     quote:
       "I couldn't imagine how great Securevest works until I signed up. Honestly, this is my first time reviewing any website, but I'm happy to write about how excellent they operate.",
     name: "Kevin",
     country: "ng",
   },
   {
-    title: "Best in class support",
+    title: "Responsive support",
     quote: "Securevest is a great company with one of the best support teams I've ever seen.",
-    name: "Theresa",
+    name: "Rhoda",
     country: "ng",
   },
 ];
 
 const rightTestimonials: Testimonial[] = [
   {
-    title: "Best exchange rates",
+    title: "Best saving platform",
     quote:
       "The platform is intuitive, seamless and easy to use. It's also the fintech platform with the best exchange rates for sending money.",
-    name: "Banji",
+    name: "Oluwapelumi",
     country: "ng",
   },
   {
     title: "Seamless for transfers",
     quote:
-      "Securevest has been helping me since last year that I found it, I don't have to stress about transfers anymore as it comes quickly and very fast.",
+      "Securevest has been helping me since I found it, I don't have to stress about transfers anymore as it comes quickly and very fast.",
     name: "Blessing",
     country: "ng",
   },
@@ -214,7 +214,7 @@ export default function TestimonialSection() {
               <VideoTestimonialCard
                 youtubeId="g3D_YGKjyms"
                 posterSrc="/testimonials/moyinoluwa-thumbnail.jpg"
-                name="Moyinoluwa"
+                name="Funmilola"
                 country="ng"
               />
             </div>

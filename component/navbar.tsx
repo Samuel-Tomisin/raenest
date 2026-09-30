@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import Button2 from "./button-blue";
+import Graylogo from "./graylogo";
 
 type AccountType = "personal" | "business";
 
@@ -293,13 +294,14 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto flex justify-between  items-center py-3">
           {/* Logo + Personal/Business toggle */}
           <div className="flex items-center gap-4">
-            <Link href="/">
+            <Graylogo/>
+            {/* <Link href="/">
               <img
                 src="/raenest.svg"
                 alt="Raenest Logo"
                 className="h-6 sm:h-7 cursor-pointer object-contain grayscale"
               />
-            </Link>
+            </Link> */}
 
           </div>
 

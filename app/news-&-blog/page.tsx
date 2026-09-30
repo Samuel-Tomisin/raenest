@@ -49,14 +49,14 @@ const FEATURED_SLIDES: FeaturedSlide[] = [
   },
   {
     id: "new-usd-account",
-    title: "Everything You Need to Know About Your New Raenest USD Account",
-    href: "/blog/everything-you-need-to-know-about-your-new-raenest-usd-account",
+    title: "Everything You Need to Know About Your New Securevest USD Account",
+    href: "/blog/everything-you-need-to-know-about-your-new-securevest-usd-account",
     bg: "bg-[#5433C9]",
   },
   {
-    id: "raenest-card-upgrade",
+    id: "securevest-card-upgrade",
     title: "The Raenest Card Just Got Upgraded",
-    href: "/blog/the-raenest-card-just-got-upgraded",
+    href: "/blog/the-securevest-card-just-got-upgraded",
     bg: "bg-[#3D2C99]",
   },
   {
@@ -112,16 +112,16 @@ const ARTICLES: Article[] = [
   {
     id: "virtual-dollar-card-reasons",
     eyebrow: undefined,
-    title: "6 Reasons why you need the new Raenest Virtual Dollar Card",
+    title: "6 Reasons why you need the new Securevest Virtual Dollar Card",
     linkText: "6 Reasons Why You Need a Raenest Virtual Dollar Card",
     category: "Cards",
     href: "/blog/6-reasons-why-you-need-a-raenest-virtual-dollar-card",
     visual: { type: "color", bg: "bg-[#3D2299]" },
   },
   {
-    id: "new-raenest-card",
+    id: "new-securevest-card",
     eyebrow: "The Visa Dollar card for global spenders",
-    title: "New Raenest Card for you",
+    title: "New Securevest Card for you",
     linkText: "The Raenest Card Just Got Upgraded",
     category: "Cards",
     href: "/blog/the-raenest-card-just-got-upgraded",
@@ -130,10 +130,10 @@ const ARTICLES: Article[] = [
   {
     id: "monthly-roundup-july-2026",
     eyebrow: "July 2026",
-    title: "Raenest Monthly Roundup",
+    title: "Securevest Monthly Roundup",
     linkText: "Raenest's July 2026 Roundup",
     category: "Updates",
-    href: "/blog/raenest-july-2026-roundup",
+    href: "/blog/securevest-july-2026-roundup",
     visual: { type: "color", bg: "bg-[#0B0B0F]" },
   },
   {
@@ -169,12 +169,12 @@ const ARTICLES: Article[] = [
     visual: { type: "color", bg: "bg-[#F3EEE1]" },
   },
   {
-    id: "raenest-diaries-ore-badmus",
+    id: "securevest-diaries-ore-badmus",
     eyebrow: "Season 2: Episode 3",
-    title: "Raenest Diaries",
+    title: "Securevest Diaries",
     linkText: "Raenest Diaries: How Visibility Took Ore Badmus from Teaching to a Global Talent Visa",
     category: "Raenest Diaries",
-    href: "/blog/raenest-diaries-ore-badmus",
+    href: "/blog/securevest-diaries-ore-badmus",
     visual: { type: "photo", alt: "Ore Badmus, guest on Raenest Diaries Season 2 Episode 3" },
   },
   {
@@ -243,7 +243,7 @@ function ArticleCard({ article }: { article: Article }) {
               alt={article.visual.alt}
               className="absolute inset-0 h-full w-full object-cover opacity-0"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/10 to-transparent" />
           </>
         ) : (
           <div className={`absolute inset-0 ${article.visual.bg}`} aria-hidden="true" />
@@ -274,7 +274,7 @@ function ArticleCard({ article }: { article: Article }) {
         <Link
           href={article.href}
           aria-label={`Read: ${article.linkText}`}
-          className="flex h-9 w-9 shrink-0 items-center cursor-pointer justify-center rounded-full bg-[#5433C9] text-gray transition-colors hover:bg-[#4527ad]"
+          className="flex h-9 w-9 shrink-0 items-center cursor-pointer justify-center rounded-full bg-primary-hover text-gray transition-colors hover:bg-[#4527ad]"
         >
           <ArrowUpRight className="h-4 w-4" />
         </Link>
@@ -319,7 +319,7 @@ export default function BlogPage() {
         />
 
         <div className="mx-auto max-w-4xl text-center">
-          <h1 className="text-3xl leading-tight text-neutral-950 sm:text-5xl">
+          <h1 className="text-3xl leading-tight text-tertiary sm:text-5xl">
             The Latest From Securevest: <br /> Tips, News and Updates!
           </h1>
 
@@ -333,7 +333,7 @@ export default function BlogPage() {
                 setVisibleCount(PAGE_SIZE);
               }}
               placeholder="Search for a blog or article"
-              className="w-full cursor-pointer rounded-3xl border border-neutral-200 bg-white py-3.5 pl-11 pr-5 text-sm text-neutral-900 outline-none placeholder:text-neutral-400 focus:border-[#5433C9]"
+              className="w-full cursor-pointer rounded-3xl border border-neutral-200 bg-gray-50 py-3.5 pl-11 pr-5 text-sm text-tertiary outline-none placeholder:text-neutral-400 focus:border-[#5433C9]"
             />
           </div>
 
@@ -348,7 +348,7 @@ export default function BlogPage() {
                 }}
                 className={`rounded-full px-4 py-2 cursor-pointer text-sm font-semibold transition-colors ${
                   activeCategory === category
-                    ? "bg-neutral-950 text-white"
+                    ? "bg-neutral-950 text-gray"
                     : "border border-neutral-200 text-neutral-800 hover:border-neutral-400"
                 }`}
               >
@@ -362,7 +362,7 @@ export default function BlogPage() {
       {/* Featured articles carousel */}
       <section className="bg-neutral-50 px-4 py-14 sm:px-8 lg:px-16">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-lg font-semibold text-neutral-900">Featured articles</h2>
+          <h2 className="text-lg font-semibold text-tertiary">Featured articles</h2>
 
           <Link
             href={activeSlide.href}
@@ -382,13 +382,13 @@ export default function BlogPage() {
                 )}
                 <p
                   className={`text-2xl font-bold leading-snug sm:text-3xl ${
-                    activeSlide.bg.includes("F3EEE1") ? "text-neutral-900" : "text-white"
+                    activeSlide.bg.includes("F3EEE1") ? "text-neutral-900" : "text-gray"
                   }`}
                 >
                   {activeSlide.title}
                 </p>
               </div>
-              <span className="flex h-11 w-11 shrink-0 items-center cursor-pointer justify-center rounded-full bg-[#5433C9] text-white">
+              <span className="flex h-11 w-11 shrink-0 items-center cursor-pointer justify-center rounded-full bg-primary-hover text-gray">
                 <ArrowRight className="h-5 w-5" />
               </span>
             </div>
@@ -400,7 +400,7 @@ export default function BlogPage() {
                 type="button"
                 onClick={() => goToSlide(slideIndex - 1)}
                 aria-label="Previous featured article"
-                className="flex h-9 w-9 items-center justify-center cursor-pointer rounded-full bg-[#EDE9FE] text-primary transition-colors hover:bg-[#E0D9FC]"
+                className="flex h-9 w-9 items-center justify-center cursor-pointer rounded-full bg-gray text-primary transition-colors hover:bg-[#E0D9FC]"
               >
                 <ArrowLeft className="h-4 w-4" />
               </button>
@@ -434,7 +434,7 @@ export default function BlogPage() {
       {/* All articles */}
       <section className="px-4 py-16 sm:px-8 lg:px-16">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-lg font-semibold text-neutral-900">All articles</h2>
+          <h2 className="text-lg font-semibold text-tertiary">All articles</h2>
 
           {visibleArticles.length > 0 ? (
             <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
@@ -453,7 +453,7 @@ export default function BlogPage() {
               <button
                 type="button"
                 onClick={() => setVisibleCount((prev) => prev + PAGE_SIZE)}
-                className="rounded-full border border-[#5433C9] px-6 py-2.5 text-sm font-semibold text-[#5433C9] transition-colors cursor-pointer hover:bg-[#EDE9FE]"
+                className="rounded-full border border-primary px-6 py-2.5 text-sm font-semibold text-primary-hover transition-colors cursor-pointer hover:bg-[#EDE9FE]"
               >
                 Load more
               </button>

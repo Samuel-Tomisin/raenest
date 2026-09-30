@@ -4,7 +4,6 @@ import Link from "next/link";
 import { Wallet, ArrowLeftRight, ShieldCheck } from "lucide-react";
 import Navbar from "@/component/navbar";
 import Footer from "@/component/footer";
-import Button2 from "@/component/button-blue";
 import Buttonbusiness2 from "@/component/button-business2";
 import Securitysection2 from "@/component/securitysection2";
 import FAQSection from "../sections/faqs";
