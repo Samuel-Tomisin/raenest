@@ -4,17 +4,17 @@ const securityFeatures = [
   {
     icon: ShieldCheck,
     title: "Compliant Transactions",
-    description: "Backed by local and international financial regulations.",
+    description: "All transactions are processed in line with applicable local financial regulations and compliance standards, helping ensure your savings and investments are handled securely and responsibly.",
   },
   {
     icon: Lock,
     title: "Two-Factor Authentication",
-    description: "Support for enhanced transaction security",
+    description: "Enhanced security with two-factor authentication to help protect your account and keep every transaction secure.",
   },
   {
     icon: ShieldAlert,
     title: "Anti-Fraud Measures",
-    description: "Proactive monitoring to secure your money.",
+    description: "Proactive fraud monitoring and security measures designed to help detect suspicious activity and protect your money.",
   },
 ];
 
@@ -27,9 +27,10 @@ export default function Securitysection() {
             Security you can rely on
           </h2>
           <p className="mt-4 max-w-lg text-gray">
-            We uphold industry-standard security across all our services,
-            ensuring your transactions and funds are protected 24/7 so you
-            can focus on what matters.
+            Your security is our priority. We use industry-standard 
+            security measures to help protect your personal information, 
+            transactions, and funds around the clock, giving you confidence as you save and invest.
+
           </p>
 
           <div className="mt-10 grid gap-8 sm:grid-cols-3">

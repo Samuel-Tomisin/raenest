@@ -63,23 +63,23 @@ export default function Sixthbsection() {
   <div className="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-5">
     <div className="w-full max-w-100.5 h-auto lg:h-125 bg-primary-hover px-6 sm:px-8 pt-8 flex flex-col items-center justify-center gap-3 rounded-3xl">
     <img src="/number1.png" alt="Number 1" className="w-[300px] h-auto"/>
-    <div className="w-full h-auto lg:h-75 bg-footer py-3 px-5 rounded-b-3xl">
-    <h2 className="text-lg sm:text-[20px] text-gray font-semibold">Quick Sign up</h2>
-    <h2 className="text-sm sm:text-[16px] pt-3 text-gray">Create your account in minutes—input legal name, strong password, and confirm verification code.</h2>
+    <div className="w-full h-auto lg:h-75 bg-footer py-3 mb-6 px-5 rounded-b-3xl">
+    <h2 className="text-lg sm:text-[20px] text-gray font-semibold">Create Your Account</h2>
+    <h2 className="text-sm sm:text-[16px] pt-3 text-gray">Sign up in minutes with your basic information and secure your account with a simple verification process.</h2>
     </div>
     </div>
     <div className="w-full max-w-100.5 h-auto lg:h-125 bg-primary-hover px-6 sm:px-8 pt-8 flex flex-col items-center justify-center gap-3 rounded-3xl">
     <img src="/number3.png" alt="Number 2" className="w-auto h-auto"/>
-    <div className="w-full h-auto lg:h-75 bg-footer py-3 px-5 rounded-b-3xl">
-    <h2 className="text-lg sm:text-[20px] text-gray font-semibold">Verify Your Identity</h2>
-    <h2 className="text-sm sm:text-[16px] pt-3 text-gray">A quick and secure verification process. This is important to help you keep your account safe.</h2>
+    <div className="w-full h-auto lg:h-75 bg-footer py-3 mb-6 px-5 rounded-b-3xl">
+    <h2 className="text-lg sm:text-[20px] text-gray font-semibold">Set Your Financial Goals</h2>
+    <h2 className="text-sm sm:text-[16px] pt-3 text-gray">Choose what you want to achieve—whether it's building an emergency fund, saving for a major purchase, or growing your wealth through investments.</h2>
     </div>
     </div>
     <div className="w-full max-w-100.5 h-auto lg:h-125 bg-primary-hover px-6 sm:px-8 pt-8 flex flex-col items-center justify-center gap-3 rounded-3xl">
     <img src="/number2.webp" alt="Number 3" className="w-auto h-auto" />
-    <div className="w-full h-auto lg:h-75 bg-footer py-3 px-5 rounded-b-3xl">
-    <h2 className="text-lg sm:text-[20px] text-gray font-semibold">Get Your Accounts</h2>
-    <h2 className="text-sm sm:text-[16px] text-gray pt-3">Start receiving payments, saving in foreign currencies, and spending globally.</h2>
+    <div className="w-full h-auto lg:h-75 bg-footer py-3 mb-9 px-5 rounded-b-3xl">
+    <h2 className="text-lg sm:text-[20px] text-gray font-semibold">Save, Invest & Grow</h2>
+    <h2 className="text-sm sm:text-[16px] text-gray pt-3">Fund your account, choose a savings or investment option that fits your goals, and watch your money grow over time.</h2>
     </div>
     </div>
    </div>
