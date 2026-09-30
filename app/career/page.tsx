@@ -1,5 +1,7 @@
 "use client";
 
+import Graylogo from "@/component/graylogo";
+import Navbar from "@/component/navbar";
 import { Monitor, Users } from "lucide-react";
 import { FaLinkedin, FaTwitter, FaFacebook } from "react-icons/fa";
 
@@ -16,25 +18,28 @@ type JobOpening = {
 // Add more roles here — each renders as another row in the list.
 const OPENINGS: JobOpening[] = [
   {
-    title: "Growth & Partnerships Lead- Philippines",
+    title: "Growth & Partnerships Lead- Lagos",
     department: "Growth and Expansion",
     location: "Remote",
-    locationDetail: "Philippines (Remote)",
+    locationDetail: "Lagos (Remote)",
     team: "Growth and Expansion",
     employmentType: "Contractor",
-    href: "/careers/growth-partnerships-lead-philippines",
+    href: "/careers/growth-partnerships-lead-lagos",
   },
 ];
 
 export default function CareerPage() {
   return (
-    <div className="min-h-screen bg-[#F2F1EC] px-4 py-8 sm:px-8 sm:py-10">
+    <div>
+      <Navbar/>
+    <div className="min-h-screen bg-gray px-4 py-8 sm:px-8 sm:py-10">
       <div className="mx-auto max-w-5xl">
         {/* Header */}
         <div className="flex items-center justify-between pb-8">
-          <div className="flex items-center gap-1.5">
+          <Graylogo/>
+          {/* <div className="flex items-center gap-1.5">
             <img src="/raenest.svg" alt="raenest logo" className="h-30 w-30" />
-          </div>
+          </div> */}
 
           <div className="flex items-center gap-3">
             <a
@@ -117,12 +122,13 @@ export default function CareerPage() {
             <span>•</span>
             <a href="/terms" className="hover:underline">Terms of Service</a>
             <span>•</span>
-            <span>© BambooHR All rights reserved.</span>
+            <span>© 2026 All rights reserved.</span>
           </p>
 
-          <span className="text-lg font-medium text-neutral-300">bambooHR</span>
+          <span className="text-lg font-medium text-gray-600">SecurevestHR</span>
         </div>
       </div>
     </div>
+  </div>
   );
 }
