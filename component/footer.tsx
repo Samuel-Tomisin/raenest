@@ -100,24 +100,32 @@ export default function Footer() {
                 </div>
 
                 <div className="px-6 text-[13px] leading-relaxed text-gray-400 sm:px-8 sm:text-[14px] lg:px-12">
-                    <h2 className="pt-10">Securevest is a Financial Technology (FinTech) Company, not a Bank. Banking services are provided by Regent Bank, Member FDIC. Securevest is not FDIC insured. FDIC deposit insurance up to
-                        $250,000 per qualified customer account on a "pass-through" basis, for which certain conditions must be satisfied. FDIC insurance only covers the failure of Regent Bank, Member FDIC.
-                        Mastercard Card services are provided by Securevest's technology partners, authorized by Visa and Mastercard to issue cards operating over their networks.</h2>
+                    <h2 className="pt-10">Securevest is a Financial Technology (FinTech) platform, not a traditional bank. We provide digital savings, investment, payment, and other financial solutions through our technology platform and, 
+                        where applicable, in partnership with licensed and regulated financial institutions and service providers in Nigeria.
 
-                    <h2 className="pt-5">The Securevest USD Visa Card is a standalone payment card, powered by the Visa Inc.. Securevest provides the platform interface through which users can access and manage the card. The card itself is a separate
-                        product from the broader Securevest platform. Services such as currency conversion, money transfers, and investments are independent offerings available within the Securevest platform.</h2>
+                        Securevest does not provide banking services directly unless otherwise stated. Our services are designed to help users save, invest, receive payments, and manage their finances securely and conveniently. Applicable 
+                        financial services, fees, limits, and protections may vary depending on the service and the licensed partners involved.
+                        </h2>
 
-                    <h2 className="pt-5">Securevest is not a broker-dealer, investment adviser or member of FINRA. Securities offered by Alpaca Securities LLC ("Alpaca Securities"). Alpaca Securities is a member of FINRA and the Securities Investor Protection
-                        Corporation. Securevest does not recommend any specific securities or investment strategies. Investing involves risk & investments may lose value, including the loss of principal. Past performance does not guarantee future results.
-                        Investors should consider their investment objectives and risks carefully before investing. U.S. stock investments are held with Alpaca Securities LLC, a U.S.-licensed broker-dealer regulated by the SEC and FINRA. Your assets are
-                        custodied under strict regulatory and security standards, and you retain full visibility into your holdings and performance at all times. Investment feature is offered in partnership with City Investment Capital Limited, a firm licensed
-                        by the Securities and Exchange Commission of Nigeria.</h2>
+                    <h2 className="pt-5">The Securevest Visa Card is a payment card designed to provide users with a convenient and secure way to make online and in-store payments. Securevest provides the platform through which users can 
+                        access and manage their card. Card services are provided through authorized financial and payment service partners, while savings, investments, payment receiving, and other financial services are offered separately 
+                        within the Securevest platform</h2>
 
-                    <h2 className="pt-5">Securevest Inc. Canada is registered with FINTRAC as a Money Services Business (Registration No. 1443707-1). Registered Office: 212 King Street West, 6th Floor, Toronto, ON M5H 1K5.</h2>
+                    <h2 className="pt-5">Securevest is a Financial Technology (FinTech) platform and does not act as a broker-dealer or investment adviser. Investment services available through Securevest are provided in partnership with 
+                        appropriately licensed and regulated investment service providers in Nigeria.
 
-                    <h2 className="pt-5 pb-15">Securevest Inc. is licensed by the Central Bank of Nigeria as an International Money Transfer Operator. Banking services in the UK are provided by Clear Junction Ltd, authorised and regulated by the
-                        Financial Conduct Authority (FCA) as an Electronic Money Institution. U.S. securities brokerage services are provided by Alpaca Securities LLC (“Alpaca Securities”), a member of FINRA and SIPC,
-                        and a wholly-owned subsidiary of AlpacaDB, Inc.</h2>
+                        Securevest does not guarantee investment returns or recommend specific investments or investment strategies. All investments carry risks, and the value of an investment may rise or fall, including the potential loss 
+                        of invested capital. Past performance is not a guarantee of future results.
+
+                        Before investing, users should carefully consider their financial goals, investment objectives, risk tolerance, and the terms associated with each investment product. Investment services are subject to applicable 
+                        Nigerian laws and regulations and the terms of the licensed investment partners providing the relevant services.
+                        </h2>
+
+                    <h2 className="pt-5 pb-15">Securevest is a Financial Technology (FinTech) platform focused on providing savings, investment, payment, and other financial solutions to users in Nigeria. Where applicable, our services are 
+                        provided in partnership with licensed and regulated financial institutions and service providers in accordance with applicable Nigerian laws and regulations.
+
+                        Specific financial products and services may be subject to the terms, conditions, licensing requirements, and regulatory oversight of the authorized partners providing them.
+                        </h2>
                 </div>
             </div>
             </div>
