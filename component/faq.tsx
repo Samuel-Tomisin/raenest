@@ -16,44 +16,44 @@ interface FAQItemProps {
 
 const FAQS: FAQ[] = [
   {
-    question: "Is Securevest a bank?",
+    question: "Is Securevest a bank or a financial technology platform?",
     answer:
-      "Securevest is a Financial Technology (FinTech) Company, not a Bank. Banking services are provided by Regent Bank, Member FDIC. Securevest is not FDIC insured. FDIC deposit insurance covers up to $250,000 per qualified customer account on a \u201cpass-through\u201d basis, for which certain conditions must be satisfied. FDIC insurance only covers the failure of Regent Bank, Member FDIC. Card services are provided by Securevest's technology partners, authorized by Visa and Mastercard to issue cards operating over their networks.",
+      "Securevest is a financial technology platform, not a traditional bank. We provide digital savings, investment, payment, and other financial solutions designed to help you manage and grow your money. Where applicable, our financial services are provided in partnership with licensed financial institutions and regulated service providers in accordance with applicable Nigerian regulations.",
   },
   {
     question: "How long does it take to get my account?",
     answer:
-      "Most accounts are ready in minutes once you've verified your identity. In rare cases where extra checks are needed, it can take up to 24 hours \u2014 we'll keep you posted the whole way.",
+      "Your Securevest account can typically be set up within a few minutes after completing the registration and verification process. If additional information or verification is required, processing may take longer. We’ll keep you informed throughout the process.",
   },
   {
-    question: "What's the fee for receiving in my account?",
+    question: "Does Securevest charge a fee for receiving money?",
     answer:
-      "Receiving money into your Securevest account is completely free, with no limit on how much you can receive. Any fees are charged by the sender's bank, not by Securevest.",
+      "Receiving money into your Securevest account is free, with no additional receiving fee charged by Securevest. However, fees may apply depending on the sender’s bank or the payment channel used.",
   },
   {
-    question: "What is the Securevest USD Visa Card and how is it related to Securevest?",
+    question: "What is the Securevest Visa Card and how does it work?",
     answer:
-      "The Securevest USD Visa Card is a virtual and physical card linked directly to your Securevest USD balance, issued by our technology partners under license from Visa. You can fund it instantly from your wallet and use it anywhere Visa is accepted.",
+      "The Securevest Visa Card is a secure payment card designed to give you convenient access to funds in your Securevest account. Depending on the card type available, you can use it for online and in-store payments at supported merchants. Card services are provided through authorized financial and payment service partners.",
   },
   {
-    question: "Can I use my USD account on Upwork, Deel, Fiverr, or Payoneer?",
+    question: "Can I receive earnings from marketplaces and digital platforms into my Securevest account?",
     answer:
-      "Yes. Your Securevest USD account comes with real US account details, so you can receive payments directly from Upwork, Deel, Fiverr, Payoneer, and most other platforms that pay out in USD.",
+      "You can receive earnings from supported marketplaces and digital platforms directly into your Securevest account, provided the platform supports payments to Nigerian bank accounts or supported local payment channels. Once received, you can manage your funds through Securevest’s savings and investment solutions.",
   },
   {
-    question: "How do I fund my Securevest wallet?",
+    question: "How can I fund my Securevest account?",
     answer:
-      "You can fund your wallet via bank transfer, debit card, or by receiving a direct USD payment from clients, employers, or platforms into your account details.",
+      "You can fund your Securevest account through supported Nigerian bank transfers and other available local payment channels. Once your funds are credited, you can use your balance to save, invest, or manage your money within the Securevest platform.",
   },
   {
     question: "Is my money safe with Securevest?",
     answer:
-      "Your funds are held in partnership with our regulated banking partners, and we use bank-level encryption and monitoring across every transaction to keep your account secure.",
+      "We take the security of your money and personal information seriously. Securevest uses industry-standard security measures, encryption, transaction monitoring, and other safeguards to help protect your account and funds. Where applicable, financial services are provided through licensed and regulated partners in line with applicable Nigerian regulations.",
   },
   {
-    question: "Can I use Securevest outside Nigeria?",
+    question: "Are Securevest's services available in Nigeria?",
     answer:
-      "Yes, Securevest is built for a global lifestyle. You can fund, spend, and withdraw from your account wherever you are, as long as you have an internet connection.",
+      "Securevest is currently focused on providing savings, investment, payment, and other financial services for users in Nigeria. Some features may only be available within Nigeria and through supported local payment channels. Availability may vary depending on the specific service and applicable regulations.",
   },
 ];
 

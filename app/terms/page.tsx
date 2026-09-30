@@ -46,7 +46,7 @@ export default function TermsOfServicePage() {
           }}
         />
         <div className="relative mx-auto max-w-300 px-6 text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-[#0E0E12] sm:text-5xl md:text-6xl">
+          <h1 className="text-4xl font-bold tracking-tight text-tertiary sm:text-5xl md:text-6xl">
             Terms of service
           </h1>
         </div>
@@ -63,7 +63,7 @@ export default function TermsOfServicePage() {
                     onClick={() => setActiveSection(s.id)}
                     className={`text-left text-[14.5px] leading-snug transition-colors ${
                       activeSection === s.id
-                        ? "font-semibold text-primary"
+                        ? "font-semibold text-primary-hover"
                         : "text-[#B5B3BE] hover:text-[#6B6B76]"
                     }`}
                   >
@@ -76,12 +76,12 @@ export default function TermsOfServicePage() {
 
           {/* Content area */}
           <div className="max-w-3xl">
-            <h2 className="text-2xl font-semibold text-[#0E0E12]">
+            <h2 className="text-2xl font-semibold text-tertiary">
               {COMPANY_NAME} Terms of Use
             </h2>
-            <p className="mt-3 italic text-[#6B6B76]">Last modified: August 2026</p>
+            <p className="mt-3 italic text-gray-500">Last modified: August 2026</p>
 
-            <div className="mt-8 space-y-6 text-[15px] leading-relaxed text-[#3A3A42]">
+            <div className="mt-8 space-y-6 text-[15px] leading-relaxed text-gray-600">
               {/* ---------------------------------------------------------------
                   PLACEHOLDER CONTENT ONLY.
                   Replace every paragraph below with your own Terms of Service,
