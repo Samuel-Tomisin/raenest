@@ -74,8 +74,8 @@ export default function CareerPage() {
 
         {/* Openings card */}
         <div className="rounded-2xl bg-white p-6 shadow-sm sm:p-8">
-          <h1 className="text-2xl font-bold text-primary">Current Openings</h1>
-          <p className="mt-2 text-sm text-neutral-600">
+          <h1 className="text-2xl font-bold text-primary-hover">Current Openings</h1>
+          <p className="mt-2 text-sm text-gray-500">
             Thanks for checking out our job openings. See something that
             interests you? Apply here.
           </p>
@@ -88,11 +88,11 @@ export default function CareerPage() {
                 <div>
                   <a
                     href={job.href}
-                    className="font-medium text-primary hover:underline"
+                    className="font-medium text-primary-hover hover:underline"
                   >
                     {job.title}
                   </a>
-                  <p className="mt-0.5 text-sm text-neutral-500">{job.department}</p>
+                  <p className="mt-0.5 text-sm text-gray-500">{job.department}</p>
                 </div>
 
                 <div className="flex items-start gap-2">
